@@ -1688,7 +1688,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
 
 <!-- Supabase SDK -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><!-- Supabase via direct REST API (no SDK needed) -->
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Mobile sidebar ─────────────── */
@@ -1767,7 +1767,13 @@ window.addEventListener('scroll', () => {
 /* ── Supabase Review System ──────── */
 const SUPABASE_URL = 'https://hekrgjagvfvmpyegjfze.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_RMpKG63wnnTsIkWzf8d_6w_y5wQsdEu';
-const sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const sbHeaders = {
+  'apikey': SUPABASE_ANON_KEY,
+  'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+  'Content-Type': 'application/json',
+  'Prefer': 'return=representation'
+};
 
 // ── Star picker JS ──────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
@@ -1778,33 +1784,31 @@ document.addEventListener('DOMContentLoaded', () => {
     stars.forEach(s => {
       const active = parseInt(s.dataset.val) <= val;
       s.classList.toggle('active', active);
-      s.style.color = active ? 'var(--gold)' : '#ddd';
+      s.style.setProperty('color', active ? '#b8860b' : '#cccccc', 'important');
     });
   }
 
   stars.forEach(star => {
-    star.addEventListener('click', () => {
-      selectStar(parseInt(star.dataset.val));
-    });
-
-    star.addEventListener('touchstart', (e) => {
+    // Use only touchend for touch devices (avoids double-fire with click)
+    star.addEventListener('touchend', (e) => {
       e.preventDefault();
       selectStar(parseInt(star.dataset.val));
     }, { passive: false });
 
-    star.addEventListener('mouseover', () => {
-      const val = parseInt(star.dataset.val);
-      stars.forEach(s => {
-        s.style.color = parseInt(s.dataset.val) <= val ? 'var(--gold)' : '#ddd';
-      });
-    });
-    star.addEventListener('mouseout', () => {
-      const selected = parseInt(document.getElementById('selectedRating').value) || 0;
-      stars.forEach(s => {
-        s.style.color = parseInt(s.dataset.val) <= selected ? 'var(--gold)' : '#ddd';
-      });
+    // Use click for desktop
+    star.addEventListener('click', () => {
+      selectStar(parseInt(star.dataset.val));
     });
   });
+
+  // Make submit button work on touch too
+  const submitBtn = document.querySelector('#reviewFormWrap .btn-primary');
+  if (submitBtn) {
+    submitBtn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      submitReview();
+    }, { passive: false });
+  }
 });
 
 
@@ -1871,21 +1875,18 @@ function updateStats(reviewsArr) {
   });
 }
 
-// Load reviews from Supabase
+// Load reviews from Supabase REST API
 async function loadReviews() {
-  const { data, error } = await sbClient
-    .from('reviews')
-    .select('*')
-    .order('created_at', { ascending: false });
-  if (error) { console.error('Supabase error:', error); return; }
-  renderReviews(data || []);
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', {
+      headers: sbHeaders
+    });
+    if (!res.ok) { console.error('Load error:', res.status, await res.text()); return; }
+    const data = await res.json();
+    renderReviews(data || []);
+  } catch(e) { console.error('loadReviews failed:', e); }
 }
 loadReviews();
-
-// Real-time: reload when new review added
-sbClient.channel('reviews-channel')
-  .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'reviews' }, () => loadReviews())
-  .subscribe();
 
 // Expose submitReview globally so onclick= in HTML can reach it
 async function submitReview() {
@@ -1904,13 +1905,12 @@ async function submitReview() {
   btn.textContent = 'Submitting…';
 
   try {
-    const { error } = await sbClient.from('reviews').insert([{
-      name,
-      subject: subj,
-      text,
-      rating:  parseInt(ratingVal)
-    }]);
-    if (error) throw error;
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+      method: 'POST',
+      headers: sbHeaders,
+      body: JSON.stringify({ name, subject: subj, text, rating: parseInt(ratingVal) })
+    });
+    if (!res.ok) throw new Error(await res.text());
     loadReviews();
 
     document.getElementById('rName').value    = '';
@@ -1937,4 +1937,24 @@ async function submitReview() {
 function sendMsg() {
   const name = document.getElementById('cName').value.trim();
   const email = document.getElementById('cEmail').value.trim();
-  const msg = document.getEl
+  const msg = document.getElementById('cMsg').value.trim();
+  if (!name || !email || !msg) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  const successEl = document.getElementById('msgSuccess');
+  if (successEl) {
+    successEl.style.display = 'block';
+    setTimeout(() => { successEl.style.display = 'none'; }, 5000);
+  }
+  document.getElementById('cName').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cSubject').value = '';
+  document.getElementById('cMsg').value = '';
+}
+
+window.submitReview = submitReview;
+window.sendMsg = sendMsg;
+</script>
+</body>
+</html>
