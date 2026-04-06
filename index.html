@@ -107,16 +107,17 @@ body {
 .sidebar {
   position: fixed;
   left: 0; top: 0;
-  width: var(--sidebar-w);
+  width: 240px;
   height: 100%;
   background: rgba(255, 252, 235, 0.96);
   backdrop-filter: blur(20px);
   border-right: 1px solid var(--border);
   padding: 40px 24px;
-  z-index: 100;
+  z-index: 300;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: transform 0.3s ease;
 }
 
 .sidebar-logo {
@@ -184,21 +185,22 @@ body {
   display: none;
   position: fixed;
   top: 16px; left: 16px;
-  z-index: 200;
+  z-index: 300;
   background: rgba(255,252,235,0.97);
   border: 1px solid var(--border);
   color: var(--text);
-  width: 40px; height: 40px;
-  border-radius: 8px;
-  font-size: 20px;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  font-size: 22px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
 /* ─── MAIN CONTENT ──────────────────────────────────── */
 .main {
-  margin-left: var(--sidebar-w);
+  margin-left: 240px;
   position: relative;
   z-index: 1;
 }
@@ -1046,18 +1048,38 @@ footer {
 
 footer a { color: var(--teal); text-decoration: none; }
 
+/* ─── SIDEBAR OVERLAY ────────────────────────────────── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 250;
+}
+.sidebar-overlay.active { display: block; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 900px) {
-  :root { --sidebar-w: 0px; }
-  .sidebar { transform: translateX(-240px); transition: transform 0.3s ease; }
-  .sidebar.open { transform: translateX(0); width: 240px; }
-  .main { margin-left: 0; }
-  .menu-toggle { display: flex; }
+  .sidebar {
+    left: -260px;
+    width: 240px;
+    transition: left 0.3s ease;
+  }
+  .sidebar.open {
+    left: 0;
+    box-shadow: 6px 0 40px rgba(0,0,0,0.2);
+  }
+
+  .menu-toggle { display: flex !important; }
+  .main { margin-left: 0 !important; }
+
+  .hero { padding: 80px 24px 60px; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero h1 { font-size: 38px; }
   .hero-image-wrap { order: -1; }
   .hero-btns { justify-content: center; }
   .hero-meta { align-items: center; }
+
   section { padding: 70px 24px; }
   .about-grid,
   .reviews-top,
@@ -1066,7 +1088,10 @@ footer a { color: var(--teal); text-decoration: none; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .research-card.glass { flex-direction: column; }
   .yt-card.glass { flex-direction: column; text-align: center; }
-  footer { flex-direction: column; gap: 8px; text-align: center; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 28px 24px; }
+
+  .hero-float-badge.top-right { right: -10px; }
+  .hero-float-badge.bottom-left { left: -10px; }
 }
 </style>
 </head>
@@ -1076,6 +1101,9 @@ footer a { color: var(--teal); text-decoration: none; }
 <div class="aurora-bg"></div>
 <div class="aurora-mid"></div>
 <div class="stars"></div>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <!-- Mobile toggle -->
 <button class="menu-toggle" id="menuToggle">☰</button>
@@ -1619,17 +1647,62 @@ footer a { color: var(--teal); text-decoration: none; }
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Mobile sidebar ─────────────── */
-const toggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
-toggle.onclick = () => {
-  sidebar.classList.toggle('open');
-  toggle.textContent = sidebar.classList.contains('open') ? '✕' : '☰';
-};
-document.addEventListener('click', e => {
-  if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
-    sidebar.classList.remove('open');
-    toggle.textContent = '☰';
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+
+  if (!toggle || !sidebar) return;
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+    toggle.innerHTML = '&#10005;';
+    document.body.style.overflow = 'hidden';
   }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+    toggle.innerHTML = '&#9776;';
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  // Touch support for mobile
+  toggle.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  if (overlay) {
+    overlay.addEventListener('click', closeSidebar);
+    overlay.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeSidebar();
+    });
+  }
+
+  // Close sidebar when a nav link is clicked (mobile)
+  document.querySelectorAll('.sidebar a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) closeSidebar();
+    });
+  });
 });
 
 /* ── Active nav link on scroll ──── */
