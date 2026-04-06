@@ -1106,7 +1106,7 @@ footer a { color: var(--teal); text-decoration: none; }
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <!-- Mobile toggle -->
-<button class="menu-toggle" id="menuToggle">☰</button>
+<button class="menu-toggle" id="menuToggle" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');if(s.classList.contains('open')){s.classList.remove('open');o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';}else{s.classList.add('open');o.classList.add('active');t.innerHTML='✕';document.body.style.overflow='hidden';}})()">☰</button>
 
 <!-- ─── SIDEBAR ─── -->
 <aside class="sidebar" id="sidebar">
