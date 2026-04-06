@@ -979,19 +979,17 @@ section {
 .form-group select option { background: #0a1020; }
 
 /* Star picker */
-.star-picker { display: flex; flex-direction: row-reverse; gap: 4px; margin-top: 4px; }
+.star-picker { display: flex; flex-direction: row; gap: 6px; margin-top: 6px; }
 .star-picker input { display: none; }
 .star-picker label {
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
-  color: rgba(255,255,255,0.15);
-  transition: color 0.2s;
+  color: #ddd;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 1;
 }
-.star-picker label:hover,
-.star-picker label:hover ~ label,
-.star-picker input:checked ~ label {
-  color: var(--gold);
-}
+.star-picker label:hover { transform: scale(1.2); }
+.star-picker label.active { color: var(--gold); }
 
 .full-width { grid-column: 1 / -1; }
 
@@ -1148,7 +1146,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <div class="sidebar-bottom">
     Gorakhpur, UP, India<br>
-    <a href="/cdn-cgi/l/email-protection#87f5eef3e2f4efe8edefe6bebfc7e0eae6eeeba9e4e8ea" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="295b405d4c5a41464341481011694e44484045074a4644">[email&#160;protected]</span></a>
+    <a href="/cdn-cgi/l/email-protection#90e2f9e4f5e3f8fffaf8f1a9a8d0f7fdf1f9fcbef3fffd" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="cab8a3beafb9a2a5a0a2abf3f28aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a>
   </div>
 </aside>
 
@@ -1569,13 +1567,14 @@ footer a { color: var(--teal); text-decoration: none; }
 
         <div class="form-group" style="margin-bottom:16px;">
           <label>YOUR RATING *</label>
-          <div class="star-picker">
-            <input type="radio" id="s5" name="rating" value="5"><label for="s5">★</label>
-            <input type="radio" id="s4" name="rating" value="4"><label for="s4">★</label>
-            <input type="radio" id="s3" name="rating" value="3"><label for="s3">★</label>
-            <input type="radio" id="s2" name="rating" value="2"><label for="s2">★</label>
-            <input type="radio" id="s1" name="rating" value="1"><label for="s1">★</label>
+          <div class="star-picker" id="starPicker">
+            <span class="star-btn" data-val="1">★</span>
+            <span class="star-btn" data-val="2">★</span>
+            <span class="star-btn" data-val="3">★</span>
+            <span class="star-btn" data-val="4">★</span>
+            <span class="star-btn" data-val="5">★</span>
           </div>
+          <input type="hidden" id="selectedRating" value="">
         </div>
 
         <div class="form-group" style="margin-bottom:20px;">
@@ -1605,7 +1604,7 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="contact-icon email">📧</div>
           <div>
             <h4>Email</h4>
-            <p><span class="__cf_email__" data-cfemail="5b29322f3e28333431333a62631b3c363a323775383436">[email&#160;protected]</span></p>
+            <p><span class="__cf_email__" data-cfemail="b0c2d9c4d5c3d8dfdad8d18988f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span></p>
           </div>
         </a>
         <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="contact-item glass">
@@ -1659,9 +1658,9 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <!-- FOOTER -->
   <footer>
-    <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2025</span>
+    <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2026</span>
     <span>
-      <a href="/cdn-cgi/l/email-protection#8efce7faebfde6e1e4e6efb7b6cee9e3efe7e2a0ede1e3"><span class="__cf_email__" data-cfemail="5b29322f3e28333431333a62631b3c363a323775383436">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#32405b4657415a5d585a530b0a72555f535b5e1c515d5f" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="eb99829f8e98838481838ad2d3ab8c868a8287c5888486">[email&#160;protected]</span></a>
       &nbsp;·&nbsp;
       <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank">YouTube @riteshojha1</a>
     </span>
@@ -1673,6 +1672,9 @@ footer a { color: var(--teal); text-decoration: none; }
 
 
 
+
+<!-- Supabase SDK -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"></script>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Mobile sidebar ─────────────── */
@@ -1748,31 +1750,38 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* ── Firebase v12 Review System ──────── */
-</script>
+/* ── Supabase Review System ──────── */
+const SUPABASE_URL = 'https://hekrgjagvfvmpyegjfze.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_RMpKG63wnnTsIkWzf8d_6w_y5wQsdEu';
+const sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-<script type="module">
-import { initializeApp }              from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-import { getAnalytics }               from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
-import {
-  getFirestore, collection,
-  addDoc, query, orderBy,
-  onSnapshot, serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+// ── Star picker JS ──────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-btn');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const val = parseInt(star.dataset.val);
+      document.getElementById('selectedRating').value = val;
+      stars.forEach(s => {
+        s.classList.toggle('active', parseInt(s.dataset.val) <= val);
+      });
+    });
+    star.addEventListener('mouseover', () => {
+      const val = parseInt(star.dataset.val);
+      stars.forEach(s => {
+        s.style.color = parseInt(s.dataset.val) <= val ? 'var(--gold)' : '#ddd';
+      });
+    });
+    star.addEventListener('mouseout', () => {
+      const selected = parseInt(document.getElementById('selectedRating').value) || 0;
+      stars.forEach(s => {
+        s.style.color = parseInt(s.dataset.val) <= selected ? 'var(--gold)' : '#ddd';
+      });
+    });
+  });
+});
 
-const firebaseConfig = {
-  apiKey:            "AIzaSyBjMYCg0VNWiugMlmBvo6mquo266GU8jb4",
-  authDomain:        "riteshojha-reviews.firebaseapp.com",
-  projectId:         "riteshojha-reviews",
-  storageBucket:     "riteshojha-reviews.firebasestorage.app",
-  messagingSenderId: "573649221065",
-  appId:             "1:573649221065:web:0e4f7edd9a368d74f9e418",
-  measurementId:     "G-6T50CWPRR5"
-};
 
-const app       = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db        = getFirestore(app);
 
 const colors = ['#60a5fa','#22d3ee','#f59e0b','#a78bfa','#4ade80','#f87171','#fb923c'];
 
@@ -1805,10 +1814,11 @@ function renderReviews(reviewsArr) {
     div.innerHTML = `
       <div class="review-header">
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:${c}22;color:${c};">${initials(r.name)}</div>
+          <div class="reviewer-avatar" style="background:${c}22;color:${c};
+">${initials(r.name)}</div>
           <div class="reviewer-info">
             <h4>${r.name}</h4>
-            <p>${r.subject || 'Student'} · ${timeAgo(r.createdAt)}</p>
+            <p>${r.subject || 'Student'} · ${timeAgo(r.created_at)}</p>
           </div>
         </div>
         <div class="review-stars">${starsHtml(r.rating)}</div>
@@ -1835,21 +1845,30 @@ function updateStats(reviewsArr) {
   });
 }
 
-// Real-time listener — all visitors see new reviews instantly
-const q = query(collection(db, 'reviews'), orderBy('createdAt', 'desc'));
-onSnapshot(q, snapshot => {
-  const reviewsArr = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-  renderReviews(reviewsArr);
-}, err => console.error('Firestore error:', err));
+// Load reviews from Supabase
+async function loadReviews() {
+  const { data, error } = await sbClient
+    .from('reviews')
+    .select('*')
+    .order('created_at', { ascending: false });
+  if (error) { console.error('Supabase error:', error); return; }
+  renderReviews(data || []);
+}
+loadReviews();
+
+// Real-time: reload when new review added
+sbClient.channel('reviews-channel')
+  .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'reviews' }, () => loadReviews())
+  .subscribe();
 
 // Expose submitReview globally so onclick= in HTML can reach it
-window.submitReview = async function () {
+async function submitReview() {
   const name     = document.getElementById('rName').value.trim();
   const subj     = document.getElementById('rSubject').value.trim();
   const text     = document.getElementById('rText').value.trim();
-  const ratingEl = document.querySelector('input[name="rating"]:checked');
+  const ratingVal = document.getElementById('selectedRating').value;
 
-  if (!name || !text || !ratingEl) {
+  if (!name || !text || !ratingVal) {
     alert('Please fill in your name, rating, and review before submitting.');
     return;
   }
@@ -1859,19 +1878,20 @@ window.submitReview = async function () {
   btn.textContent = 'Submitting…';
 
   try {
-    await addDoc(collection(db, 'reviews'), {
+    const { error } = await sbClient.from('reviews').insert([{
       name,
-      subject:   subj,
+      subject: subj,
       text,
-      rating:    parseInt(ratingEl.value),
-      createdAt: serverTimestamp()
-    });
+      rating:  parseInt(ratingVal)
+    }]);
+    if (error) throw error;
+    loadReviews();
 
     document.getElementById('rName').value    = '';
     document.getElementById('rSubject').value = '';
     document.getElementById('rText').value    = '';
-    const checkedStar = document.querySelector('input[name="rating"]:checked');
-    if (checkedStar) checkedStar.checked = false;
+    document.getElementById('selectedRating').value = '';
+    document.querySelectorAll('.star-btn').forEach(s => s.classList.remove('active'));
 
     const successMsg = document.getElementById('successMsg');
     successMsg.style.display = 'block';
@@ -1886,19 +1906,9 @@ window.submitReview = async function () {
   }
 };
 
+
 /* ── Contact form (placeholder) ── */
 function sendMsg() {
   const name = document.getElementById('cName').value.trim();
   const email = document.getElementById('cEmail').value.trim();
-  const msg = document.getElementById('cMsg').value.trim();
-  if (!name || !email || !msg) { alert('Please fill all fields.'); return; }
-  document.getElementById('msgSuccess').style.display = 'block';
-  setTimeout(() => { document.getElementById('msgSuccess').style.display = 'none'; }, 4000);
-  document.getElementById('cName').value = '';
-  document.getElementById('cEmail').value = '';
-  document.getElementById('cSubject').value = '';
-  document.getElementById('cMsg').value = '';
-}
-</script>
-</body>
-</html>
+  const msg = document.getEl
