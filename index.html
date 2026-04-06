@@ -180,6 +180,29 @@ body {
   padding-top: 16px;
 }
 
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.8);
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  .sidebar-close { display: flex; }
+  .sidebar { position: fixed; }
+}
+
 /* ─── MOBILE TOGGLE ─────────────────────────────────── */
 .menu-toggle {
   display: none;
@@ -1110,6 +1133,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
 <!-- ─── SIDEBAR ─── -->
 <aside class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');s.classList.remove('open');if(o)o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';})()">✕</button>
   <div class="sidebar-logo">Ritesh Ojha</div>
   <div class="sidebar-tagline">Physics Educator</div>
 
@@ -1124,7 +1148,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <div class="sidebar-bottom">
     Gorakhpur, UP, India<br>
-    <a href="/cdn-cgi/l/email-protection#8ffde6fbeafce7e0e5e7eeb6b7cfe8e2eee6e3a1ece0e2" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="acdec5d8c9dfc4c3c6c4cd9594eccbc1cdc5c082cfc3c1">[email&#160;protected]</span></a>
+    <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a>
   </div>
 </aside>
 
