@@ -979,10 +979,10 @@ section {
 .form-group select option { background: #0a1020; }
 
 /* Star picker */
-.star-picker { display: flex; flex-direction: row; gap: 6px; margin-top: 6px; }
+.star-picker { display: flex; flex-direction: row; gap: 10px; margin-top: 6px; }
 .star-picker input { display: none; }
 .star-picker label {
-  font-size: 32px;
+  font-size: 36px;
   cursor: pointer;
   color: #ddd;
   transition: color 0.15s, transform 0.15s;
@@ -990,6 +990,20 @@ section {
 }
 .star-picker label:hover { transform: scale(1.2); }
 .star-picker label.active { color: var(--gold); }
+
+.star-btn {
+  font-size: 40px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 1;
+  padding: 4px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+.star-btn.active { color: var(--gold); }
+.star-btn:hover { transform: scale(1.2); }
 
 .full-width { grid-column: 1 / -1; }
 
@@ -1758,14 +1772,26 @@ const sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // ── Star picker JS ──────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const stars = document.querySelectorAll('.star-btn');
+
+  function selectStar(val) {
+    document.getElementById('selectedRating').value = val;
+    stars.forEach(s => {
+      const active = parseInt(s.dataset.val) <= val;
+      s.classList.toggle('active', active);
+      s.style.color = active ? 'var(--gold)' : '#ddd';
+    });
+  }
+
   stars.forEach(star => {
     star.addEventListener('click', () => {
-      const val = parseInt(star.dataset.val);
-      document.getElementById('selectedRating').value = val;
-      stars.forEach(s => {
-        s.classList.toggle('active', parseInt(s.dataset.val) <= val);
-      });
+      selectStar(parseInt(star.dataset.val));
     });
+
+    star.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      selectStar(parseInt(star.dataset.val));
+    }, { passive: false });
+
     star.addEventListener('mouseover', () => {
       const val = parseInt(star.dataset.val);
       stars.forEach(s => {
