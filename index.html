@@ -732,15 +732,7 @@ footer a { color: var(--teal); text-decoration: none; }
 
       <div class="hero-image-wrap">
         <div class="hero-img-frame">
-          <img src="profile.jpg" alt="Physics Educator" 
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-            style="position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:50%;object-fit:cover;z-index:2;">
-          <div style="display:none;position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:50%;z-index:2;
-            background:linear-gradient(135deg,rgba(184,134,11,0.2),rgba(14,116,144,0.2));
-            align-items:center;justify-content:center;flex-direction:column;gap:6px;text-align:center;">
-            <div style="font-size:64px;">⚛️</div>
-            <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;">PHYSICS</div>
-          </div>
+          <img src="profile.jpg" alt="Ritesh Ojha — Physics Educator Gorakhpur">
           <div class="hero-float-badge top-right">⚛️ M.Sc Physics</div>
           <div class="hero-float-badge bottom-left">📺 GyanMitra</div>
         </div>
@@ -1395,8 +1387,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelectorAll('.sidebar a, .sidebar-subscribe-btn').forEach(function(link) {
     link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) closeSidebar();
+    });
+    link.addEventListener('touchend', function(e) {
       if (window.innerWidth <= 900) {
-        setTimeout(closeSidebar, 100);
+        // Small delay so the click registers before closing
+        setTimeout(closeSidebar, 80);
       }
     });
   });
