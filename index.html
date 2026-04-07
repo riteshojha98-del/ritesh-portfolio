@@ -3,7 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ritesh Ojha — Physics Educator</title>
+
+<!-- ── SEO META TAGS ── -->
+<title>Ritesh Ojha — Physics Educator | GyanMitra | Gorakhpur</title>
+<meta name="description" content="Ritesh Ojha is a Physics Educator, M.Sc student at DDU Gorakhpur University, and founder of GyanMitra YouTube channel. Teaching Physics for Class 9–12, NEET & JEE. Based in Gorakhpur, UP, India.">
+<meta name="keywords" content="Ritesh Ojha, Physics Teacher, GyanMitra, Gorakhpur Physics Tutor, Class 9 10 11 12 Physics, NEET Physics, JEE Physics, DDU Gorakhpur, Physics Educator India, Online Physics Tutor">
+<meta name="author" content="Ritesh Ojha">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://riteshojha.vercel.app/">
+
+<!-- Open Graph (for sharing on social/WhatsApp/Google preview) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ritesh Ojha — Physics Educator | GyanMitra">
+<meta property="og:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE. M.Sc Physics, DDU Gorakhpur. Founder of GyanMitra YouTube Channel.">
+<meta property="og:url" content="https://riteshojha.vercel.app/">
+<meta property="og:image" content="https://riteshojha.vercel.app/profile.jpg">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Ritesh Ojha — Physics Educator">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ritesh Ojha — Physics Educator | GyanMitra">
+<meta name="twitter:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE.">
+<meta name="twitter:image" content="https://riteshojha.vercel.app/profile.jpg">
+
+<!-- Structured Data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ritesh Ojha",
+  "jobTitle": "Physics Educator",
+  "description": "Physics teacher for Class 9-12, NEET and JEE. M.Sc Physics student at DDU Gorakhpur University. Founder of GyanMitra YouTube channel.",
+  "url": "https://riteshojha.vercel.app/",
+  "email": "riteshojha98@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gorakhpur",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://youtube.com/@riteshojha1",
+    "https://www.instagram.com/iam_riteshojha1"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -34,22 +80,13 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── AURORA BACKGROUND ────────────────────────────── */
+/* ─── AURORA BACKGROUND ─────────────────────────────── */
 .aurora-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
+  position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
 }
-.aurora-bg::before,
-.aurora-bg::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.52;
-  animation: drift 18s ease-in-out infinite alternate;
+.aurora-bg::before, .aurora-bg::after {
+  content: ''; position: absolute; border-radius: 50%; filter: blur(120px);
+  opacity: 0.52; animation: drift 18s ease-in-out infinite alternate;
 }
 .aurora-bg::before {
   width: 700px; height: 700px;
@@ -59,28 +96,18 @@ body {
 .aurora-bg::after {
   width: 600px; height: 600px;
   background: radial-gradient(circle, #fde68a, transparent 60%);
-  bottom: -200px; right: -100px;
-  animation-delay: -9s;
-  opacity: 0.28;
+  bottom: -200px; right: -100px; animation-delay: -9s; opacity: 0.28;
 }
 .aurora-mid {
-  position: fixed;
-  top: 30%;
-  left: 45%;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fef3c7, transparent 60%);
-  filter: blur(130px);
-  opacity: 0.22;
+  position: fixed; top: 30%; left: 45%; width: 500px; height: 500px;
+  border-radius: 50%; background: radial-gradient(circle, #fef3c7, transparent 60%);
+  filter: blur(130px); opacity: 0.22;
   animation: drift 22s ease-in-out infinite alternate-reverse;
-  pointer-events: none;
-  z-index: 0;
+  pointer-events: none; z-index: 0;
 }
 
-/* Stars */
 .stars {
-  position: fixed;
-  inset: 0;
+  position: fixed; inset: 0;
   background-image:
     radial-gradient(1px 1px at 10% 20%, rgba(180,140,40,0.18) 0%, transparent 100%),
     radial-gradient(1px 1px at 80% 10%, rgba(180,140,40,0.13) 0%, transparent 100%),
@@ -91,11 +118,8 @@ body {
     radial-gradient(1px 1px at 15% 55%, rgba(180,140,40,0.10) 0%, transparent 100%),
     radial-gradient(1.5px 1.5px at 70% 90%, rgba(180,140,40,0.13) 0%, transparent 100%),
     radial-gradient(1px 1px at 40% 15%, rgba(180,140,40,0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 25% 45%, rgba(180,140,40,0.10) 0%, transparent 100%),
-    radial-gradient(1px 1px at 55% 75%, rgba(180,140,40,0.12) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 85% 40%, rgba(180,140,40,0.10) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
+    radial-gradient(1px 1px at 25% 45%, rgba(180,140,40,0.10) 0%, transparent 100%);
+  pointer-events: none; z-index: 0;
 }
 
 @keyframes drift {
@@ -105,1026 +129,538 @@ body {
 
 /* ─── SIDEBAR ───────────────────────────────────────── */
 .sidebar {
-  position: fixed;
-  left: 0; top: 0;
-  width: 240px;
-  height: 100%;
-  background: rgba(255, 252, 235, 0.96);
-  backdrop-filter: blur(20px);
-  border-right: 1px solid var(--border);
-  padding: 40px 24px;
-  z-index: 300;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  position: fixed; left: 0; top: 0; width: 240px; height: 100%;
+  background: rgba(255, 252, 235, 0.96); backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border); padding: 40px 24px;
+  z-index: 300; display: flex; flex-direction: column; gap: 6px;
   transition: transform 0.3s ease;
 }
 
 .sidebar-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 900;
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900;
   background: linear-gradient(135deg, var(--gold), var(--teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 10px; letter-spacing: 0.5px;
 }
-
 .sidebar-tagline {
-  font-size: 10px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
+  font-size: 10px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 30px;
+  border-bottom: 1px solid var(--border); padding-bottom: 20px;
 }
-
 .sidebar a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 13.5px;
-  font-weight: 500;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-  position: relative;
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+  color: var(--muted); text-decoration: none; font-size: 13.5px;
+  font-weight: 500; border-radius: 10px; transition: all 0.25s ease; position: relative;
 }
-
 .sidebar a .nav-icon { font-size: 16px; }
-
-.sidebar a:hover, .sidebar a.active {
-  background: rgba(255,255,255,0.06);
-  color: var(--text);
-}
+.sidebar a:hover, .sidebar a.active { background: rgba(255,255,255,0.06); color: var(--text); }
 .sidebar a:hover::before, .sidebar a.active::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 20%; bottom: 20%;
-  width: 3px;
-  border-radius: 4px;
-  background: linear-gradient(var(--gold), var(--teal));
+  content: ''; position: absolute; left: 0; top: 20%; bottom: 20%;
+  width: 3px; border-radius: 4px; background: linear-gradient(var(--gold), var(--teal));
 }
 
 .sidebar-bottom {
-  margin-top: auto;
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
+  margin-top: auto; font-size: 11px; color: var(--muted); text-align: center;
+  border-top: 1px solid var(--border); padding-top: 16px;
 }
-
 .sidebar-close {
-  display: none;
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.8);
-  color: var(--text);
-  font-size: 16px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  display: none; position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.8); color: var(--text); font-size: 16px;
+  cursor: pointer; align-items: center; justify-content: center; z-index: 10;
 }
-
 @media (max-width: 900px) {
   .sidebar-close { display: flex; }
   .sidebar { position: fixed; }
 }
 
+/* ─── SUBSCRIBE BUTTON (sidebar) ─────────────────── */
+.sidebar-subscribe-btn {
+  display: flex; align-items: center; gap: 10px; padding: 11px 14px;
+  background: linear-gradient(135deg, rgba(184,134,11,0.15), rgba(14,116,144,0.15));
+  border: 1px solid rgba(184,134,11,0.3); border-radius: 10px;
+  color: var(--gold); font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: all 0.25s; margin-top: 4px; text-decoration: none;
+}
+.sidebar-subscribe-btn:hover {
+  background: linear-gradient(135deg, rgba(184,134,11,0.25), rgba(14,116,144,0.25));
+  transform: translateY(-1px);
+}
+
 /* ─── MOBILE TOGGLE ─────────────────────────────────── */
 .menu-toggle {
-  display: none;
-  position: fixed;
-  top: 16px; left: 16px;
-  z-index: 300;
-  background: rgba(255,252,235,0.97);
-  border: 1px solid var(--border);
-  color: var(--text);
-  width: 44px; height: 44px;
-  border-radius: 10px;
-  font-size: 22px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
+  display: none; position: fixed; top: 16px; left: 16px; z-index: 300;
+  background: rgba(255,252,235,0.97); border: 1px solid var(--border);
+  color: var(--text); width: 44px; height: 44px; border-radius: 10px;
+  font-size: 22px; cursor: pointer; align-items: center; justify-content: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
 /* ─── MAIN CONTENT ──────────────────────────────────── */
-.main {
-  margin-left: 240px;
-  position: relative;
-  z-index: 1;
-}
+.main { margin-left: 240px; position: relative; z-index: 1; }
 
 /* ─── HERO ──────────────────────────────────────────── */
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 60px;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 80px 60px; position: relative; overflow: hidden;
 }
-
 .hero-glow {
-  position: absolute;
-  width: 600px; height: 600px;
-  border-radius: 50%;
+  position: absolute; width: 600px; height: 600px; border-radius: 50%;
   background: radial-gradient(circle, rgba(251,191,36,0.10), transparent 65%);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+  top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
 }
-
 .hero-inner {
-  max-width: 780px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  max-width: 780px; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
 }
-
 .hero-text { animation: fadeUp 0.8s ease both; }
-
 .hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(184,134,11,0.10);
-  border: 1px solid rgba(184,134,11,0.3);
-  color: var(--gold);
-  padding: 5px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(184,134,11,0.10); border: 1px solid rgba(184,134,11,0.3);
+  color: var(--gold); padding: 5px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 24px;
 }
-
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 54px;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 6px;
+  font-family: 'Playfair Display', serif; font-size: 54px;
+  font-weight: 900; line-height: 1.1; margin-bottom: 6px;
 }
-
 .hero h1 em {
   font-style: normal;
   background: linear-gradient(135deg, var(--gold), var(--teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
+.hero-sub { font-size: 16px; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
+.hero-meta { display: flex; flex-direction: column; gap: 8px; margin-bottom: 36px; }
+.hero-meta span { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-sub {
-  font-size: 16px;
-  color: var(--muted);
-  margin-bottom: 32px;
-  line-height: 1.6;
-}
-
-.hero-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 36px;
-}
-
-.hero-meta span {
-  font-size: 13px;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
+/* Buttons */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  cursor: pointer;
-  border: none;
-  font-family: 'DM Sans', sans-serif;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 10px; font-size: 14px;
+  font-weight: 600; text-decoration: none; transition: all 0.25s ease;
+  cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
 }
-
 .btn-primary {
   background: linear-gradient(135deg, #b8860b, var(--teal2));
-  color: white;
-  box-shadow: 0 8px 30px rgba(184,134,11,0.25);
+  color: white; box-shadow: 0 8px 30px rgba(184,134,11,0.25);
 }
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(184,134,11,0.40);
-}
-
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,134,11,0.40); }
 .btn-secondary {
-  background: rgba(184,134,11,0.07);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: rgba(184,134,11,0.07); border: 1px solid var(--border); color: var(--text);
 }
-.btn-secondary:hover {
-  background: rgba(184,134,11,0.13);
-  transform: translateY(-2px);
-}
-
+.btn-secondary:hover { background: rgba(184,134,11,0.13); transform: translateY(-2px); }
 .btn-yt {
   background: linear-gradient(135deg, #ff0000, #cc0000);
-  color: white;
-  box-shadow: 0 8px 30px rgba(255,0,0,0.3);
+  color: white; box-shadow: 0 8px 30px rgba(255,0,0,0.3);
 }
-.btn-yt:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(255,0,0,0.45);
+.btn-yt:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,0,0,0.45); }
+.btn-resume {
+  background: linear-gradient(135deg, #0e7490, #0891b2);
+  color: white; box-shadow: 0 8px 30px rgba(14,116,144,0.3);
 }
+.btn-resume:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(14,116,144,0.45); }
 
 /* Hero Image */
-.hero-image-wrap {
-  display: flex;
-  justify-content: center;
-  animation: fadeUp 0.8s 0.2s ease both;
-}
-
-.hero-img-frame {
-  position: relative;
-  width: 280px; height: 280px;
-}
-
+.hero-image-wrap { display: flex; flex-direction: column; align-items: center; gap: 18px; animation: fadeUp 0.8s 0.2s ease both; }
+.hero-img-frame { position: relative; width: 280px; height: 280px; }
 .hero-img-frame::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
+  content: ''; position: absolute; inset: -3px; border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), var(--teal), #2563eb);
-  z-index: 0;
-  animation: spin 8s linear infinite;
+  z-index: 0; animation: spin 8s linear infinite;
 }
 .hero-img-frame::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border-radius: 50%;
-  background: var(--bg);
-  z-index: 1;
+  content: ''; position: absolute; inset: 3px;
+  border-radius: 50%; background: var(--bg); z-index: 1;
 }
-
 .hero-img-frame img {
-  position: absolute;
-  inset: 8px;
-  width: calc(100% - 16px);
-  height: calc(100% - 16px);
-  border-radius: 50%;
-  object-fit: cover;
-  z-index: 2;
+  position: absolute; inset: 8px; width: calc(100% - 16px);
+  height: calc(100% - 16px); border-radius: 50%; object-fit: cover; z-index: 2;
 }
-
 .hero-float-badge {
-  position: absolute;
-  background: rgba(255, 252, 235, 0.95);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 10px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  z-index: 10;
-  white-space: nowrap;
+  position: absolute; background: rgba(255, 252, 235, 0.95);
+  border: 1px solid var(--border); backdrop-filter: blur(12px);
+  border-radius: 12px; padding: 10px 14px; font-size: 12px; font-weight: 600;
+  z-index: 10; white-space: nowrap;
 }
-.hero-float-badge.top-right {
-  top: 10px; right: -20px;
-  color: var(--gold);
+.hero-float-badge.top-right { top: 10px; right: -20px; color: var(--gold); }
+.hero-float-badge.bottom-left { bottom: 20px; left: -30px; color: var(--teal); }
+
+/* Resume link below photo */
+.hero-resume-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, rgba(14,116,144,0.12), rgba(184,134,11,0.12));
+  border: 1px solid rgba(14,116,144,0.3); border-radius: 12px;
+  padding: 10px 20px; font-size: 13px; font-weight: 600;
+  color: var(--teal); text-decoration: none; transition: all 0.25s;
 }
-.hero-float-badge.bottom-left {
-  bottom: 20px; left: -30px;
-  color: var(--teal);
+.hero-resume-link:hover {
+  background: linear-gradient(135deg, rgba(14,116,144,0.22), rgba(184,134,11,0.22));
+  transform: translateY(-2px);
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* ─── SECTION BASE ──────────────────────────────────── */
-section {
-  padding: 100px 60px;
-  border-top: 1px solid var(--border);
-}
-
+section { padding: 100px 60px; border-top: 1px solid var(--border); }
 .section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 12px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
 }
-.section-label::before {
-  content: '';
-  width: 20px; height: 2px;
-  background: var(--teal);
-  border-radius: 2px;
-}
-
+.section-label::before { content: ''; width: 20px; height: 2px; background: var(--teal); border-radius: 2px; }
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 900;
-  margin-bottom: 14px;
-  line-height: 1.15;
+  font-family: 'Playfair Display', serif; font-size: 42px;
+  font-weight: 900; margin-bottom: 14px; line-height: 1.15;
 }
-
 .section-title em {
   font-style: normal;
   background: linear-gradient(135deg, var(--gold), var(--teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-
-.section-desc {
-  color: var(--muted);
-  font-size: 15px;
-  max-width: 540px;
-  line-height: 1.7;
-  margin-bottom: 50px;
-}
+.section-desc { color: var(--muted); font-size: 15px; max-width: 540px; line-height: 1.7; margin-bottom: 50px; }
 
 /* ─── GLASS CARD ────────────────────────────────────── */
 .glass {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); backdrop-filter: blur(12px); transition: all 0.3s ease;
 }
 .glass:hover {
-  background: rgba(255,248,210,0.85);
-  border-color: rgba(184,134,11,0.28);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(180,140,40,0.12);
+  background: rgba(255,248,210,0.85); border-color: rgba(184,134,11,0.28);
+  transform: translateY(-5px); box-shadow: 0 20px 60px rgba(180,140,40,0.12);
 }
 
 /* ─── ABOUT ─────────────────────────────────────────── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .about-main.glass { padding: 40px; }
-
-.about-main p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 16px;
-}
+.about-main p { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 16px; }
 .about-main p b { color: var(--text); }
-
 .about-side { display: flex; flex-direction: column; gap: 16px; }
-
-.info-card.glass {
-  padding: 20px 24px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.info-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
+.info-card.glass { padding: 20px 24px; display: flex; align-items: flex-start; gap: 16px; }
+.info-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
 .info-icon.blue { background: rgba(37,99,235,0.15); }
 .info-icon.gold { background: rgba(245,158,11,0.15); }
 .info-icon.teal { background: rgba(6,182,212,0.15); }
-
 .info-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
 .info-card p { font-size: 12px; color: var(--muted); }
+.info-card a { color: var(--teal); text-decoration: none; }
 
 /* ─── STATS ROW ─────────────────────────────────────── */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 60px;
-}
-
-.stat-card.glass {
-  padding: 30px 20px;
-  text-align: center;
-}
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 60px; }
+.stat-card.glass { padding: 30px 20px; text-align: center; }
 .stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  font-weight: 900;
+  font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900;
   background: linear-gradient(135deg, var(--gold), var(--teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
 /* ─── EDUCATION TIMELINE ────────────────────────────── */
 .timeline {
-  position: relative;
-  padding-left: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  position: relative; padding-left: 36px; display: flex; flex-direction: column; gap: 0;
 }
-
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 7px; top: 12px; bottom: 12px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--gold), var(--teal), transparent);
-  border-radius: 2px;
+  content: ''; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--teal), transparent); border-radius: 2px;
 }
-
-.tl-item {
-  position: relative;
-  padding: 0 0 40px 20px;
-}
-
+.tl-item { position: relative; padding: 0 0 40px 20px; }
 .tl-item::before {
-  content: '';
-  position: absolute;
-  left: -29px; top: 12px;
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  background: var(--bg);
-  z-index: 1;
+  content: ''; position: absolute; left: -29px; top: 12px;
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--gold); background: var(--bg); z-index: 1;
 }
-
 .tl-item:last-child { padding-bottom: 0; }
-
 .tl-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.2);
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 10px;
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gold);
+  background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
 }
-
-.tl-card.glass {
-  padding: 24px 28px;
-}
-.tl-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-.tl-card .institution {
-  font-size: 13px;
-  color: var(--teal);
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.tl-card .year {
-  font-size: 12px;
-  color: var(--muted);
-}
+.tl-card.glass { padding: 24px 28px; }
+.tl-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.tl-card .institution { font-size: 13px; color: var(--teal); font-weight: 600; margin-bottom: 4px; }
+.tl-card .year { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.tl-card .subjects { font-size: 12px; color: var(--muted); line-height: 1.6; }
 
 /* ─── SKILLS ────────────────────────────────────────── */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.skill-card.glass {
-  padding: 28px 24px;
-  text-align: center;
-}
-
-.skill-icon {
-  font-size: 36px;
-  margin-bottom: 14px;
-  display: block;
-}
-.skill-card h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-.skill-card p {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.skill-card.glass { padding: 28px 24px; text-align: center; }
+.skill-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+.skill-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.skill-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
 .skill-bar-wrap { margin-top: 14px; text-align: left; }
-.skill-bar-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 5px;
-}
+.skill-bar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 5px; }
 .skill-bar {
-  height: 4px;
-  background: rgba(184,134,11,0.12);
-  height: 100%;
-  border-radius: 4px;
+  height: 4px; background: rgba(184,134,11,0.12); border-radius: 4px; overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%; border-radius: 4px;
   background: linear-gradient(90deg, var(--gold), var(--teal));
-  transition: width 1.5s ease;
 }
 
 /* ─── RESEARCH ──────────────────────────────────────── */
-.research-card.glass {
-  padding: 40px;
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
-
+.research-card.glass { padding: 40px; display: flex; gap: 30px; align-items: flex-start; }
 .research-icon {
-  width: 60px; height: 60px;
-  border-radius: 14px;
+  width: 60px; height: 60px; border-radius: 14px;
   background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(6,182,212,0.2));
-  border: 1px solid rgba(37,99,235,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  flex-shrink: 0;
+  border: 1px solid rgba(37,99,235,0.3); display: flex; align-items: center;
+  justify-content: center; font-size: 28px; flex-shrink: 0;
 }
-
-.research-body h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-.research-body p {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.research-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-.tag {
-  display: inline-flex;
-  align-items: center;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
-}
+.research-body h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+.research-body p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+.research-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.tag { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
 .tag.blue { background: rgba(37,99,235,0.15); color: #60a5fa; border: 1px solid rgba(37,99,235,0.2); }
 .tag.teal { background: rgba(6,182,212,0.15); color: var(--teal); border: 1px solid rgba(6,182,212,0.2); }
 .tag.gold { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.2); }
 
 /* ─── AWARDS ────────────────────────────────────────── */
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.award-card.glass {
-  overflow: hidden;
-}
-
-.award-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
+.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.award-card.glass { overflow: hidden; }
+.award-card img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease; }
 .award-card:hover img { transform: scale(1.05); }
-
-.award-card-body {
-  padding: 20px 24px;
-}
-.award-card-body h4 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.award-card-body p {
-  font-size: 12px;
-  color: var(--muted);
-}
+.award-card-body { padding: 20px 24px; }
+.award-card-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.award-card-body p { font-size: 12px; color: var(--muted); }
 
 /* ─── YOUTUBE ────────────────────────────────────────── */
-.yt-card.glass {
-  padding: 40px;
-  display: flex;
-  gap: 36px;
-  align-items: center;
-}
-
-.yt-logo {
-  width: 100px; height: 100px;
-  border-radius: 20px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid rgba(255,0,0,0.3);
-}
-
-.yt-body h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.yt-body p {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-.yt-body .yt-stats {
-  display: flex;
-  gap: 28px;
-  margin-bottom: 24px;
-}
+.yt-card.glass { padding: 40px; display: flex; gap: 36px; align-items: center; }
+.yt-logo { width: 100px; height: 100px; border-radius: 20px; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(255,0,0,0.3); }
+.yt-body h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+.yt-body p { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.7; }
+.yt-body .yt-stats { display: flex; gap: 28px; margin-bottom: 24px; }
 .yt-stat { text-align: center; }
-.yt-stat .num {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #ff4444;
-}
+.yt-stat .num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #ff4444; }
 .yt-stat .lbl { font-size: 11px; color: var(--muted); }
 
-/* ─── QUOTE ─────────────────────────────────────────── */
-.quote-section {
+/* ─── SUBSCRIPTION SECTION ───────────────────────────── */
+.subscribe-section {
   padding: 80px 60px;
-  text-align: center;
   border-top: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(184,134,11,0.04), rgba(14,116,144,0.04));
+}
+.subscribe-card.glass {
+  padding: 50px 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.sub-logo {
+  width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; box-shadow: 0 10px 40px rgba(184,134,11,0.3);
+  animation: pulse-sub 2.5s ease-in-out infinite;
+}
+@keyframes pulse-sub {
+  0%, 100% { box-shadow: 0 10px 40px rgba(184,134,11,0.3); }
+  50% { box-shadow: 0 14px 55px rgba(184,134,11,0.55); transform: scale(1.05); }
+}
+.subscribe-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; margin-bottom: 10px;
+}
+.subscribe-card .sub-price {
+  font-size: 42px; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 6px; line-height: 1;
+}
+.subscribe-card .sub-desc {
+  font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.7; max-width: 400px; margin-left: auto; margin-right: auto;
+}
+.sub-features {
+  display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left;
+  background: rgba(255,255,255,0.4); border-radius: 12px; padding: 20px 24px; border: 1px solid var(--border);
+}
+.sub-feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); }
+.sub-feature span.icon { font-size: 18px; }
+.btn-subscribe {
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  color: white; font-size: 16px; font-weight: 700; padding: 16px 36px;
+  border-radius: 14px; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 8px 30px rgba(184,134,11,0.35); transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-subscribe:hover { transform: translateY(-3px); box-shadow: 0 14px 45px rgba(184,134,11,0.5); }
+
+/* ─── UPI MODAL ───────────────────────────────────────── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(6px);
+  z-index: 1000; align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 20px;
+  padding: 44px 36px; max-width: 420px; width: 90%; text-align: center;
+  animation: modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
   position: relative;
 }
-
-.quote-mark {
-  font-family: 'Playfair Display', serif;
-  font-size: 80px;
-  line-height: 0.5;
-  color: var(--gold);
-  opacity: 0.4;
-  display: block;
-  margin-bottom: 20px;
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
-
-.quote-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-style: italic;
-  color: var(--text);
-  max-width: 700px;
-  margin: 0 auto 16px;
-  line-height: 1.6;
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(184,134,11,0.1); border: 1px solid var(--border);
+  color: var(--text); font-size: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
 }
-
-.quote-author {
-  font-size: 13px;
-  color: var(--muted);
+.modal-logo {
+  width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
 }
+.modal-box h3 {
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; margin-bottom: 6px;
+}
+.modal-box .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.upi-box {
+  background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(14,116,144,0.08));
+  border: 2px solid rgba(184,134,11,0.3); border-radius: 14px; padding: 20px;
+  margin-bottom: 18px;
+}
+.upi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; font-weight: 700; }
+.upi-id {
+  font-family: monospace; font-size: 20px; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.5px;
+}
+.upi-amount {
+  font-size: 28px; font-weight: 900; margin: 10px 0 4px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.upi-note { font-size: 11px; color: var(--muted); }
+.upi-steps { text-align: left; margin-bottom: 18px; }
+.upi-step { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.upi-step .step-num {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--gold);
+  color: white; font-size: 11px; font-weight: 700; display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.btn-copy {
+  background: rgba(184,134,11,0.12); border: 1px solid rgba(184,134,11,0.3);
+  color: var(--gold); font-size: 13px; font-weight: 600; padding: 10px 20px;
+  border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-copy:hover { background: rgba(184,134,11,0.2); }
+
+/* ─── QUOTE ─────────────────────────────────────────── */
+.quote-section { padding: 80px 60px; text-align: center; border-top: 1px solid var(--border); position: relative; }
+.quote-mark { font-family: 'Playfair Display', serif; font-size: 80px; line-height: 0.5; color: var(--gold); opacity: 0.4; display: block; margin-bottom: 20px; }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic; color: var(--text); max-width: 700px; margin: 0 auto 16px; line-height: 1.6; }
+.quote-author { font-size: 13px; color: var(--muted); }
 
 /* ─── REVIEWS ────────────────────────────────────────── */
-.reviews-top {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
-  margin-bottom: 50px;
-  align-items: start;
-}
-
-.rating-summary.glass {
-  padding: 36px 28px;
-  text-align: center;
-}
-
+.reviews-top { display: grid; grid-template-columns: 280px 1fr; gap: 40px; margin-bottom: 50px; align-items: start; }
+.rating-summary.glass { padding: 36px 28px; text-align: center; }
 .rating-big {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 900;
+  font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 900;
   background: linear-gradient(135deg, var(--gold), #fde68a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 6px;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin-bottom: 6px;
 }
-
 .stars-display { font-size: 22px; margin-bottom: 8px; letter-spacing: 2px; }
-
 .rating-count { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
-
-.bar-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .bar-row-label { font-size: 12px; color: var(--muted); width: 28px; text-align: right; }
-.bar-row-bar {
-  flex: 1;
-  height: 6px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.bar-row-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--gold), #fde68a);
-  border-radius: 4px;
-}
+.bar-row-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+.bar-row-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #fde68a); border-radius: 4px; }
 .bar-row-count { font-size: 11px; color: var(--muted); width: 20px; }
-
 .review-cards { display: flex; flex-direction: column; gap: 16px; }
-
 .review-card.glass { padding: 24px 28px; }
-
-.review-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.reviewer {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.reviewer-avatar {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
+.review-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.reviewer { display: flex; align-items: center; gap: 14px; }
+.reviewer-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
 .reviewer-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
 .reviewer-info p { font-size: 12px; color: var(--muted); }
-
 .review-stars { font-size: 14px; letter-spacing: 1px; }
-
 .review-text { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+.review-subject { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(6,182,212,0.1); color: var(--teal); border: 1px solid rgba(6,182,212,0.2); }
 
-.review-subject {
-  display: inline-flex;
-  align-items: center;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: rgba(6,182,212,0.1);
-  color: var(--teal);
-  border: 1px solid rgba(6,182,212,0.2);
-}
-
-/* ─── LEAVE REVIEW FORM ─────────────────────────────── */
-.review-form-section {
-  margin-top: 60px;
-}
-
-.review-form-section h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-.review-form-section .sub {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 30px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
+/* ─── REVIEW FORM ─────────────────────────────────────── */
+.review-form-section { margin-top: 60px; }
+.review-form-section h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+.review-form-section .sub { font-size: 13px; color: var(--muted); margin-bottom: 30px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-group label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; }
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 16px;
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
+.form-group input, .form-group textarea, .form-group select {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px; color: var(--text);
+  font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.2s;
 }
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: var(--teal);
-}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--teal); }
 .form-group textarea { resize: vertical; min-height: 120px; }
-.form-group select option { background: #0a1020; }
-
-/* Star picker */
-.star-picker { display: flex; flex-direction: row; gap: 10px; margin-top: 6px; }
-.star-picker input { display: none; }
-.star-picker label {
-  font-size: 36px;
-  cursor: pointer;
-  color: #ddd;
-  transition: color 0.15s, transform 0.15s;
-  line-height: 1;
-}
-.star-picker label:hover { transform: scale(1.2); }
-.star-picker label.active { color: var(--gold); }
-
-.star-btn {
-  font-size: 40px;
-  cursor: pointer;
-  color: #ddd;
-  transition: color 0.15s, transform 0.15s;
-  line-height: 1;
-  padding: 4px;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  touch-action: manipulation;
-}
+.star-btn { font-size: 40px; cursor: pointer; color: #ddd; transition: color 0.15s, transform 0.15s; line-height: 1; padding: 4px; -webkit-tap-highlight-color: transparent; user-select: none; touch-action: manipulation; }
 .star-btn.active { color: var(--gold); }
 .star-btn:hover { transform: scale(1.2); }
-
+.star-picker { display: flex; flex-direction: row; gap: 10px; margin-top: 6px; }
 .full-width { grid-column: 1 / -1; }
-
-/* Dynamic reviews list */
 #reviews-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
-
 .success-msg {
-  background: rgba(34,197,94,0.1);
-  border: 1px solid rgba(34,197,94,0.25);
-  color: #4ade80;
-  border-radius: 12px;
-  padding: 16px 22px;
-  font-size: 14px;
-  display: none;
-  margin-top: 14px;
+  background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+  color: #4ade80; border-radius: 12px; padding: 16px 22px; font-size: 14px; display: none; margin-top: 14px;
 }
 
 /* ─── CONTACT ────────────────────────────────────────── */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .contact-info { display: flex; flex-direction: column; gap: 16px; }
-
-.contact-item.glass {
-  padding: 22px 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  color: var(--text);
-}
-.contact-icon {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
+.contact-item.glass { padding: 22px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--text); }
+.contact-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
 .contact-icon.email { background: rgba(37,99,235,0.15); }
 .contact-icon.yt    { background: rgba(255,0,0,0.15); }
 .contact-icon.loc   { background: rgba(6,182,212,0.15); }
-
+.contact-icon.insta { background: linear-gradient(135deg, rgba(225,48,108,0.15), rgba(150,47,191,0.15)); }
 .contact-item h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
 .contact-item p  { font-size: 12px; color: var(--muted); }
-
 .contact-form.glass { padding: 36px; }
-
-.contact-form h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.cf-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 14px;
-}
+.contact-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
 
 /* ─── FOOTER ────────────────────────────────────────── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 28px 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  color: var(--muted);
-}
-
+footer { border-top: 1px solid var(--border); padding: 28px 60px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 8px; }
 footer a { color: var(--teal); text-decoration: none; }
 
 /* ─── SIDEBAR OVERLAY ────────────────────────────────── */
-.sidebar-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 250;
-}
+.sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 250; }
 .sidebar-overlay.active { display: block; }
+
+/* ─── INSTAGRAM ICON ──────────────────────────────────── */
+.insta-icon {
+  display: inline-block; width: 22px; height: 22px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 6px; text-align: center; line-height: 22px; font-size: 13px;
+  margin-right: 4px; vertical-align: middle; color: white;
+}
 
 /* ─── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 900px) {
-  .sidebar {
-    left: -260px;
-    width: 240px;
-    transition: left 0.3s ease;
-  }
-  .sidebar.open {
-    left: 0;
-    box-shadow: 6px 0 40px rgba(0,0,0,0.2);
-  }
-
+  .sidebar { left: -260px; width: 240px; transition: left 0.3s ease; }
+  .sidebar.open { left: 0; box-shadow: 6px 0 40px rgba(0,0,0,0.2); }
   .menu-toggle { display: flex !important; }
   .main { margin-left: 0 !important; }
-
   .hero { padding: 80px 24px 60px; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero h1 { font-size: 38px; }
   .hero-image-wrap { order: -1; }
   .hero-btns { justify-content: center; }
   .hero-meta { align-items: center; }
-
   section { padding: 70px 24px; }
-  .about-grid,
-  .reviews-top,
-  .contact-grid { grid-template-columns: 1fr; }
+  .subscribe-section { padding: 60px 24px; }
+  .about-grid, .reviews-top, .contact-grid { grid-template-columns: 1fr; }
   .form-grid, .cf-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .research-card.glass { flex-direction: column; }
   .yt-card.glass { flex-direction: column; text-align: center; }
   footer { flex-direction: column; gap: 8px; text-align: center; padding: 28px 24px; }
-
   .hero-float-badge.top-right { right: -10px; }
   .hero-float-badge.bottom-left { left: -10px; }
 }
@@ -1141,26 +677,31 @@ footer a { color: var(--teal); text-decoration: none; }
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <!-- Mobile toggle -->
-<button class="menu-toggle" id="menuToggle" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');if(s.classList.contains('open')){s.classList.remove('open');o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';}else{s.classList.add('open');o.classList.add('active');t.innerHTML='✕';document.body.style.overflow='hidden';}})()">☰</button>
+<button class="menu-toggle" id="menuToggle">☰</button>
 
 <!-- ─── SIDEBAR ─── -->
 <aside class="sidebar" id="sidebar">
-  <button class="sidebar-close" id="sidebarClose" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');s.classList.remove('open');if(o)o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';})()">✕</button>
+  <button class="sidebar-close" id="sidebarClose">✕</button>
   <div class="sidebar-logo">Ritesh Ojha</div>
   <div class="sidebar-tagline">Physics Educator</div>
 
-  <a href="#about"     class="active"><span class="nav-icon">👤</span>About</a>
-  <a href="#education"          ><span class="nav-icon">🎓</span>Education</a>
-  <a href="#skills"             ><span class="nav-icon">⚡</span>Skills</a>
-  <a href="#research"           ><span class="nav-icon">🔬</span>Research</a>
-  <a href="#awards"             ><span class="nav-icon">🏆</span>Awards</a>
-  <a href="#youtube"            ><span class="nav-icon">📺</span>YouTube</a>
-  <a href="#reviews"            ><span class="nav-icon">⭐</span>Reviews</a>
-  <a href="#contact"            ><span class="nav-icon">✉️</span>Contact</a>
+  <a href="#about"      class="active"><span class="nav-icon">👤</span>About</a>
+  <a href="#education"            ><span class="nav-icon">🎓</span>Education</a>
+  <a href="#skills"               ><span class="nav-icon">⚡</span>Skills</a>
+  <a href="#research"             ><span class="nav-icon">🔬</span>Research</a>
+  <a href="#awards"               ><span class="nav-icon">🏆</span>Awards</a>
+  <a href="#youtube"              ><span class="nav-icon">📺</span>YouTube</a>
+  <a href="#subscribe"            ><span class="nav-icon">⭐</span>Subscribe<span style="margin-left:auto;background:linear-gradient(135deg,var(--gold),var(--teal2));color:white;font-size:9px;font-weight:800;padding:2px 7px;border-radius:20px;letter-spacing:0.5px;">₹11</span></a>
+  <a href="#reviews"              ><span class="nav-icon">💬</span>Reviews</a>
+  <a href="#contact"              ><span class="nav-icon">✉️</span>Contact</a>
+
+  <button class="sidebar-subscribe-btn" onclick="openSubscribeModal()">
+    🔔 Subscribe — ₹11
+  </button>
 
   <div class="sidebar-bottom">
     Gorakhpur, UP, India<br>
-    <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#1c6e7568796f747376747d25245c7b717d7570327f7371" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="7c0e1508190f141316141d45443c1b111d1510521f1311">[email&#160;protected]</span></a>
   </div>
 </aside>
 
@@ -1175,25 +716,38 @@ footer a { color: var(--teal); text-decoration: none; }
       <div class="hero-text">
         <div class="hero-badge">⚡ Available for Collaboration</div>
         <h1>Ritesh<br><em>Ojha</em></h1>
-        <p class="hero-sub">Physics Educator · YouTuber · M.Sc Student<br>Making physics simple, engaging & unforgettable.</p>
+        <p class="hero-sub">Physics Educator · YouTuber · M.Sc Student<br>Making physics simple, engaging &amp; unforgettable.</p>
         <div class="hero-meta">
           <span>⚛️ M.Sc Physics (Electronics) — DDU University</span>
           <span>📍 Gorakhpur, Uttar Pradesh, India</span>
           <span>🎓 Teaching Class 9–12 since 2022</span>
+          <span>✉️ <a href="/cdn-cgi/l/email-protection#ddafb4a9b8aeb5b2b7b5bce4e59dbab0bcb4b1f3beb2b0" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="aad8c3decfd9c2c5c0c2cb9392eacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a></span>
         </div>
         <div class="hero-btns">
           <a href="#reviews" class="btn btn-primary">⭐ Student Reviews</a>
           <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ GyanMitra</a>
-          <a href="#contact" class="btn btn-secondary">✉ Contact</a>
+          <button onclick="openSubscribeModal()" class="btn btn-secondary">🔔 Subscribe ₹11</button>
         </div>
       </div>
 
       <div class="hero-image-wrap">
         <div class="hero-img-frame">
-          <img src="profile.jpg" alt="Ritesh Ojha">
+          <img src="profile.jpg" alt="Physics Educator" 
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            style="position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:50%;object-fit:cover;z-index:2;">
+          <div style="display:none;position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:50%;z-index:2;
+            background:linear-gradient(135deg,rgba(184,134,11,0.2),rgba(14,116,144,0.2));
+            align-items:center;justify-content:center;flex-direction:column;gap:6px;text-align:center;">
+            <div style="font-size:64px;">⚛️</div>
+            <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;">PHYSICS</div>
+          </div>
           <div class="hero-float-badge top-right">⚛️ M.Sc Physics</div>
           <div class="hero-float-badge bottom-left">📺 GyanMitra</div>
         </div>
+        <!-- Resume link below profile photo -->
+        <a href="https://drive.google.com/file/d/1tPIAPGOFX3vTYCJSkkHh-C4XiRVO2szp/view?usp=drivesdk" target="_blank" class="hero-resume-link">
+          📄 View My Resume
+        </a>
       </div>
 
     </div>
@@ -1227,8 +781,8 @@ footer a { color: var(--teal); text-decoration: none; }
     <div class="about-grid">
       <div class="about-main glass">
         <p>Hi! I'm <b>Ritesh Ojha</b>, a dedicated Physics educator based in Gorakhpur, India. I believe that every student deserves to experience the wonder of Physics — not as a burden, but as a doorway to understanding the universe.</p>
-        <p>Currently pursuing <b>M.Sc in Physics (Electronics)</b> at DDU University (2024–2026), I combine academic rigor with creative teaching methods. My goal is to simplify even the most complex concepts and deliver them in a way that truly sticks.</p>
-        <p>I run <b>GyanMitra</b> — my YouTube channel dedicated to educational content for school and college students. Teaching isn't just my career — it's my calling.</p>
+        <p>Currently pursuing <b>M.Sc in Physics (Electronics)</b> at DDU Gorakhpur University (2024–2026), I combine academic rigor with creative teaching methods. My goal is to simplify even the most complex concepts and deliver them in a way that truly sticks.</p>
+        <p>I run <b>GyanMitra</b> — my YouTube channel dedicated to educational content for school and college students. I have been teaching students of Class 9 to 12 offline since my graduation in 2024. Teaching isn't just my career — it's my calling.</p>
         <p>My greatest strength? My mother's blessings, and the satisfaction of watching my students succeed. 🙏</p>
       </div>
 
@@ -1265,7 +819,14 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="info-icon gold">✉️</div>
           <div>
             <h4>Email</h4>
-            <p>riteshojha98@gmail.com</p>
+            <p><a href="/cdn-cgi/l/email-protection#5d2f3429382e353237353c64651d3a303c3431733e3230"><span class="__cf_email__" data-cfemail="23514a5746504b4c494b421a1b63444e424a4f0d404c4e">[email&#160;protected]</span></a></p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon" style="background:linear-gradient(135deg,rgba(225,48,108,0.15),rgba(150,47,191,0.15));font-size:18px;">📸</div>
+          <div>
+            <h4>Instagram</h4>
+            <p><a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank" style="color:var(--teal);">@iam_riteshojha1</a></p>
           </div>
         </div>
       </div>
@@ -1280,39 +841,47 @@ footer a { color: var(--teal); text-decoration: none; }
 
     <div class="timeline">
 
+      <!-- Post Graduation -->
       <div class="tl-item">
         <span class="tl-tag">Current · 2024–2026</span>
         <div class="tl-card glass">
-          <h3>M.Sc Physics (Electronics)</h3>
-          <div class="institution">DDU Gorakhpur University</div>
+          <h3>M.Sc Physics — Post Graduation</h3>
+          <div class="institution">Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur (UP) — India</div>
           <div class="year">Specialization in Electronics · Research in Molecular Interactions</div>
+          <div class="subjects">📚 Subjects: Physics with specialization in Electronics</div>
         </div>
       </div>
 
+      <!-- Graduation -->
       <div class="tl-item">
         <span class="tl-tag">2021–2024</span>
         <div class="tl-card glass">
-          <h3>B.Sc Mathematics</h3>
-          <div class="institution">DDU Gorakhpur University</div>
-          <div class="year">Physics · Chemistry · Mathematics · Developed passion for teaching during undergrad</div>
+          <h3>B.Sc (Maths) — Graduation</h3>
+          <div class="institution">Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur (UP) — India</div>
+          <div class="year">Bachelor of Science in Mathematics, Physics and Chemistry · Completed 2024</div>
+          <div class="subjects">📚 Subjects: Mathematics, Physics, Chemistry<br>🎓 Since graduation, teaching students of Class 9 to 12 offline</div>
         </div>
       </div>
 
+      <!-- 12th -->
       <div class="tl-item">
-        <span class="tl-tag">2019–2021</span>
+        <span class="tl-tag">2021 · 12th CBSE</span>
         <div class="tl-card glass">
-          <h3>12th CBSE — PCM</h3>
-          <div class="institution">Senior Secondary School</div>
-          <div class="year">Physics · Chemistry · Mathematics · Prepared for JEE simultaneously</div>
+          <h3>12th CBSE Board — Science</h3>
+          <div class="institution">Star Hybrid School, Taramandal, Gorakhpur (Uttar Pradesh) — India</div>
+          <div class="year">Completed 2021</div>
+          <div class="subjects">📚 Subjects: Physics, Chemistry, Mathematics, Hindi, English, Physical Education</div>
         </div>
       </div>
 
+      <!-- 10th -->
       <div class="tl-item">
-        <span class="tl-tag">2017–2019</span>
+        <span class="tl-tag">2019 · 10th CBSE</span>
         <div class="tl-card glass">
-          <h3>10th CBSE</h3>
-          <div class="institution">Secondary School</div>
-          <div class="year">Graduated 2019 · Developed early interest in Physics and Science</div>
+          <h3>10th CBSE Board</h3>
+          <div class="institution">US Central Academy, Sirkriganj, Gorakhpur (UP) — India</div>
+          <div class="year">Completed 2019</div>
+          <div class="subjects">📚 Subjects: Science, English, Hindi, Social Science, Mathematics, Foundation of IT (Computer)</div>
         </div>
       </div>
 
@@ -1326,7 +895,6 @@ footer a { color: var(--teal); text-decoration: none; }
     <p class="section-desc">A combination of academic depth, communication mastery, and digital content skills.</p>
 
     <div class="skills-grid">
-
       <div class="skill-card glass">
         <span class="skill-icon">📖</span>
         <h3>Physics Teaching</h3>
@@ -1336,7 +904,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
         </div>
       </div>
-
       <div class="skill-card glass">
         <span class="skill-icon">🎬</span>
         <h3>Video Editing</h3>
@@ -1346,7 +913,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
         </div>
       </div>
-
       <div class="skill-card glass">
         <span class="skill-icon">✍️</span>
         <h3>Content Creation</h3>
@@ -1356,7 +922,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
         </div>
       </div>
-
       <div class="skill-card glass">
         <span class="skill-icon">🗣️</span>
         <h3>Communication</h3>
@@ -1366,17 +931,15 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
         </div>
       </div>
-
       <div class="skill-card glass">
         <span class="skill-icon">🔬</span>
-        <h3>Research & Analysis</h3>
-        <p>Molecular interaction studies, scientific literature review & documentation</p>
+        <h3>Research &amp; Analysis</h3>
+        <p>Molecular interaction studies, scientific literature review &amp; documentation</p>
         <div class="skill-bar-wrap">
           <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
           <div class="skill-bar"><div class="skill-bar-fill" style="width:78%"></div></div>
         </div>
       </div>
-
       <div class="skill-card glass">
         <span class="skill-icon">💪</span>
         <h3>Consistency</h3>
@@ -1386,7 +949,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="skill-bar"><div class="skill-bar-fill" style="width:99%"></div></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1399,7 +961,7 @@ footer a { color: var(--teal); text-decoration: none; }
     <div class="research-card glass">
       <div class="research-icon">🧬</div>
       <div class="research-body">
-        <h3>Molecular Interactions of ACE Inhibitors with ACE Receptors<br><em style="font-size:15px;color:var(--muted);font-style:normal;">(Captopril & Enalapril in COVID-19)</em></h3>
+        <h3>Molecular Interactions of ACE Inhibitors with ACE Receptors<br><em style="font-size:15px;color:var(--muted);font-style:normal;">(Captopril &amp; Enalapril in COVID-19)</em></h3>
         <p>This research investigates the molecular docking interactions of ACE inhibitors — specifically Captopril and Enalapril — with ACE2 receptors, exploring their significance in the context of COVID-19 pathophysiology and potential therapeutic applications. The study provides insight into drug-receptor binding affinity and pharmacological implications for hypertensive patients during viral infection.</p>
         <div class="research-tags">
           <span class="tag blue">Molecular Docking</span>
@@ -1408,6 +970,9 @@ footer a { color: var(--teal); text-decoration: none; }
           <span class="tag blue">ACE Inhibitors</span>
           <span class="tag teal">Computational Biology</span>
         </div>
+        <a href="https://drive.google.com/file/d/1pSr9UfwcjKRI5utNuwQst2IPC-T1h3ca/view?usp=drivesdk" target="_blank" class="btn btn-resume" style="display:inline-flex;margin-top:4px;">
+          📄 View Research Paper (PDF)
+        </a>
       </div>
     </div>
   </section>
@@ -1415,7 +980,7 @@ footer a { color: var(--teal); text-decoration: none; }
   <!-- AWARDS -->
   <section id="awards">
     <div class="section-label">Recognition</div>
-    <h2 class="section-title">Awards & <em>Achievements</em></h2>
+    <h2 class="section-title">Awards &amp; <em>Achievements</em></h2>
     <p class="section-desc">Milestones that mark the journey of dedication and hard work.</p>
 
     <div class="awards-grid">
@@ -1458,11 +1023,36 @@ footer a { color: var(--teal); text-decoration: none; }
           </div>
           <div class="yt-stat">
             <div class="num">🇮🇳</div>
-            <div class="lbl">Hindi & English</div>
+            <div class="lbl">Hindi &amp; English</div>
           </div>
         </div>
         <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ Visit GyanMitra Channel</a>
       </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section id="subscribe" class="subscribe-section">
+    <div class="section-label">Exclusive Content</div>
+    <h2 class="section-title" style="text-align:center;">Premium <em>Subscription</em></h2>
+    <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;">Get exclusive study material and special digital content — at a price that fits every student!</p>
+
+    <div class="subscribe-card glass">
+      <div class="sub-logo">🔔</div>
+      <h3>Join the Learning Family</h3>
+      <div class="sub-price">₹11 <span style="font-size:18px;-webkit-text-fill-color:var(--muted);font-weight:400;">/ access</span></div>
+      <p class="sub-desc">Get instant access to exclusive study notes, special content, and the <strong>AI Basic Prompt PDF</strong> — a practical guide to using AI tools for your studies!</p>
+
+      <div class="sub-features">
+        <div class="sub-feature"><span class="icon">🤖</span><span><strong>AI Basic Prompt PDF</strong> — Learn how to use AI prompts effectively for studying</span></div>
+        <div class="sub-feature"><span class="icon">⭐</span><span><strong>Special Content</strong> — Curated physics notes, tips and tricks</span></div>
+        <div class="sub-feature"><span class="icon">📱</span><span><strong>Instant UPI Access</strong> — Pay ₹11 via any UPI app and get your content</span></div>
+        <div class="sub-feature"><span class="icon">🇮🇳</span><span><strong>Made for Indian Students</strong> — Hindi + English content</span></div>
+      </div>
+
+      <button class="btn-subscribe" onclick="openSubscribeModal()">
+        🔔 Subscribe Now — ₹11 Only
+      </button>
     </div>
   </section>
 
@@ -1480,7 +1070,6 @@ footer a { color: var(--teal); text-decoration: none; }
     <p class="section-desc">Honest feedback from the students I've had the joy of teaching — their success is my greatest reward.</p>
 
     <div class="reviews-top">
-
       <div class="rating-summary glass">
         <div class="rating-big" id="avgRating">4.8</div>
         <div class="stars-display" id="avgStars">⭐⭐⭐⭐⭐</div>
@@ -1495,7 +1084,6 @@ footer a { color: var(--teal); text-decoration: none; }
       </div>
 
       <div class="review-cards" id="reviewCards">
-
         <div class="review-card glass">
           <div class="review-header">
             <div class="reviewer">
@@ -1510,7 +1098,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <p class="review-text">Sir explains even the hardest topics with such clarity and creativity. His analogies for electromagnetism and modern physics are unmatched. I cleared my boards with 96% in Physics — couldn't have done it without him!</p>
           <span class="review-subject">Electromagnetism</span>
         </div>
-
         <div class="review-card glass">
           <div class="review-header">
             <div class="reviewer">
@@ -1525,7 +1112,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <p class="review-text">The GyanMitra YouTube channel is a lifesaver! Sir's videos are concise, visual, and super easy to follow. Physics used to scare me — now it's my favourite subject. Thank you, Ritesh Sir!</p>
           <span class="review-subject">Mechanics</span>
         </div>
-
         <div class="review-card glass">
           <div class="review-header">
             <div class="reviewer">
@@ -1540,7 +1126,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <p class="review-text">Very patient and dedicated. He never makes you feel bad for asking basic questions, and always follows up with extra material. The numerical problem sessions are gold for board and NEET prep!</p>
           <span class="review-subject">Thermodynamics</span>
         </div>
-
         <div class="review-card glass">
           <div class="review-header">
             <div class="reviewer">
@@ -1555,18 +1140,15 @@ footer a { color: var(--teal); text-decoration: none; }
           <p class="review-text">His passion for Physics is truly infectious! The story behind every discovery makes learning so enjoyable. He guided me through NEET prep alongside board exams — seamlessly and effectively.</p>
           <span class="review-subject">Modern Physics</span>
         </div>
-
       </div>
     </div>
 
-    <!-- Dynamic reviews -->
     <div id="reviews-list"></div>
 
     <!-- LEAVE A REVIEW FORM -->
     <div class="review-form-section">
       <h3>✨ Leave a Review</h3>
       <p class="sub">Were you one of my students? Your feedback genuinely helps me grow as an educator.</p>
-
       <div class="glass" style="padding:36px;" id="reviewFormWrap">
         <div class="form-grid">
           <div class="form-group">
@@ -1578,7 +1160,6 @@ footer a { color: var(--teal); text-decoration: none; }
             <input type="text" id="rSubject" placeholder="e.g. Class 12 · Physics">
           </div>
         </div>
-
         <div class="form-group" style="margin-bottom:16px;">
           <label>YOUR RATING *</label>
           <div class="star-picker" id="starPicker">
@@ -1590,14 +1171,11 @@ footer a { color: var(--teal); text-decoration: none; }
           </div>
           <input type="hidden" id="selectedRating" value="">
         </div>
-
         <div class="form-group" style="margin-bottom:20px;">
           <label>YOUR REVIEW *</label>
           <textarea id="rText" placeholder="Share your experience with Ritesh Sir..."></textarea>
         </div>
-
         <button class="btn btn-primary" onclick="submitReview()">Submit Review ⭐</button>
-
         <div class="success-msg" id="successMsg">
           🌟 Thank you so much! Your review has been posted and means the world to me.
         </div>
@@ -1612,13 +1190,12 @@ footer a { color: var(--teal); text-decoration: none; }
     <p class="section-desc">Feel free to reach out for tutoring enquiries, collaborations, or just to say hello!</p>
 
     <div class="contact-grid">
-
       <div class="contact-info">
-        <a href="/cdn-cgi/l/email-protection#99ebf0edfceaf1f6f3f1f8a0a1d9fef4f8f0f5b7faf6f4" class="contact-item glass">
+        <a href="/cdn-cgi/l/email-protection#8efce7faebfde6e1e4e6efb7b6cee9e3efe7e2a0ede1e3" class="contact-item glass">
           <div class="contact-icon email">📧</div>
           <div>
             <h4>Email</h4>
-            <p><span class="__cf_email__" data-cfemail="b0c2d9c4d5c3d8dfdad8d18988f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span></p>
+            <p><span class="__cf_email__" data-cfemail="ea98839e8f99828580828bd3d2aa8d878b8386c4898587">[email&#160;protected]</span></p>
           </div>
         </a>
         <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="contact-item glass">
@@ -1628,6 +1205,28 @@ footer a { color: var(--teal); text-decoration: none; }
             <p>@riteshojha1 · GyanMitra</p>
           </div>
         </a>
+        <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank" class="contact-item glass">
+          <div class="contact-icon insta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#f09433"/>
+                  <stop offset="25%" style="stop-color:#e6683c"/>
+                  <stop offset="50%" style="stop-color:#dc2743"/>
+                  <stop offset="75%" style="stop-color:#cc2366"/>
+                  <stop offset="100%" style="stop-color:#bc1888"/>
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#instaGrad)"/>
+              <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@iam_riteshojha1</p>
+          </div>
+        </a>
         <div class="contact-item glass">
           <div class="contact-icon loc">📍</div>
           <div>
@@ -1635,10 +1234,9 @@ footer a { color: var(--teal); text-decoration: none; }
             <p>Gorakhpur, Uttar Pradesh, India</p>
           </div>
         </div>
-
         <div class="glass" style="padding:24px;">
           <p style="font-size:13px;color:var(--muted);line-height:1.8;">
-            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help.
+            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help. Email: <a href="/cdn-cgi/l/email-protection#d0a2b9a4b5a3b8bfbab8b1e9e890b7bdb1b9bcfeb3bfbd" style="color:var(--teal);"><span class="__cf_email__" data-cfemail="16647f6273657e797c7e772f2e56717b777f7a3875797b">[email&#160;protected]</span></a>
           </p>
         </div>
       </div>
@@ -1666,7 +1264,6 @@ footer a { color: var(--teal); text-decoration: none; }
         <button class="btn btn-primary" onclick="sendMsg()">Send Message →</button>
         <div class="success-msg" id="msgSuccess">✅ Message sent! I'll get back to you soon.</div>
       </div>
-
     </div>
   </section>
 
@@ -1674,84 +1271,139 @@ footer a { color: var(--teal); text-decoration: none; }
   <footer>
     <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2026</span>
     <span>
-      <a href="/cdn-cgi/l/email-protection#32405b4657415a5d585a530b0a72555f535b5e1c515d5f" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="eb99829f8e98838481838ad2d3ab8c868a8287c5888486">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#017368756472696e6b6960383941666c60686d2f626e6c" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="addfc4d9c8dec5c2c7c5cc9495edcac0ccc4c183cec2c0">[email&#160;protected]</span></a>
       &nbsp;·&nbsp;
       <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank">YouTube @riteshojha1</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig2)"/>
+          <defs>
+            <linearGradient id="ig2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#f09433"/>
+              <stop offset="100%" style="stop-color:#bc1888"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8" fill="none"/>
+          <circle cx="17" cy="7" r="1" fill="white"/>
+        </svg>Instagram
+      </a>
     </span>
   </footer>
 
 </div><!-- end .main -->
 
+<!-- ── UPI SUBSCRIBE MODAL ───────────────────────────── -->
+<div class="modal-overlay" id="subscribeModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeSubscribeModal()">✕</button>
 
+    <div class="modal-logo">🔔</div>
+    <h3>Premium Subscription</h3>
+    <p class="modal-sub">
+      Get instant access to <strong>special content</strong> and the <strong>AI Basic Prompt PDF</strong>.<br>
+      Pay just <strong>₹11</strong> via UPI to unlock!
+    </p>
 
+    <div class="upi-box">
+      <div class="upi-label">Send Payment To</div>
+      <div class="upi-id" id="upiIdText">riteshojha98-1@okicici</div>
+      <div class="upi-amount">₹11</div>
+      <div class="upi-note">Any UPI app — GPay · PhonePe · Paytm · BHIM</div>
+    </div>
 
+    <div class="upi-steps">
+      <div class="upi-step">
+        <span class="step-num">1</span>
+        <span>Open your UPI app (GPay, PhonePe, Paytm, etc.)</span>
+      </div>
+      <div class="upi-step">
+        <span class="step-num">2</span>
+        <span>Send <strong>₹11</strong> to UPI ID: <strong>riteshojha98-1@okicici</strong></span>
+      </div>
+      <div class="upi-step">
+        <span class="step-num">3</span>
+        <span>Take a screenshot &amp; email it to <a href="/cdn-cgi/l/email-protection#97e5fee3f2e4fff8fdfff6aeafd7f0faf6fefbb9f4f8fa" style="color:var(--teal);"><span class="__cf_email__" data-cfemail="14667d6071677c7b7e7c752d2c547379757d783a777b79">[email&#160;protected]</span></a></span>
+      </div>
+      <div class="upi-step">
+        <span class="step-num">4</span>
+        <span>Receive your content link within 24 hours! 🎉</span>
+      </div>
+    </div>
 
+    <div style="margin:18px 0 10px;text-align:center;">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">After Payment — Access Your Content</div>
+      <a href="https://drive.google.com/drive/folders/12oILLzzBQd-FooQmux47yzIlVYxuKgB8" target="_blank"
+        style="display:inline-flex;align-items:center;gap:10px;padding:13px 24px;
+        background:linear-gradient(135deg,rgba(184,134,11,0.18),rgba(14,116,144,0.18));
+        border:1.5px solid rgba(184,134,11,0.4);border-radius:12px;
+        color:var(--gold);font-size:14px;font-weight:700;text-decoration:none;
+        transition:all 0.25s;width:100%;justify-content:center;box-sizing:border-box;"
+        onmouseover="this.style.background='linear-gradient(135deg,rgba(184,134,11,0.28),rgba(14,116,144,0.28))';this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.background='linear-gradient(135deg,rgba(184,134,11,0.18),rgba(14,116,144,0.18))';this.style.transform='translateY(0)'">
+        📂 Open Content Folder — Google Drive
+      </a>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px;">🔒 Full access unlocks after payment verification</p>
+    </div>
 
-<!-- Supabase SDK -->
-<!-- Supabase via direct REST API (no SDK needed) -->
+    <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
+  </div>
+</div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Mobile sidebar ─────────────── */
 document.addEventListener('DOMContentLoaded', function() {
   var toggle = document.getElementById('menuToggle');
   var sidebar = document.getElementById('sidebar');
   var overlay = document.getElementById('sidebarOverlay');
+  var closeBtn = document.getElementById('sidebarClose');
 
   if (!toggle || !sidebar) return;
 
   function openSidebar() {
     sidebar.classList.add('open');
     if (overlay) overlay.classList.add('active');
-    toggle.innerHTML = '&#10005;';
+    toggle.innerHTML = '✕';
     document.body.style.overflow = 'hidden';
   }
 
   function closeSidebar() {
     sidebar.classList.remove('open');
     if (overlay) overlay.classList.remove('active');
-    toggle.innerHTML = '&#9776;';
+    toggle.innerHTML = '☰';
     document.body.style.overflow = '';
   }
 
   toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (sidebar.classList.contains('open')) {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
+    e.preventDefault(); e.stopPropagation();
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+  toggle.addEventListener('touchend', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
   });
 
-  // Touch support for mobile
-  toggle.addEventListener('touchend', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (sidebar.classList.contains('open')) {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeSidebar);
+    closeBtn.addEventListener('touchend', function(e) { e.preventDefault(); closeSidebar(); });
+  }
 
   if (overlay) {
     overlay.addEventListener('click', closeSidebar);
-    overlay.addEventListener('touchend', function(e) {
-      e.preventDefault();
-      closeSidebar();
-    });
+    overlay.addEventListener('touchend', function(e) { e.preventDefault(); closeSidebar(); });
   }
 
-  // Close sidebar when a nav link is clicked (mobile)
-  document.querySelectorAll('.sidebar a').forEach(function(link) {
+  document.querySelectorAll('.sidebar a, .sidebar-subscribe-btn').forEach(function(link) {
     link.addEventListener('click', function() {
-      if (window.innerWidth <= 900) closeSidebar();
+      if (window.innerWidth <= 900) {
+        setTimeout(closeSidebar, 100);
+      }
     });
   });
 });
 
 /* ── Active nav link on scroll ──── */
-const sections = document.querySelectorAll('section, .hero');
+const sections = document.querySelectorAll('section, .hero, .subscribe-section');
 const navLinks = document.querySelectorAll('.sidebar a');
 window.addEventListener('scroll', () => {
   let current = '';
@@ -1764,10 +1416,32 @@ window.addEventListener('scroll', () => {
   });
 });
 
+/* ── Subscribe Modal ─────────── */
+function openSubscribeModal() {
+  document.getElementById('subscribeModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeSubscribeModal() {
+  document.getElementById('subscribeModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function copyUPI() {
+  const upiId = 'riteshojha98-1@okicici';
+  navigator.clipboard.writeText(upiId).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => { btn.innerHTML = '📋 Copy UPI ID'; }, 2000);
+  }).catch(() => {
+    prompt('Copy this UPI ID:', upiId);
+  });
+}
+document.getElementById('subscribeModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSubscribeModal();
+});
+
 /* ── Supabase Review System ──────── */
 const SUPABASE_URL = 'https://hekrgjagvfvmpyegjfze.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_RMpKG63wnnTsIkWzf8d_6w_y5wQsdEu';
-
 const sbHeaders = {
   'apikey': SUPABASE_ANON_KEY,
   'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
@@ -1775,10 +1449,8 @@ const sbHeaders = {
   'Prefer': 'return=representation'
 };
 
-// ── Star picker JS ──────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const stars = document.querySelectorAll('.star-btn');
-
   function selectStar(val) {
     document.getElementById('selectedRating').value = val;
     stars.forEach(s => {
@@ -1787,42 +1459,20 @@ document.addEventListener('DOMContentLoaded', () => {
       s.style.setProperty('color', active ? '#b8860b' : '#cccccc', 'important');
     });
   }
-
   stars.forEach(star => {
-    // Use only touchend for touch devices (avoids double-fire with click)
-    star.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      selectStar(parseInt(star.dataset.val));
-    }, { passive: false });
-
-    // Use click for desktop
-    star.addEventListener('click', () => {
-      selectStar(parseInt(star.dataset.val));
-    });
+    star.addEventListener('touchend', (e) => { e.preventDefault(); selectStar(parseInt(star.dataset.val)); }, { passive: false });
+    star.addEventListener('click', () => { selectStar(parseInt(star.dataset.val)); });
   });
-
-  // Make submit button work on touch too
   const submitBtn = document.querySelector('#reviewFormWrap .btn-primary');
   if (submitBtn) {
-    submitBtn.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      submitReview();
-    }, { passive: false });
+    submitBtn.addEventListener('touchend', (e) => { e.preventDefault(); submitReview(); }, { passive: false });
   }
 });
 
-
-
 const colors = ['#60a5fa','#22d3ee','#f59e0b','#a78bfa','#4ade80','#f87171','#fb923c'];
 
-function starsHtml(n) {
-  return '⭐'.repeat(n) + (n < 5 ? '☆'.repeat(5 - n) : '');
-}
-
-function initials(name) {
-  return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
-}
-
+function starsHtml(n) { return '⭐'.repeat(n) + (n < 5 ? '☆'.repeat(5 - n) : ''); }
+function initials(name) { return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
 function timeAgo(ts) {
   if (!ts) return 'Recently';
   const date = ts.toDate ? ts.toDate() : new Date(ts);
@@ -1844,8 +1494,7 @@ function renderReviews(reviewsArr) {
     div.innerHTML = `
       <div class="review-header">
         <div class="reviewer">
-          <div class="reviewer-avatar" style="background:${c}22;color:${c};
-">${initials(r.name)}</div>
+          <div class="reviewer-avatar" style="background:${c}22;color:${c};">${initials(r.name)}</div>
           <div class="reviewer-info">
             <h4>${r.name}</h4>
             <p>${r.subject || 'Student'} · ${timeAgo(r.created_at)}</p>
@@ -1875,20 +1524,16 @@ function updateStats(reviewsArr) {
   });
 }
 
-// Load reviews from Supabase REST API
 async function loadReviews() {
   try {
-    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', {
-      headers: sbHeaders
-    });
-    if (!res.ok) { console.error('Load error:', res.status, await res.text()); return; }
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', { headers: sbHeaders });
+    if (!res.ok) { console.error('Load error:', res.status); return; }
     const data = await res.json();
     renderReviews(data || []);
   } catch(e) { console.error('loadReviews failed:', e); }
 }
 loadReviews();
 
-// Expose submitReview globally so onclick= in HTML can reach it
 async function submitReview() {
   const name     = document.getElementById('rName').value.trim();
   const subj     = document.getElementById('rSubject').value.trim();
@@ -1899,62 +1544,18 @@ async function submitReview() {
     alert('Please fill in your name, rating, and review before submitting.');
     return;
   }
-
   const btn = document.querySelector('#reviewFormWrap .btn-primary');
-  btn.disabled    = true;
-  btn.textContent = 'Submitting…';
-
+  btn.disabled = true; btn.textContent = 'Submitting…';
   try {
     const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
-      method: 'POST',
-      headers: sbHeaders,
+      method: 'POST', headers: sbHeaders,
       body: JSON.stringify({ name, subject: subj, text, rating: parseInt(ratingVal) })
     });
     if (!res.ok) throw new Error(await res.text());
     loadReviews();
-
-    document.getElementById('rName').value    = '';
+    document.getElementById('rName').value = '';
     document.getElementById('rSubject').value = '';
-    document.getElementById('rText').value    = '';
+    document.getElementById('rText').value = '';
     document.getElementById('selectedRating').value = '';
     document.querySelectorAll('.star-btn').forEach(s => s.classList.remove('active'));
-
-    const successMsg = document.getElementById('successMsg');
-    successMsg.style.display = 'block';
-    setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
-
-  } catch (err) {
-    console.error('Error saving review:', err);
-    alert('Oops! Could not save your review. Please try again.');
-  } finally {
-    btn.disabled    = false;
-    btn.textContent = 'Submit Review ⭐';
-  }
-};
-
-
-/* ── Contact form (placeholder) ── */
-function sendMsg() {
-  const name = document.getElementById('cName').value.trim();
-  const email = document.getElementById('cEmail').value.trim();
-  const msg = document.getElementById('cMsg').value.trim();
-  if (!name || !email || !msg) {
-    alert('Please fill in all fields.');
-    return;
-  }
-  const successEl = document.getElementById('msgSuccess');
-  if (successEl) {
-    successEl.style.display = 'block';
-    setTimeout(() => { successEl.style.display = 'none'; }, 5000);
-  }
-  document.getElementById('cName').value = '';
-  document.getElementById('cEmail').value = '';
-  document.getElementById('cSubject').value = '';
-  document.getElementById('cMsg').value = '';
-}
-
-window.submitReview = submitReview;
-window.sendMsg = sendMsg;
-</script>
-</body>
-</html>
+    const successMsg = docum
