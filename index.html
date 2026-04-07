@@ -3,55 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ── PRIMARY SEO ──────────────────────────────────── -->
-<title>Ritesh Ojha | Physics Educator, Tutor & YouTuber in Gorakhpur, India</title>
-<meta name="description" content="Ritesh Ojha is a passionate Physics educator and YouTuber from Gorakhpur, India. M.Sc Physics (Electronics) student at DDU University, teaching Classes 9–12, NEET & JEE. Watch free lessons on YouTube channel GyanMitra.">
-<meta name="keywords" content="Ritesh Ojha, Physics Educator, Physics Tutor Gorakhpur, GyanMitra YouTube, Class 12 Physics, NEET Physics, JEE Physics, DDU University, Physics Teacher India, Molecular Docking ACE Inhibitors">
-<meta name="author" content="Ritesh Ojha">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://riteshojha.vercel.app/">
-
-<!-- ── OPEN GRAPH (Facebook / WhatsApp / LinkedIn preview) ── -->
-<meta property="og:type"        content="website">
-<meta property="og:url"         content="https://riteshojha.vercel.app/">
-<meta property="og:title"       content="Ritesh Ojha | Physics Educator & YouTuber — Gorakhpur">
-<meta property="og:description" content="Making Physics simple, engaging & unforgettable. Free lessons on GyanMitra YouTube · NEET & JEE guidance · M.Sc Physics researcher.">
-<meta property="og:image"       content="https://riteshojha.vercel.app/profile.jpg">
-<meta property="og:locale"      content="en_IN">
-<meta property="og:site_name"   content="Ritesh Ojha — Physics Educator">
-
-<!-- ── TWITTER CARD ──────────────────────────────────── -->
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="Ritesh Ojha | Physics Educator & YouTuber">
-<meta name="twitter:description" content="Free Physics lessons for Classes 9–12, NEET & JEE on YouTube @GyanMitra. Based in Gorakhpur, India.">
-<meta name="twitter:image"       content="https://riteshojha.vercel.app/profile.jpg">
-
-<!-- ── STRUCTURED DATA (Google Rich Results) ──────────── -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ritesh Ojha",
-  "jobTitle": "Physics Educator & Tutor",
-  "description": "Physics teacher for Classes 9–12, NEET & JEE based in Gorakhpur, India. M.Sc Physics (Electronics) student at DDU University and YouTube educator on GyanMitra channel.",
-  "url": "https://riteshojha.vercel.app/",
-  "image": "https://riteshojha.vercel.app/profile.jpg",
-  "email": "riteshojha98@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Gorakhpur",
-    "addressRegion": "Uttar Pradesh",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://youtube.com/@riteshojha1",
-    "https://www.instagram.com/iam_riteshojha1"
-  ],
-  "knowsAbout": ["Physics", "Molecular Docking", "ACE Inhibitors", "COVID-19", "NEET", "JEE", "Electronics"]
-}
-</script>
-
+<title>Ritesh Ojha — Physics Educator</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -413,16 +365,6 @@ body {
   box-shadow: 0 12px 40px rgba(255,0,0,0.45);
 }
 
-.btn-insta {
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: white;
-  box-shadow: 0 8px 30px rgba(225,48,108,0.30);
-}
-.btn-insta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(225,48,108,0.45);
-}
-
 /* Hero Image */
 .hero-image-wrap {
   display: flex;
@@ -440,4 +382,1579 @@ body {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), va
+  background: linear-gradient(135deg, var(--gold), var(--teal), #2563eb);
+  z-index: 0;
+  animation: spin 8s linear infinite;
+}
+.hero-img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg);
+  z-index: 1;
+}
+
+.hero-img-frame img {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero-float-badge {
+  position: absolute;
+  background: rgba(255, 252, 235, 0.95);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 10;
+  white-space: nowrap;
+}
+.hero-float-badge.top-right {
+  top: 10px; right: -20px;
+  color: var(--gold);
+}
+.hero-float-badge.bottom-left {
+  bottom: 20px; left: -30px;
+  color: var(--teal);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION BASE ──────────────────────────────────── */
+section {
+  padding: 100px 60px;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+.section-label::before {
+  content: '';
+  width: 20px; height: 2px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.section-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+/* ─── GLASS CARD ────────────────────────────────────── */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+.glass:hover {
+  background: rgba(255,248,210,0.85);
+  border-color: rgba(184,134,11,0.28);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(180,140,40,0.12);
+}
+
+/* ─── ABOUT ─────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-main.glass { padding: 40px; }
+
+.about-main p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.about-main p b { color: var(--text); }
+
+.about-side { display: flex; flex-direction: column; gap: 16px; }
+
+.info-card.glass {
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.info-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.info-icon.blue { background: rgba(37,99,235,0.15); }
+.info-icon.gold { background: rgba(245,158,11,0.15); }
+.info-icon.teal { background: rgba(6,182,212,0.15); }
+
+.info-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.info-card p { font-size: 12px; color: var(--muted); }
+
+/* ─── STATS ROW ─────────────────────────────────────── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.stat-card.glass {
+  padding: 30px 20px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* ─── EDUCATION TIMELINE ────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 12px; bottom: 12px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--teal), transparent);
+  border-radius: 2px;
+}
+
+.tl-item {
+  position: relative;
+  padding: 0 0 40px 20px;
+}
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -29px; top: 12px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--bg);
+  z-index: 1;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.tl-card.glass {
+  padding: 24px 28px;
+}
+.tl-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.tl-card .institution {
+  font-size: 13px;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.tl-card .year {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ─── SKILLS ────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-card.glass {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.skill-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: block;
+}
+.skill-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.skill-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.skill-bar-wrap { margin-top: 14px; text-align: left; }
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+.skill-bar {
+  height: 4px;
+  background: rgba(184,134,11,0.12);
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+  transition: width 1.5s ease;
+}
+
+/* ─── RESEARCH ──────────────────────────────────────── */
+.research-card.glass {
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.research-icon {
+  width: 60px; height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(6,182,212,0.2));
+  border: 1px solid rgba(37,99,235,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.research-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.research-body p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.research-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.tag.blue { background: rgba(37,99,235,0.15); color: #60a5fa; border: 1px solid rgba(37,99,235,0.2); }
+.tag.teal { background: rgba(6,182,212,0.15); color: var(--teal); border: 1px solid rgba(6,182,212,0.2); }
+.tag.gold { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.2); }
+
+/* ─── AWARDS ────────────────────────────────────────── */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.award-card.glass {
+  overflow: hidden;
+}
+
+.award-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.award-card:hover img { transform: scale(1.05); }
+
+.award-card-body {
+  padding: 20px 24px;
+}
+.award-card-body h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.award-card-body p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ─── YOUTUBE ────────────────────────────────────────── */
+.yt-card.glass {
+  padding: 40px;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.yt-logo {
+  width: 100px; height: 100px;
+  border-radius: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,0,0,0.3);
+}
+
+.yt-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.yt-body p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.yt-body .yt-stats {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+.yt-stat { text-align: center; }
+.yt-stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff4444;
+}
+.yt-stat .lbl { font-size: 11px; color: var(--muted); }
+
+/* ─── QUOTE ─────────────────────────────────────────── */
+.quote-section {
+  padding: 80px 60px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  line-height: 0.5;
+  color: var(--gold);
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--text);
+  max-width: 700px;
+  margin: 0 auto 16px;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ─── REVIEWS ────────────────────────────────────────── */
+.reviews-top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+.rating-summary.glass {
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.rating-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), #fde68a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stars-display { font-size: 22px; margin-bottom: 8px; letter-spacing: 2px; }
+
+.rating-count { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.bar-row-label { font-size: 12px; color: var(--muted); width: 28px; text-align: right; }
+.bar-row-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-row-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #fde68a);
+  border-radius: 4px;
+}
+.bar-row-count { font-size: 11px; color: var(--muted); width: 20px; }
+
+.review-cards { display: flex; flex-direction: column; gap: 16px; }
+
+.review-card.glass { padding: 24px 28px; }
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reviewer-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.reviewer-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.reviewer-info p { font-size: 12px; color: var(--muted); }
+
+.review-stars { font-size: 14px; letter-spacing: 1px; }
+
+.review-text { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+
+.review-subject {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(6,182,212,0.1);
+  color: var(--teal);
+  border: 1px solid rgba(6,182,212,0.2);
+}
+
+/* ─── LEAVE REVIEW FORM ─────────────────────────────── */
+.review-form-section {
+  margin-top: 60px;
+}
+
+.review-form-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.review-form-section .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; }
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--teal);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: #0a1020; }
+
+/* Star picker */
+.star-picker { display: flex; flex-direction: row; gap: 10px; margin-top: 6px; }
+.star-picker input { display: none; }
+.star-picker label {
+  font-size: 36px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 1;
+}
+.star-picker label:hover { transform: scale(1.2); }
+.star-picker label.active { color: var(--gold); }
+
+.star-btn {
+  font-size: 40px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 1;
+  padding: 4px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+.star-btn.active { color: var(--gold); }
+.star-btn:hover { transform: scale(1.2); }
+
+.full-width { grid-column: 1 / -1; }
+
+/* Dynamic reviews list */
+#reviews-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+
+.success-msg {
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.25);
+  color: #4ade80;
+  border-radius: 12px;
+  padding: 16px 22px;
+  font-size: 14px;
+  display: none;
+  margin-top: 14px;
+}
+
+/* ─── CONTACT ────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+
+.contact-item.glass {
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text);
+}
+.contact-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.contact-icon.email { background: rgba(37,99,235,0.15); }
+.contact-icon.yt    { background: rgba(255,0,0,0.15); }
+.contact-icon.loc   { background: rgba(6,182,212,0.15); }
+
+.contact-item h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.contact-item p  { font-size: 12px; color: var(--muted); }
+
+.contact-form.glass { padding: 36px; }
+
+.contact-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.cf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ─── FOOTER ────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+footer a { color: var(--teal); text-decoration: none; }
+
+/* ─── SIDEBAR OVERLAY ────────────────────────────────── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 250;
+}
+.sidebar-overlay.active { display: block; }
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .sidebar {
+    left: -260px;
+    width: 240px;
+    transition: left 0.3s ease;
+  }
+  .sidebar.open {
+    left: 0;
+    box-shadow: 6px 0 40px rgba(0,0,0,0.2);
+  }
+
+  .menu-toggle { display: flex !important; }
+  .main { margin-left: 0 !important; }
+
+  .hero { padding: 80px 24px 60px; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero h1 { font-size: 38px; }
+  .hero-image-wrap { order: -1; }
+  .hero-btns { justify-content: center; }
+  .hero-meta { align-items: center; }
+
+  section { padding: 70px 24px; }
+  .about-grid,
+  .reviews-top,
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-grid, .cf-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .research-card.glass { flex-direction: column; }
+  .yt-card.glass { flex-direction: column; text-align: center; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 28px 24px; }
+
+  .hero-float-badge.top-right { right: -10px; }
+  .hero-float-badge.bottom-left { left: -10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="aurora-bg"></div>
+<div class="aurora-mid"></div>
+<div class="stars"></div>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Mobile toggle -->
+<button class="menu-toggle" id="menuToggle" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');if(s.classList.contains('open')){s.classList.remove('open');o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';}else{s.classList.add('open');o.classList.add('active');t.innerHTML='✕';document.body.style.overflow='hidden';}})()">☰</button>
+
+<!-- ─── SIDEBAR ─── -->
+<aside class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose" onclick="(function(){var s=document.getElementById('sidebar');var o=document.getElementById('sidebarOverlay');var t=document.getElementById('menuToggle');s.classList.remove('open');if(o)o.classList.remove('active');t.innerHTML='☰';document.body.style.overflow='';})()">✕</button>
+  <div class="sidebar-logo">Ritesh Ojha</div>
+  <div class="sidebar-tagline">Physics Educator</div>
+
+  <a href="#about"     class="active"><span class="nav-icon">👤</span>About</a>
+  <a href="#education"          ><span class="nav-icon">🎓</span>Education</a>
+  <a href="#skills"             ><span class="nav-icon">⚡</span>Skills</a>
+  <a href="#research"           ><span class="nav-icon">🔬</span>Research</a>
+  <a href="#awards"             ><span class="nav-icon">🏆</span>Awards</a>
+  <a href="#youtube"            ><span class="nav-icon">📺</span>YouTube</a>
+  <a href="#reviews"            ><span class="nav-icon">⭐</span>Reviews</a>
+  <a href="#contact"            ><span class="nav-icon">✉️</span>Contact</a>
+
+  <div class="sidebar-bottom">
+    Gorakhpur, UP, India<br>
+    <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a>
+  </div>
+</aside>
+
+<!-- ─── MAIN ─── -->
+<div class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-badge">⚡ Available for Collaboration</div>
+        <h1>Ritesh<br><em>Ojha</em></h1>
+        <p class="hero-sub">Physics Educator · YouTuber · M.Sc Student<br>Making physics simple, engaging & unforgettable.</p>
+        <div class="hero-meta">
+          <span>⚛️ M.Sc Physics (Electronics) — DDU University</span>
+          <span>📍 Gorakhpur, Uttar Pradesh, India</span>
+          <span>🎓 Teaching Class 9–12 since 2022</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#reviews" class="btn btn-primary">⭐ Student Reviews</a>
+          <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ GyanMitra</a>
+          <a href="#contact" class="btn btn-secondary">✉ Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-img-frame">
+          <img src="profile.jpg" alt="Ritesh Ojha">
+          <div class="hero-float-badge top-right">⚛️ M.Sc Physics</div>
+          <div class="hero-float-badge bottom-left">📺 GyanMitra</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-title">About <em>Me</em></h2>
+    <p class="section-desc">A passionate Physics educator on a mission to make learning genuinely joyful and effective for every student.</p>
+
+    <div class="stats-row">
+      <div class="stat-card glass">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Teaching</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">9–12</div>
+        <div class="stat-label">Classes Taught</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Research Paper</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">📺</div>
+        <div class="stat-label">GyanMitra Channel</div>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-main glass">
+        <p>Hi! I'm <b>Ritesh Ojha</b>, a dedicated Physics educator based in Gorakhpur, India. I believe that every student deserves to experience the wonder of Physics — not as a burden, but as a doorway to understanding the universe.</p>
+        <p>Currently pursuing <b>M.Sc in Physics (Electronics)</b> at DDU University (2024–2026), I combine academic rigor with creative teaching methods. My goal is to simplify even the most complex concepts and deliver them in a way that truly sticks.</p>
+        <p>I run <b>GyanMitra</b> — my YouTube channel dedicated to educational content for school and college students. Teaching isn't just my career — it's my calling.</p>
+        <p>My greatest strength? My mother's blessings, and the satisfaction of watching my students succeed. 🙏</p>
+      </div>
+
+      <div class="about-side">
+        <div class="info-card glass">
+          <div class="info-icon blue">🎓</div>
+          <div>
+            <h4>M.Sc Physics (Electronics)</h4>
+            <p>DDU University · 2024 – 2026</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon gold">📍</div>
+          <div>
+            <h4>Present Location</h4>
+            <p>Gorakhpur, Uttar Pradesh, India</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon teal">💡</div>
+          <div>
+            <h4>Interests</h4>
+            <p>Teaching Physics · Video Editing · Content Creation · Digital Education</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon blue">🌐</div>
+          <div>
+            <h4>Languages</h4>
+            <p>Hindi (Native) · English (Fluent)</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon gold">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>riteshojha98@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">Academic Journey</div>
+    <h2 class="section-title">My <em>Education</em></h2>
+    <p class="section-desc">A strong academic foundation building towards excellence in Physics education and research.</p>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <span class="tl-tag">Current · 2024–2026</span>
+        <div class="tl-card glass">
+          <h3>M.Sc Physics (Electronics)</h3>
+          <div class="institution">DDU Gorakhpur University</div>
+          <div class="year">Specialization in Electronics · Research in Molecular Interactions</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-tag">2021–2024</span>
+        <div class="tl-card glass">
+          <h3>B.Sc Mathematics</h3>
+          <div class="institution">DDU Gorakhpur University</div>
+          <div class="year">Physics · Chemistry · Mathematics · Developed passion for teaching during undergrad</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-tag">2019–2021</span>
+        <div class="tl-card glass">
+          <h3>12th CBSE — PCM</h3>
+          <div class="institution">Senior Secondary School</div>
+          <div class="year">Physics · Chemistry · Mathematics · Prepared for JEE simultaneously</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-tag">2017–2019</span>
+        <div class="tl-card glass">
+          <h3>10th CBSE</h3>
+          <div class="institution">Secondary School</div>
+          <div class="year">Graduated 2019 · Developed early interest in Physics and Science</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">My <em>Skills</em></h2>
+    <p class="section-desc">A combination of academic depth, communication mastery, and digital content skills.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-card glass">
+        <span class="skill-icon">📖</span>
+        <h3>Physics Teaching</h3>
+        <p>Class 9–12 curriculum, NEET, JEE fundamentals with concept clarity</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>95%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass">
+        <span class="skill-icon">🎬</span>
+        <h3>Video Editing</h3>
+        <p>Educational video production, animation overlays, engaging formats</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass">
+        <span class="skill-icon">✍️</span>
+        <h3>Content Creation</h3>
+        <p>Scripting, structuring lessons, YouTube content strategy for GyanMitra</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass">
+        <span class="skill-icon">🗣️</span>
+        <h3>Communication</h3>
+        <p>Clear, engaging explanation. Adapts complexity to the learner's level</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>92%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass">
+        <span class="skill-icon">🔬</span>
+        <h3>Research & Analysis</h3>
+        <p>Molecular interaction studies, scientific literature review & documentation</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:78%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card glass">
+        <span class="skill-icon">💪</span>
+        <h3>Consistency</h3>
+        <p>Daily commitment to teaching excellence, growth mindset, goal-oriented focus</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>99%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:99%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="section-label">Academic Research</div>
+    <h2 class="section-title">Research <em>Work</em></h2>
+    <p class="section-desc">Exploring the intersection of computational biology and pharmacology in the context of modern medicine.</p>
+
+    <div class="research-card glass">
+      <div class="research-icon">🧬</div>
+      <div class="research-body">
+        <h3>Molecular Interactions of ACE Inhibitors with ACE Receptors<br><em style="font-size:15px;color:var(--muted);font-style:normal;">(Captopril & Enalapril in COVID-19)</em></h3>
+        <p>This research investigates the molecular docking interactions of ACE inhibitors — specifically Captopril and Enalapril — with ACE2 receptors, exploring their significance in the context of COVID-19 pathophysiology and potential therapeutic applications. The study provides insight into drug-receptor binding affinity and pharmacological implications for hypertensive patients during viral infection.</p>
+        <div class="research-tags">
+          <span class="tag blue">Molecular Docking</span>
+          <span class="tag teal">COVID-19</span>
+          <span class="tag gold">Pharmacology</span>
+          <span class="tag blue">ACE Inhibitors</span>
+          <span class="tag teal">Computational Biology</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Awards & <em>Achievements</em></h2>
+    <p class="section-desc">Milestones that mark the journey of dedication and hard work.</p>
+
+    <div class="awards-grid">
+      <div class="award-card glass">
+        <img src="award1.jpg" alt="Award 1">
+        <div class="award-card-body">
+          <h4>🏆 Achievement Award</h4>
+          <p>Recognized for outstanding academic performance and contribution</p>
+        </div>
+      </div>
+      <div class="award-card glass">
+        <img src="award2.jpg" alt="Award 2">
+        <div class="award-card-body">
+          <h4>🏅 Excellence Award</h4>
+          <p>Honored for dedication to education and teaching excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube">
+    <div class="section-label">Digital Education</div>
+    <h2 class="section-title">YouTube <em>Channel</em></h2>
+    <p class="section-desc">Spreading physics knowledge beyond classrooms through engaging video content.</p>
+
+    <div class="yt-card glass">
+      <img src="logo.jpg" alt="GyanMitra Logo" class="yt-logo">
+      <div class="yt-body">
+        <h3>📺 GyanMitra</h3>
+        <p>GyanMitra is my educational YouTube channel dedicated to making Physics and Science accessible to every student. From basics to advanced concepts — explained clearly, visually, and memorably. Subscribe and join the learning family!</p>
+        <div class="yt-stats">
+          <div class="yt-stat">
+            <div class="num">📺</div>
+            <div class="lbl">Channel</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">🎓</div>
+            <div class="lbl">Education</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">🇮🇳</div>
+            <div class="lbl">Hindi & English</div>
+          </div>
+        </div>
+        <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ Visit GyanMitra Channel</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">My mother is my strength — her happiness gives me the power to achieve anything in this world.</p>
+    <p class="quote-author">— Ritesh Ojha</p>
+  </div>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="section-label">What Students Say</div>
+    <h2 class="section-title">Student <em>Reviews</em></h2>
+    <p class="section-desc">Honest feedback from the students I've had the joy of teaching — their success is my greatest reward.</p>
+
+    <div class="reviews-top">
+
+      <div class="rating-summary glass">
+        <div class="rating-big" id="avgRating">4.8</div>
+        <div class="stars-display" id="avgStars">⭐⭐⭐⭐⭐</div>
+        <div class="rating-count" id="totalCount">Based on 5 reviews</div>
+        <div id="barRows">
+          <div class="bar-row"><span class="bar-row-label">5★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar5" style="width:80%"></div></div><span class="bar-row-count" id="cnt5">4</span></div>
+          <div class="bar-row"><span class="bar-row-label">4★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar4" style="width:20%"></div></div><span class="bar-row-count" id="cnt4">1</span></div>
+          <div class="bar-row"><span class="bar-row-label">3★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar3" style="width:0%"></div></div><span class="bar-row-count" id="cnt3">0</span></div>
+          <div class="bar-row"><span class="bar-row-label">2★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar2" style="width:0%"></div></div><span class="bar-row-count" id="cnt2">0</span></div>
+          <div class="bar-row"><span class="bar-row-label">1★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar1" style="width:0%"></div></div><span class="bar-row-count" id="cnt1">0</span></div>
+        </div>
+      </div>
+
+      <div class="review-cards" id="reviewCards">
+
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(37,99,235,0.2);color:#60a5fa;">AK</div>
+              <div class="reviewer-info">
+                <h4>Amit Kumar</h4>
+                <p>Class 12 · Physics · March 2025</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">Sir explains even the hardest topics with such clarity and creativity. His analogies for electromagnetism and modern physics are unmatched. I cleared my boards with 96% in Physics — couldn't have done it without him!</p>
+          <span class="review-subject">Electromagnetism</span>
+        </div>
+
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(6,182,212,0.2);color:var(--teal);">PS</div>
+              <div class="reviewer-info">
+                <h4>Priya Singh</h4>
+                <p>Class 11 · Physics · January 2025</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">The GyanMitra YouTube channel is a lifesaver! Sir's videos are concise, visual, and super easy to follow. Physics used to scare me — now it's my favourite subject. Thank you, Ritesh Sir!</p>
+          <span class="review-subject">Mechanics</span>
+        </div>
+
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(245,158,11,0.2);color:var(--gold);">RV</div>
+              <div class="reviewer-info">
+                <h4>Rohit Verma</h4>
+                <p>Class 12 · Physics · November 2024</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">Very patient and dedicated. He never makes you feel bad for asking basic questions, and always follows up with extra material. The numerical problem sessions are gold for board and NEET prep!</p>
+          <span class="review-subject">Thermodynamics</span>
+        </div>
+
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(139,92,246,0.2);color:#a78bfa;">NJ</div>
+              <div class="reviewer-info">
+                <h4>Neha Joshi</h4>
+                <p>Class 11 · Physics · December 2024</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">His passion for Physics is truly infectious! The story behind every discovery makes learning so enjoyable. He guided me through NEET prep alongside board exams — seamlessly and effectively.</p>
+          <span class="review-subject">Modern Physics</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dynamic reviews -->
+    <div id="reviews-list"></div>
+
+    <!-- LEAVE A REVIEW FORM -->
+    <div class="review-form-section">
+      <h3>✨ Leave a Review</h3>
+      <p class="sub">Were you one of my students? Your feedback genuinely helps me grow as an educator.</p>
+
+      <div class="glass" style="padding:36px;" id="reviewFormWrap">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>YOUR NAME *</label>
+            <input type="text" id="rName" placeholder="e.g. Anjali Gupta">
+          </div>
+          <div class="form-group">
+            <label>SUBJECT / CLASS</label>
+            <input type="text" id="rSubject" placeholder="e.g. Class 12 · Physics">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px;">
+          <label>YOUR RATING *</label>
+          <div class="star-picker" id="starPicker">
+            <span class="star-btn" data-val="1">★</span>
+            <span class="star-btn" data-val="2">★</span>
+            <span class="star-btn" data-val="3">★</span>
+            <span class="star-btn" data-val="4">★</span>
+            <span class="star-btn" data-val="5">★</span>
+          </div>
+          <input type="hidden" id="selectedRating" value="">
+        </div>
+
+        <div class="form-group" style="margin-bottom:20px;">
+          <label>YOUR REVIEW *</label>
+          <textarea id="rText" placeholder="Share your experience with Ritesh Sir..."></textarea>
+        </div>
+
+        <button class="btn btn-primary" onclick="submitReview()">Submit Review ⭐</button>
+
+        <div class="success-msg" id="successMsg">
+          🌟 Thank you so much! Your review has been posted and means the world to me.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Build <em>Together</em></h2>
+    <p class="section-desc">Feel free to reach out for tutoring enquiries, collaborations, or just to say hello!</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <a href="/cdn-cgi/l/email-protection#99ebf0edfceaf1f6f3f1f8a0a1d9fef4f8f0f5b7faf6f4" class="contact-item glass">
+          <div class="contact-icon email">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><span class="__cf_email__" data-cfemail="b0c2d9c4d5c3d8dfdad8d18988f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span></p>
+          </div>
+        </a>
+        <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="contact-item glass">
+          <div class="contact-icon yt">▶</div>
+          <div>
+            <h4>YouTube</h4>
+            <p>@riteshojha1 · GyanMitra</p>
+          </div>
+        </a>
+        <div class="contact-item glass">
+          <div class="contact-icon loc">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Gorakhpur, Uttar Pradesh, India</p>
+          </div>
+        </div>
+
+        <div class="glass" style="padding:24px;">
+          <p style="font-size:13px;color:var(--muted);line-height:1.8;">
+            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form glass">
+        <h3>Send a Message</h3>
+        <div class="cf-grid">
+          <div class="form-group">
+            <label>NAME</label>
+            <input type="text" id="cName" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>EMAIL</label>
+            <input type="email" id="cEmail" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:14px;">
+          <label>SUBJECT</label>
+          <input type="text" id="cSubject" placeholder="What's this about?">
+        </div>
+        <div class="form-group" style="margin-bottom:20px;">
+          <label>MESSAGE</label>
+          <textarea id="cMsg" placeholder="Type your message here..."></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="sendMsg()">Send Message →</button>
+        <div class="success-msg" id="msgSuccess">✅ Message sent! I'll get back to you soon.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2026</span>
+    <span>
+      <a href="/cdn-cgi/l/email-protection#32405b4657415a5d585a530b0a72555f535b5e1c515d5f" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="eb99829f8e98838481838ad2d3ab8c868a8287c5888486">[email&#160;protected]</span></a>
+      &nbsp;·&nbsp;
+      <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank">YouTube @riteshojha1</a>
+    </span>
+  </footer>
+
+</div><!-- end .main -->
+
+
+
+
+
+
+<!-- Supabase SDK -->
+<!-- Supabase via direct REST API (no SDK needed) -->
+
+<script>
+/* ── Mobile sidebar ─────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+
+  if (!toggle || !sidebar) return;
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+    toggle.innerHTML = '&#10005;';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+    toggle.innerHTML = '&#9776;';
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  // Touch support for mobile
+  toggle.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  if (overlay) {
+    overlay.addEventListener('click', closeSidebar);
+    overlay.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      closeSidebar();
+    });
+  }
+
+  // Close sidebar when a nav link is clicked (mobile)
+  document.querySelectorAll('.sidebar a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) closeSidebar();
+    });
+  });
+});
+
+/* ── Active nav link on scroll ──── */
+const sections = document.querySelectorAll('section, .hero');
+const navLinks = document.querySelectorAll('.sidebar a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 160) current = s.id || 'hero';
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+/* ── Supabase Review System ──────── */
+const SUPABASE_URL = 'https://hekrgjagvfvmpyegjfze.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_RMpKG63wnnTsIkWzf8d_6w_y5wQsdEu';
+
+const sbHeaders = {
+  'apikey': SUPABASE_ANON_KEY,
+  'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+  'Content-Type': 'application/json',
+  'Prefer': 'return=representation'
+};
+
+// ── Star picker JS ──────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-btn');
+
+  function selectStar(val) {
+    document.getElementById('selectedRating').value = val;
+    stars.forEach(s => {
+      const active = parseInt(s.dataset.val) <= val;
+      s.classList.toggle('active', active);
+      s.style.setProperty('color', active ? '#b8860b' : '#cccccc', 'important');
+    });
+  }
+
+  stars.forEach(star => {
+    // Use only touchend for touch devices (avoids double-fire with click)
+    star.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      selectStar(parseInt(star.dataset.val));
+    }, { passive: false });
+
+    // Use click for desktop
+    star.addEventListener('click', () => {
+      selectStar(parseInt(star.dataset.val));
+    });
+  });
+
+  // Make submit button work on touch too
+  const submitBtn = document.querySelector('#reviewFormWrap .btn-primary');
+  if (submitBtn) {
+    submitBtn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      submitReview();
+    }, { passive: false });
+  }
+});
+
+
+
+const colors = ['#60a5fa','#22d3ee','#f59e0b','#a78bfa','#4ade80','#f87171','#fb923c'];
+
+function starsHtml(n) {
+  return '⭐'.repeat(n) + (n < 5 ? '☆'.repeat(5 - n) : '');
+}
+
+function initials(name) {
+  return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+}
+
+function timeAgo(ts) {
+  if (!ts) return 'Recently';
+  const date = ts.toDate ? ts.toDate() : new Date(ts);
+  const diff = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (diff < 60) return 'Just now';
+  if (diff < 3600) return Math.floor(diff / 60) + ' min ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + ' hr ago';
+  return date.toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+}
+
+function renderReviews(reviewsArr) {
+  const list = document.getElementById('reviews-list');
+  if (!list) return;
+  list.innerHTML = '';
+  reviewsArr.forEach((r, i) => {
+    const c = colors[i % colors.length];
+    const div = document.createElement('div');
+    div.className = 'review-card glass';
+    div.innerHTML = `
+      <div class="review-header">
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:${c}22;color:${c};
+">${initials(r.name)}</div>
+          <div class="reviewer-info">
+            <h4>${r.name}</h4>
+            <p>${r.subject || 'Student'} · ${timeAgo(r.created_at)}</p>
+          </div>
+        </div>
+        <div class="review-stars">${starsHtml(r.rating)}</div>
+      </div>
+      <p class="review-text">${r.text}</p>
+    `;
+    list.appendChild(div);
+  });
+  updateStats(reviewsArr);
+}
+
+function updateStats(reviewsArr) {
+  const seed = [5,5,5,5,4];
+  const all  = [...seed, ...reviewsArr.map(r => r.rating)];
+  const total = all.length;
+  const avg   = (all.reduce((a,b) => a+b, 0) / total).toFixed(1);
+  document.getElementById('avgRating').textContent  = avg;
+  document.getElementById('totalCount').textContent = `Based on ${total} reviews`;
+  [1,2,3,4,5].forEach(s => {
+    const cnt = all.filter(r => r === s).length;
+    const pct = total ? (cnt / total * 100).toFixed(0) : 0;
+    document.getElementById('bar' + s).style.width   = pct + '%';
+    document.getElementById('cnt' + s).textContent   = cnt;
+  });
+}
+
+// Load reviews from Supabase REST API
+async function loadReviews() {
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', {
+      headers: sbHeaders
+    });
+    if (!res.ok) { console.error('Load error:', res.status, await res.text()); return; }
+    const data = await res.json();
+    renderReviews(data || []);
+  } catch(e) { console.error('loadReviews failed:', e); }
+}
+loadReviews();
+
+// Expose submitReview globally so onclick= in HTML can reach it
+async function submitReview() {
+  const name     = document.getElementById('rName').value.trim();
+  const subj     = document.getElementById('rSubject').value.trim();
+  const text     = document.getElementById('rText').value.trim();
+  const ratingVal = document.getElementById('selectedRating').value;
+
+  if (!name || !text || !ratingVal) {
+    alert('Please fill in your name, rating, and review before submitting.');
+    return;
+  }
+
+  const btn = document.querySelector('#reviewFormWrap .btn-primary');
+  btn.disabled    = true;
+  btn.textContent = 'Submitting…';
+
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+      method: 'POST',
+      headers: sbHeaders,
+      body: JSON.stringify({ name, subject: subj, text, rating: parseInt(ratingVal) })
+    });
+    if (!res.ok) throw new Error(await res.text());
+    loadReviews();
+
+    document.getElementById('rName').value    = '';
+    document.getElementById('rSubject').value = '';
+    document.getElementById('rText').value    = '';
+    document.getElementById('selectedRating').value = '';
+    document.querySelectorAll('.star-btn').forEach(s => s.classList.remove('active'));
+
+    const successMsg = document.getElementById('successMsg');
+    successMsg.style.display = 'block';
+    setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+
+  } catch (err) {
+    console.error('Error saving review:', err);
+    alert('Oops! Could not save your review. Please try again.');
+  } finally {
+    btn.disabled    = false;
+    btn.textContent = 'Submit Review ⭐';
+  }
+};
+
+
+/* ── Contact form (placeholder) ── */
+function sendMsg() {
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const msg = document.getElementById('cMsg').value.trim();
+  if (!name || !email || !msg) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  const successEl = document.getElementById('msgSuccess');
+  if (successEl) {
+    successEl.style.display = 'block';
+    setTimeout(() => { successEl.style.display = 'none'; }, 5000);
+  }
+  document.getElementById('cName').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cSubject').value = '';
+  document.getElementById('cMsg').value = '';
+}
+
+window.submitReview = submitReview;
+window.sendMsg = sendMsg;
+</script>
+</body>
+</html>
