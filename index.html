@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://riteshojha.vercel.app/">
 <meta name="google-site-verification" content="uc7nMeb8stmV0Qo9oYfzL2EoDSzQFHfj82xnj_LZAsM" />
 
-<!-- Open Graph (for sharing on social/WhatsApp/Google preview) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ritesh Ojha — Physics Educator | GyanMitra">
 <meta property="og:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE. M.Sc Physics, DDU Gorakhpur. Founder of GyanMitra YouTube Channel.">
@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE.">
 <meta name="twitter:image" content="https://riteshojha.vercel.app/profile.jpg">
 
-<!-- Structured Data for Google -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,6 +49,14 @@
     "https://www.instagram.com/iam_riteshojha1"
   ]
 }
+</script>
+
+<!-- EmailJS for contact form -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+  })();
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -135,6 +143,7 @@ body {
   border-right: 1px solid var(--border); padding: 40px 24px;
   z-index: 300; display: flex; flex-direction: column; gap: 6px;
   transition: transform 0.3s ease;
+  overflow-y: auto;
 }
 
 .sidebar-logo {
@@ -188,9 +197,30 @@ body {
   transform: translateY(-1px);
 }
 
+/* ─── SIDEBAR LOGO IMAGE ─────────────────────────────── */
+.sidebar-logo-img {
+  width: 52px; height: 52px; border-radius: 12px; object-fit: cover;
+  border: 2px solid rgba(184,134,11,0.3);
+  margin-bottom: 8px; display: block;
+}
+
+/* ─── SIDEBAR QR CODE ────────────────────────────────── */
+.sidebar-qr-wrap {
+  margin-top: 10px; text-align: center; padding: 10px 0 4px;
+  border-top: 1px solid var(--border);
+}
+.sidebar-qr-wrap img {
+  width: 90px; height: 90px; border-radius: 8px;
+  border: 1px solid rgba(184,134,11,0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.sidebar-qr-label {
+  font-size: 10px; color: var(--muted); margin-top: 5px; letter-spacing: 0.5px;
+}
+
 /* ─── MOBILE TOGGLE ─────────────────────────────────── */
 .menu-toggle {
-  display: none; position: fixed; top: 16px; left: 16px; z-index: 300;
+  display: none; position: fixed; top: 16px; left: 16px; z-index: 400;
   background: rgba(255,252,235,0.97); border: 1px solid var(--border);
   color: var(--text); width: 44px; height: 44px; border-radius: 10px;
   font-size: 22px; cursor: pointer; align-items: center; justify-content: center;
@@ -457,6 +487,10 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
   display: flex; align-items: center; justify-content: center;
   font-size: 36px; box-shadow: 0 10px 40px rgba(184,134,11,0.3);
   animation: pulse-sub 2.5s ease-in-out infinite;
+  overflow: hidden;
+}
+.sub-logo img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
 }
 @keyframes pulse-sub {
   0%, 100% { box-shadow: 0 10px 40px rgba(184,134,11,0.3); }
@@ -498,9 +532,9 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
 .modal-overlay.active { display: flex; }
 .modal-box {
   background: var(--bg); border: 1px solid var(--border); border-radius: 20px;
-  padding: 44px 36px; max-width: 420px; width: 90%; text-align: center;
+  padding: 44px 36px; max-width: 440px; width: 90%; text-align: center;
   animation: modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
-  position: relative;
+  position: relative; max-height: 90vh; overflow-y: auto;
 }
 @keyframes modalIn {
   from { opacity: 0; transform: scale(0.85) translateY(20px); }
@@ -517,7 +551,9 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
   width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 16px;
   background: linear-gradient(135deg, var(--gold), var(--teal));
   display: flex; align-items: center; justify-content: center; font-size: 32px;
+  overflow: hidden;
 }
+.modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .modal-box h3 {
   font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; margin-bottom: 6px;
 }
@@ -538,6 +574,12 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .upi-note { font-size: 11px; color: var(--muted); }
+.upi-qr-wrap { margin-top: 14px; text-align: center; }
+.upi-qr-wrap img {
+  width: 150px; height: 150px; border-radius: 10px;
+  border: 2px solid rgba(184,134,11,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.upi-qr-label { font-size: 11px; color: var(--muted); margin-top: 6px; letter-spacing: 0.4px; }
 .upi-steps { text-align: left; margin-bottom: 18px; }
 .upi-step { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .upi-step .step-num {
@@ -552,6 +594,15 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
   transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
 }
 .btn-copy:hover { background: rgba(184,134,11,0.2); }
+.btn-drive-access {
+  display: block; text-align: center; margin: 14px 0 10px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #b8860b, #0e7490);
+  color: white; font-weight: 700; font-size: 14px; border-radius: 10px;
+  text-decoration: none; box-shadow: 0 6px 20px rgba(184,134,11,0.25);
+  transition: all 0.25s;
+}
+.btn-drive-access:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(184,134,11,0.4); }
 
 /* ─── QUOTE ─────────────────────────────────────────── */
 .quote-section { padding: 80px 60px; text-align: center; border-top: 1px solid var(--border); position: relative; }
@@ -594,7 +645,7 @@ section { padding: 100px 60px; border-top: 1px solid var(--border); }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-group label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; }
 .form-group input, .form-group textarea, .form-group select {
-  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  background: rgba(255,255,255,0.6); border: 1px solid var(--border);
   border-radius: 10px; padding: 12px 16px; color: var(--text);
   font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.2s;
 }
@@ -683,6 +734,10 @@ footer a { color: var(--teal); text-decoration: none; }
 <!-- ─── SIDEBAR ─── -->
 <aside class="sidebar" id="sidebar">
   <button class="sidebar-close" id="sidebarClose">✕</button>
+
+  <!-- Channel Logo in sidebar -->
+  <img src="logo.jpg" alt="GyanMitra" class="sidebar-logo-img">
+
   <div class="sidebar-logo">Ritesh Ojha</div>
   <div class="sidebar-tagline">Physics Educator</div>
 
@@ -700,7 +755,7 @@ footer a { color: var(--teal); text-decoration: none; }
     🔔 Subscribe — ₹11
   </button>
 
-  <!-- Instagram below subscribe button -->
+  <!-- Instagram link in sidebar -->
   <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank"
      style="display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:10px;text-decoration:none;font-size:12.5px;font-weight:600;color:#cc2366;background:linear-gradient(135deg,rgba(240,148,51,0.10),rgba(188,24,136,0.10));border:1px solid rgba(220,39,67,0.18);margin-top:2px;transition:all 0.25s;">
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
@@ -717,8 +772,16 @@ footer a { color: var(--teal); text-decoration: none; }
     </svg>
     @iam_riteshojha1
   </a>
+
+  <!-- QR Barcode in sidebar -->
+  <div class="sidebar-qr-wrap">
+    <img src="barcode1.jpg" alt="Scan to Pay ₹11">
+    <div class="sidebar-qr-label">📲 Scan to Subscribe ₹11</div>
+  </div>
+
+  <div class="sidebar-bottom">
     Gorakhpur, UP, India<br>
-    <a href="/cdn-cgi/l/email-protection#cbb9a2bfaeb8a3a4a1a3aaf2f38baca6aaa2a7e5a8a4a6" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="92e0fbe6f7e1fafdf8faf3abaad2f5fff3fbfebcf1fdff">[email&#160;protected]</span></a>
+    <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a>
   </div>
 </aside>
 
@@ -738,7 +801,7 @@ footer a { color: var(--teal); text-decoration: none; }
           <span>⚛️ M.Sc Physics (Electronics) — DDU University</span>
           <span>📍 Gorakhpur, Uttar Pradesh, India</span>
           <span>🎓 Teaching Class 9–12 since 2022</span>
-          <span>✉️ <a href="/cdn-cgi/l/email-protection#ef9d869b8a9c878085878ed6d7af88828e8683c18c8082" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="295b405d4c5a41464341481011694e44484045074a4644">[email&#160;protected]</span></a></span>
+          <span>✉️ <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a></span>
         </div>
         <div class="hero-btns">
           <a href="#reviews" class="btn btn-primary">⭐ Student Reviews</a>
@@ -753,7 +816,7 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="hero-float-badge top-right">⚛️ M.Sc Physics</div>
           <div class="hero-float-badge bottom-left">📺 GyanMitra</div>
         </div>
-        <!-- Resume link below profile photo -->
+        <!-- Updated resume link -->
         <a href="https://drive.google.com/file/d/1MqcYJat3B5w8zcfLUTyqWNDicvkhSGZb/view?usp=drivesdk" target="_blank" class="hero-resume-link">
           📄 View My Resume
         </a>
@@ -828,7 +891,7 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="info-icon gold">✉️</div>
           <div>
             <h4>Email</h4>
-            <p><a href="/cdn-cgi/l/email-protection#295b405d4c5a41464341481011694e44484045074a4644"><span class="__cf_email__" data-cfemail="c8baa1bcadbba0a7a2a0a9f1f088afa5a9a1a4e6aba7a5">[email&#160;protected]</span></a></p>
+            <p><a href="mailto:riteshojha98@gmail.com">riteshojha98@gmail.com</a></p>
           </div>
         </div>
         <div class="info-card glass">
@@ -849,8 +912,6 @@ footer a { color: var(--teal); text-decoration: none; }
     <p class="section-desc">A strong academic foundation building towards excellence in Physics education and research.</p>
 
     <div class="timeline">
-
-      <!-- Post Graduation -->
       <div class="tl-item">
         <span class="tl-tag">Current · 2024–2026</span>
         <div class="tl-card glass">
@@ -860,8 +921,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="subjects">📚 Subjects: Physics with specialization in Electronics</div>
         </div>
       </div>
-
-      <!-- Graduation -->
       <div class="tl-item">
         <span class="tl-tag">2021–2024</span>
         <div class="tl-card glass">
@@ -871,8 +930,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="subjects">📚 Subjects: Mathematics, Physics, Chemistry<br>🎓 Since graduation, teaching students of Class 9 to 12 offline</div>
         </div>
       </div>
-
-      <!-- 12th -->
       <div class="tl-item">
         <span class="tl-tag">2021 · 12th CBSE</span>
         <div class="tl-card glass">
@@ -882,8 +939,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="subjects">📚 Subjects: Physics, Chemistry, Mathematics, Hindi, English, Physical Education</div>
         </div>
       </div>
-
-      <!-- 10th -->
       <div class="tl-item">
         <span class="tl-tag">2019 · 10th CBSE</span>
         <div class="tl-card glass">
@@ -893,7 +948,6 @@ footer a { color: var(--teal); text-decoration: none; }
           <div class="subjects">📚 Subjects: Science, English, Hindi, Social Science, Mathematics, Foundation of IT (Computer)</div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1047,7 +1101,10 @@ footer a { color: var(--teal); text-decoration: none; }
     <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;">Get exclusive study material and special digital content — at a price that fits every student!</p>
 
     <div class="subscribe-card glass">
-      <div class="sub-logo">🔔</div>
+      <!-- Logo in subscription section -->
+      <div class="sub-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
       <h3>Join the Learning Family</h3>
       <div class="sub-price">₹11 <span style="font-size:18px;-webkit-text-fill-color:var(--muted);font-weight:400;">/ access</span></div>
       <p class="sub-desc">Get instant access to exclusive study notes, special content, and the <strong>AI Basic Prompt PDF</strong> — a practical guide to using AI tools for your studies!</p>
@@ -1055,7 +1112,7 @@ footer a { color: var(--teal); text-decoration: none; }
       <div class="sub-features">
         <div class="sub-feature"><span class="icon">🤖</span><span><strong>AI Basic Prompt PDF</strong> — Learn how to use AI prompts effectively for studying</span></div>
         <div class="sub-feature"><span class="icon">⭐</span><span><strong>Special Content</strong> — Curated physics notes, tips and tricks</span></div>
-        <div class="sub-feature"><span class="icon">📱</span><span><strong>Instant UPI Access</strong> — Pay ₹11 via any UPI app and get your content</span></div>
+        <div class="sub-feature"><span class="icon">📱</span><span><strong>Instant Access</strong> — Pay ₹11 via UPI and get your content link directly</span></div>
         <div class="sub-feature"><span class="icon">🇮🇳</span><span><strong>Made for Indian Students</strong> — Hindi + English content</span></div>
       </div>
 
@@ -1200,11 +1257,11 @@ footer a { color: var(--teal); text-decoration: none; }
 
     <div class="contact-grid">
       <div class="contact-info">
-        <a href="/cdn-cgi/l/email-protection#7c0e1508190f141316141d45443c1b111d1510521f1311" class="contact-item glass">
+        <a href="mailto:riteshojha98@gmail.com" class="contact-item glass">
           <div class="contact-icon email">📧</div>
           <div>
             <h4>Email</h4>
-            <p><span class="__cf_email__" data-cfemail="24564d5041574c4b4e4c451d1c644349454d480a474b49">[email&#160;protected]</span></p>
+            <p>riteshojha98@gmail.com</p>
           </div>
         </a>
         <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="contact-item glass">
@@ -1245,7 +1302,7 @@ footer a { color: var(--teal); text-decoration: none; }
         </div>
         <div class="glass" style="padding:24px;">
           <p style="font-size:13px;color:var(--muted);line-height:1.8;">
-            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help. Email: <a href="/cdn-cgi/l/email-protection#4c3e2538293f242326242d75740c2b212d2520622f2321" style="color:var(--teal);"><span class="__cf_email__" data-cfemail="3d4f5449584e555257555c04057d5a505c5451135e5250">[email&#160;protected]</span></a>
+            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help. Email: <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);">riteshojha98@gmail.com</a>
           </p>
         </div>
       </div>
@@ -1280,7 +1337,7 @@ footer a { color: var(--teal); text-decoration: none; }
   <footer>
     <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2026</span>
     <span>
-      <a href="/cdn-cgi/l/email-protection#86f4eff2e3f5eee9eceee7bfbec6e1ebe7efeaa8e5e9eb" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="17657e6372647f787d7f762e2f57707a767e7b3974787a">[email&#160;protected]</span></a>
+      <a href="mailto:riteshojha98@gmail.com" style="color:var(--teal);text-decoration:none;">riteshojha98@gmail.com</a>
       &nbsp;·&nbsp;
       <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank">YouTube @riteshojha1</a>
       &nbsp;·&nbsp;
@@ -1307,7 +1364,10 @@ footer a { color: var(--teal); text-decoration: none; }
   <div class="modal-box">
     <button class="modal-close" onclick="closeSubscribeModal()">✕</button>
 
-    <div class="modal-logo">🔔</div>
+    <!-- Logo in modal -->
+    <div class="modal-logo">
+      <img src="logo.jpg" alt="GyanMitra">
+    </div>
     <h3>Premium Subscription</h3>
     <p class="modal-sub">
       Get instant access to <strong>special content</strong> and the <strong>AI Basic Prompt PDF</strong>.<br>
@@ -1319,10 +1379,10 @@ footer a { color: var(--teal); text-decoration: none; }
       <div class="upi-id" id="upiIdText">riteshojha98-1@okicici</div>
       <div class="upi-amount">₹11</div>
       <div class="upi-note">Any UPI app — GPay · PhonePe · Paytm · BHIM</div>
-      <!-- QR Code for easy scanning -->
-      <div style="margin-top:14px;text-align:center;">
-        <img src="barcode1.jpg" alt="Scan QR to Pay" style="width:150px;height:150px;border-radius:10px;border:2px solid rgba(184,134,11,0.25);box-shadow:0 4px 16px rgba(0,0,0,0.10);">
-        <div style="font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:0.4px;">📲 Scan with any UPI app</div>
+      <!-- QR Barcode in modal -->
+      <div class="upi-qr-wrap">
+        <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
+        <div class="upi-qr-label">📲 Scan with any UPI app</div>
       </div>
     </div>
 
@@ -1337,17 +1397,12 @@ footer a { color: var(--teal); text-decoration: none; }
       </div>
       <div class="upi-step">
         <span class="step-num">3</span>
-        <span>Take a screenshot &amp; email it to <a href="/cdn-cgi/l/email-protection#ff8d968b9a8c979095979ec6c7bf98929e9693d19c9092" style="color:var(--teal);"><span class="__cf_email__" data-cfemail="7d0f1409180e151217151c44453d1a101c1411531e1210">[email&#160;protected]</span></a></span>
-      </div>
-      <div class="upi-step">
-        <span class="step-num">4</span>
-        <span>After payment, access your content instantly via the button below 🎉</span>
+        <span>Click the button below to access your content right away! 🎉</span>
       </div>
     </div>
 
-    <!-- Direct Drive Access Button -->
-    <a href="https://drive.google.com/drive/folders/12oILLzzBQd-FooQmux47yzIlVYxuKgB8" target="_blank"
-       style="display:block;text-align:center;margin:14px 0 10px;padding:13px 20px;background:linear-gradient(135deg,#b8860b,#0e7490);color:white;font-weight:700;font-size:14px;border-radius:10px;text-decoration:none;box-shadow:0 6px 20px rgba(184,134,11,0.25);transition:all 0.25s;">
+    <!-- Direct Drive link after payment -->
+    <a href="https://drive.google.com/drive/folders/12oILLzzBQd-FooQmux47yzIlVYxuKgB8" target="_blank" class="btn-drive-access">
       📂 Access Your Content Now →
     </a>
 
@@ -1355,7 +1410,7 @@ footer a { color: var(--teal); text-decoration: none; }
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── Mobile sidebar ─────────────── */
 document.addEventListener('DOMContentLoaded', function() {
   var toggle = document.getElementById('menuToggle');
@@ -1538,9 +1593,9 @@ async function loadReviews() {
 loadReviews();
 
 async function submitReview() {
-  const name     = document.getElementById('rName').value.trim();
-  const subj     = document.getElementById('rSubject').value.trim();
-  const text     = document.getElementById('rText').value.trim();
+  const name      = document.getElementById('rName').value.trim();
+  const subj      = document.getElementById('rSubject').value.trim();
+  const text      = document.getElementById('rText').value.trim();
   const ratingVal = document.getElementById('selectedRating').value;
 
   if (!name || !text || !ratingVal) {
@@ -1556,9 +1611,67 @@ async function submitReview() {
     });
     if (!res.ok) throw new Error(await res.text());
     loadReviews();
-    document.getElementById('rName').value = '';
-    document.getElementById('rSubject').value = '';
-    document.getElementById('rText').value = '';
+    document.getElementById('rName').value      = '';
+    document.getElementById('rSubject').value   = '';
+    document.getElementById('rText').value      = '';
     document.getElementById('selectedRating').value = '';
-    document.querySelectorAll('.star-btn').forEach(s => s.classList.remove('active'));
-    const successMsg = docum
+    document.querySelectorAll('.star-btn').forEach(s => {
+      s.classList.remove('active');
+      s.style.setProperty('color', '#cccccc', 'important');
+    });
+    const successMsg = document.getElementById('successMsg');
+    if (successMsg) { successMsg.style.display = 'block'; setTimeout(() => { successMsg.style.display = 'none'; }, 4000); }
+  } catch(err) {
+    console.error('submitReview error:', err);
+    alert('Oops! Could not submit your review. Please try again.');
+  } finally {
+    btn.disabled = false; btn.textContent = 'Submit Review ⭐';
+  }
+}
+
+/* ── Contact Form — sends to riteshojha98@gmail.com via mailto fallback ── */
+function sendMsg() {
+  const name    = document.getElementById('cName').value.trim();
+  const email   = document.getElementById('cEmail').value.trim();
+  const subject = document.getElementById('cSubject').value.trim();
+  const msg     = document.getElementById('cMsg').value.trim();
+
+  if (!name || !msg) {
+    alert('Please fill in your name and message.');
+    return;
+  }
+
+  const btn = document.querySelector('.contact-form .btn-primary');
+  btn.disabled = true; btn.textContent = 'Sending…';
+
+  /* Build mailto as reliable fallback */
+  const mailSubject = encodeURIComponent((subject || 'Message from ' + name) + ' — via Portfolio');
+  const mailBody    = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + (email || 'Not provided') + '\n\n' +
+    'Message:\n' + msg
+  );
+  const mailtoLink = 'mailto:riteshojha98@gmail.com?subject=' + mailSubject + '&body=' + mailBody;
+
+  /* Try to open mail client */
+  window.location.href = mailtoLink;
+
+  /* Show success message */
+  setTimeout(() => {
+    btn.disabled = false; btn.textContent = 'Send Message →';
+    const successMsg = document.getElementById('msgSuccess');
+    if (successMsg) {
+      successMsg.style.display = 'block';
+      successMsg.textContent = '✅ Opening your mail app… Message ready to send!';
+      setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+    }
+    /* Clear fields */
+    document.getElementById('cName').value    = '';
+    document.getElementById('cEmail').value   = '';
+    document.getElementById('cSubject').value = '';
+    document.getElementById('cMsg').value     = '';
+  }, 800);
+}
+</script>
+</body>
+</html>
