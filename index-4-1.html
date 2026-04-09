@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO META TAGS ── -->
+<title>Ritesh Ojha — Physics Educator | GyanMitra | Gorakhpur</title>
+<meta name="description" content="Ritesh Ojha is a Physics Educator, M.Sc student at DDU Gorakhpur University, and founder of GyanMitra YouTube channel. Teaching Physics for Class 9–12, NEET & JEE. Based in Gorakhpur, UP, India.">
+<meta name="keywords" content="Ritesh Ojha, Physics Teacher, GyanMitra, Gorakhpur Physics Tutor, Class 9 10 11 12 Physics, NEET Physics, JEE Physics, DDU Gorakhpur, Physics Educator India, Online Physics Tutor">
+<meta name="author" content="Ritesh Ojha">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://riteshojha.vercel.app/">
+<meta name="google-site-verification" content="uc7nMeb8stmV0Qo9oYfzL2EoDSzQFHfj82xnj_LZAsM" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ritesh Ojha — Physics Educator | GyanMitra">
+<meta property="og:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE. M.Sc Physics, DDU Gorakhpur. Founder of GyanMitra YouTube Channel.">
+<meta property="og:url" content="https://riteshojha.vercel.app/">
+<meta property="og:image" content="https://riteshojha.vercel.app/profile.jpg">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Ritesh Ojha — Physics Educator">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ritesh Ojha — Physics Educator | GyanMitra">
+<meta name="twitter:description" content="Making Physics simple, engaging & unforgettable. Teaching Class 9–12 | NEET | JEE.">
+<meta name="twitter:image" content="https://riteshojha.vercel.app/profile.jpg">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ritesh Ojha",
+  "jobTitle": "Physics Educator",
+  "description": "Physics teacher for Class 9-12, NEET and JEE. M.Sc Physics student at DDU Gorakhpur University. Founder of GyanMitra YouTube channel.",
+  "url": "https://riteshojha.vercel.app/",
+  "email": "riteshojha98@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gorakhpur",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://youtube.com/@riteshojha1",
+    "https://www.instagram.com/iam_riteshojha1"
+  ]
+}
+</script>
+
+<!-- EmailJS for contact form -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+  })();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET & ROOT ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #fdfaf3;
+  --bg2:       #fef9ec;
+  --card:      rgba(255, 248, 220, 0.65);
+  --border:    rgba(212, 175, 80, 0.22);
+  --gold:      #b8860b;
+  --gold2:     #d4a017;
+  --teal:      #0e7490;
+  --teal2:     #0891b2;
+  --text:      #1e1a10;
+  --muted:     #6b5e3e;
+  --sidebar-w: 240px;
+  --radius:    16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ─── AURORA BACKGROUND ─────────────────────────────── */
+.aurora-bg {
+  position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+}
+.aurora-bg::before, .aurora-bg::after {
+  content: ''; position: absolute; border-radius: 50%; filter: blur(120px);
+  opacity: 0.52; animation: drift 18s ease-in-out infinite alternate;
+}
+.aurora-bg::before {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, #ffe08a, transparent 60%);
+  top: -200px; left: -150px;
+}
+.aurora-bg::after {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, #fde68a, transparent 60%);
+  bottom: -200px; right: -100px; animation-delay: -9s; opacity: 0.28;
+}
+.aurora-mid {
+  position: fixed; top: 30%; left: 45%; width: 500px; height: 500px;
+  border-radius: 50%; background: radial-gradient(circle, #fef3c7, transparent 60%);
+  filter: blur(130px); opacity: 0.22;
+  animation: drift 22s ease-in-out infinite alternate-reverse;
+  pointer-events: none; z-index: 0;
+}
+
+.stars {
+  position: fixed; inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(180,140,40,0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 10%, rgba(180,140,40,0.13) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 60%, rgba(180,140,40,0.10) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 80%, rgba(180,140,40,0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 70%, rgba(180,140,40,0.10) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 35%, rgba(180,140,40,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 55%, rgba(180,140,40,0.10) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 70% 90%, rgba(180,140,40,0.13) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 15%, rgba(180,140,40,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 45%, rgba(180,140,40,0.10) 0%, transparent 100%);
+  pointer-events: none; z-index: 0;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 30px) scale(1.1); }
+}
+
+/* ─── SIDEBAR ───────────────────────────────────────── */
+.sidebar {
+  position: fixed; left: 0; top: 0; width: 240px; height: 100%;
+  background: rgba(255, 252, 235, 0.96); backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border); padding: 40px 24px;
+  z-index: 300; display: flex; flex-direction: column; gap: 6px;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 10px; letter-spacing: 0.5px;
+}
+.sidebar-tagline {
+  font-size: 10px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 30px;
+  border-bottom: 1px solid var(--border); padding-bottom: 20px;
+}
+.sidebar a {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+  color: var(--muted); text-decoration: none; font-size: 13.5px;
+  font-weight: 500; border-radius: 10px; transition: all 0.25s ease; position: relative;
+}
+.sidebar a .nav-icon { font-size: 16px; }
+.sidebar a:hover, .sidebar a.active { background: rgba(255,255,255,0.06); color: var(--text); }
+.sidebar a:hover::before, .sidebar a.active::before {
+  content: ''; position: absolute; left: 0; top: 20%; bottom: 20%;
+  width: 3px; border-radius: 4px; background: linear-gradient(var(--gold), var(--teal));
+}
+
+.sidebar-bottom {
+  margin-top: auto; font-size: 11px; color: var(--muted); text-align: center;
+  border-top: 1px solid var(--border); padding-top: 16px;
+}
+.sidebar-close {
+  display: none; position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.8); color: var(--text); font-size: 16px;
+  cursor: pointer; align-items: center; justify-content: center; z-index: 10;
+}
+@media (max-width: 900px) {
+  .sidebar-close { display: flex; }
+  .sidebar { position: fixed; }
+}
+
+/* ─── SUBSCRIBE BUTTON (sidebar) ─────────────────── */
+.sidebar-subscribe-btn {
+  display: flex; align-items: center; gap: 10px; padding: 11px 14px;
+  background: linear-gradient(135deg, rgba(184,134,11,0.15), rgba(14,116,144,0.15));
+  border: 1px solid rgba(184,134,11,0.3); border-radius: 10px;
+  color: var(--gold); font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: all 0.25s; margin-top: 4px; text-decoration: none;
+}
+.sidebar-subscribe-btn:hover {
+  background: linear-gradient(135deg, rgba(184,134,11,0.25), rgba(14,116,144,0.25));
+  transform: translateY(-1px);
+}
+
+/* ─── SIDEBAR LOGO IMAGE ─────────────────────────────── */
+.sidebar-logo-img {
+  width: 52px; height: 52px; border-radius: 12px; object-fit: cover;
+  border: 2px solid rgba(184,134,11,0.3);
+  margin-bottom: 8px; display: block;
+}
+
+/* ─── SIDEBAR QR CODE ────────────────────────────────── */
+.sidebar-qr-wrap {
+  margin-top: 10px; text-align: center; padding: 10px 0 4px;
+  border-top: 1px solid var(--border);
+}
+.sidebar-qr-wrap img {
+  width: 90px; height: 90px; border-radius: 8px;
+  border: 1px solid rgba(184,134,11,0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.sidebar-qr-label {
+  font-size: 10px; color: var(--muted); margin-top: 5px; letter-spacing: 0.5px;
+}
+
+/* ─── MOBILE TOGGLE ─────────────────────────────────── */
+.menu-toggle {
+  display: none; position: fixed; top: 16px; left: 16px; z-index: 400;
+  background: rgba(255,252,235,0.97); border: 1px solid var(--border);
+  color: var(--text); width: 44px; height: 44px; border-radius: 10px;
+  font-size: 22px; cursor: pointer; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* ─── MAIN CONTENT ──────────────────────────────────── */
+.main { margin-left: 240px; position: relative; z-index: 1; }
+
+/* ─── HERO ──────────────────────────────────────────── */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 80px 60px; position: relative; overflow: hidden;
+}
+.hero-glow {
+  position: absolute; width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(251,191,36,0.10), transparent 65%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
+}
+.hero-inner {
+  max-width: 780px; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-text { animation: fadeUp 0.8s ease both; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(184,134,11,0.10); border: 1px solid rgba(184,134,11,0.3);
+  color: var(--gold); padding: 5px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif; font-size: 54px;
+  font-weight: 900; line-height: 1.1; margin-bottom: 6px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub { font-size: 16px; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
+.hero-meta { display: flex; flex-direction: column; gap: 8px; margin-bottom: 36px; }
+.hero-meta span { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 10px; font-size: 14px;
+  font-weight: 600; text-decoration: none; transition: all 0.25s ease;
+  cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #b8860b, var(--teal2));
+  color: white; box-shadow: 0 8px 30px rgba(184,134,11,0.25);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,134,11,0.40); }
+.btn-secondary {
+  background: rgba(184,134,11,0.07); border: 1px solid var(--border); color: var(--text);
+}
+.btn-secondary:hover { background: rgba(184,134,11,0.13); transform: translateY(-2px); }
+.btn-yt {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white; box-shadow: 0 8px 30px rgba(255,0,0,0.3);
+}
+.btn-yt:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,0,0,0.45); }
+.btn-resume {
+  background: linear-gradient(135deg, #0e7490, #0891b2);
+  color: white; box-shadow: 0 8px 30px rgba(14,116,144,0.3);
+}
+.btn-resume:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(14,116,144,0.45); }
+
+/* Hero Image */
+.hero-image-wrap { display: flex; flex-direction: column; align-items: center; gap: 18px; animation: fadeUp 0.8s 0.2s ease both; }
+.hero-img-frame { position: relative; width: 280px; height: 280px; }
+.hero-img-frame::before {
+  content: ''; position: absolute; inset: -3px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--teal), #2563eb);
+  z-index: 0; animation: spin 8s linear infinite;
+}
+.hero-img-frame::after {
+  content: ''; position: absolute; inset: 3px;
+  border-radius: 50%; background: var(--bg); z-index: 1;
+}
+.hero-img-frame img {
+  position: absolute; inset: 8px; width: calc(100% - 16px);
+  height: calc(100% - 16px); border-radius: 50%; object-fit: cover; z-index: 2;
+}
+.hero-float-badge {
+  position: absolute; background: rgba(255, 252, 235, 0.95);
+  border: 1px solid var(--border); backdrop-filter: blur(12px);
+  border-radius: 12px; padding: 10px 14px; font-size: 12px; font-weight: 600;
+  z-index: 10; white-space: nowrap;
+}
+.hero-float-badge.top-right { top: 10px; right: -20px; color: var(--gold); }
+.hero-float-badge.bottom-left { bottom: 20px; left: -30px; color: var(--teal); }
+
+/* Resume link below photo */
+.hero-resume-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, rgba(14,116,144,0.12), rgba(184,134,11,0.12));
+  border: 1px solid rgba(14,116,144,0.3); border-radius: 12px;
+  padding: 10px 20px; font-size: 13px; font-weight: 600;
+  color: var(--teal); text-decoration: none; transition: all 0.25s;
+}
+.hero-resume-link:hover {
+  background: linear-gradient(135deg, rgba(14,116,144,0.22), rgba(184,134,11,0.22));
+  transform: translateY(-2px);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION BASE ──────────────────────────────────── */
+section { padding: 100px 60px; border-top: 1px solid var(--border); }
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+}
+.section-label::before { content: ''; width: 20px; height: 2px; background: var(--teal); border-radius: 2px; }
+.section-title {
+  font-family: 'Playfair Display', serif; font-size: 42px;
+  font-weight: 900; margin-bottom: 14px; line-height: 1.15;
+}
+.section-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.section-desc { color: var(--muted); font-size: 15px; max-width: 540px; line-height: 1.7; margin-bottom: 50px; }
+
+/* ─── GLASS CARD ────────────────────────────────────── */
+.glass {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); backdrop-filter: blur(12px); transition: all 0.3s ease;
+}
+.glass:hover {
+  background: rgba(255,248,210,0.85); border-color: rgba(184,134,11,0.28);
+  transform: translateY(-5px); box-shadow: 0 20px 60px rgba(180,140,40,0.12);
+}
+
+/* ─── ABOUT ─────────────────────────────────────────── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.about-main.glass { padding: 40px; }
+.about-main p { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 16px; }
+.about-main p b { color: var(--text); }
+.about-side { display: flex; flex-direction: column; gap: 16px; }
+.info-card.glass { padding: 20px 24px; display: flex; align-items: flex-start; gap: 16px; }
+.info-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.info-icon.blue { background: rgba(37,99,235,0.15); }
+.info-icon.gold { background: rgba(245,158,11,0.15); }
+.info-icon.teal { background: rgba(6,182,212,0.15); }
+.info-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.info-card p { font-size: 12px; color: var(--muted); }
+.info-card a { color: var(--teal); text-decoration: none; }
+
+/* ─── STATS ROW ─────────────────────────────────────── */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 60px; }
+.stat-card.glass { padding: 30px 20px; text-align: center; }
+.stat-num {
+  font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* ─── EDUCATION TIMELINE ────────────────────────────── */
+.timeline {
+  position: relative; padding-left: 36px; display: flex; flex-direction: column; gap: 0;
+}
+.timeline::before {
+  content: ''; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--teal), transparent); border-radius: 2px;
+}
+.tl-item { position: relative; padding: 0 0 40px 20px; }
+.tl-item::before {
+  content: ''; position: absolute; left: -29px; top: 12px;
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--gold); background: var(--bg); z-index: 1;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-tag {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gold);
+  background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+.tl-card.glass { padding: 24px 28px; }
+.tl-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.tl-card .institution { font-size: 13px; color: var(--teal); font-weight: 600; margin-bottom: 4px; }
+.tl-card .year { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.tl-card .subjects { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ─── SKILLS ────────────────────────────────────────── */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.skill-card.glass { padding: 28px 24px; text-align: center; }
+.skill-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+.skill-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.skill-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.skill-bar-wrap { margin-top: 14px; text-align: left; }
+.skill-bar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+.skill-bar {
+  height: 4px; background: rgba(184,134,11,0.12); border-radius: 4px; overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+}
+
+/* ─── RESEARCH ──────────────────────────────────────── */
+.research-card.glass { padding: 40px; display: flex; gap: 30px; align-items: flex-start; }
+.research-icon {
+  width: 60px; height: 60px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(6,182,212,0.2));
+  border: 1px solid rgba(37,99,235,0.3); display: flex; align-items: center;
+  justify-content: center; font-size: 28px; flex-shrink: 0;
+}
+.research-body h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+.research-body p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+.research-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.tag { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+.tag.blue { background: rgba(37,99,235,0.15); color: #60a5fa; border: 1px solid rgba(37,99,235,0.2); }
+.tag.teal { background: rgba(6,182,212,0.15); color: var(--teal); border: 1px solid rgba(6,182,212,0.2); }
+.tag.gold { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.2); }
+
+/* ─── AWARDS ────────────────────────────────────────── */
+.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.award-card.glass { overflow: hidden; }
+.award-card img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.award-card:hover img { transform: scale(1.05); }
+.award-card-body { padding: 20px 24px; }
+.award-card-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.award-card-body p { font-size: 12px; color: var(--muted); }
+
+/* ─── YOUTUBE ────────────────────────────────────────── */
+.yt-card.glass { padding: 40px; display: flex; gap: 36px; align-items: center; }
+.yt-logo { width: 100px; height: 100px; border-radius: 20px; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(255,0,0,0.3); }
+.yt-body h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+.yt-body p { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.7; }
+.yt-body .yt-stats { display: flex; gap: 28px; margin-bottom: 24px; }
+.yt-stat { text-align: center; }
+.yt-stat .num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #ff4444; }
+.yt-stat .lbl { font-size: 11px; color: var(--muted); }
+
+/* ─── SUBSCRIPTION SECTION ───────────────────────────── */
+.subscribe-section {
+  padding: 80px 60px;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(184,134,11,0.04), rgba(14,116,144,0.04));
+}
+.subscribe-card.glass {
+  padding: 50px 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.sub-logo {
+  width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; box-shadow: 0 10px 40px rgba(184,134,11,0.3);
+  animation: pulse-sub 2.5s ease-in-out infinite;
+  overflow: hidden;
+}
+.sub-logo img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+}
+@keyframes pulse-sub {
+  0%, 100% { box-shadow: 0 10px 40px rgba(184,134,11,0.3); }
+  50% { box-shadow: 0 14px 55px rgba(184,134,11,0.55); transform: scale(1.05); }
+}
+.subscribe-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; margin-bottom: 10px;
+}
+.subscribe-card .sub-price {
+  font-size: 42px; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 6px; line-height: 1;
+}
+.subscribe-card .sub-desc {
+  font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.7; max-width: 400px; margin-left: auto; margin-right: auto;
+}
+.sub-features {
+  display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; text-align: left;
+  background: rgba(255,255,255,0.4); border-radius: 12px; padding: 20px 24px; border: 1px solid var(--border);
+}
+.sub-feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); }
+.sub-feature span.icon { font-size: 18px; }
+.btn-subscribe {
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  color: white; font-size: 16px; font-weight: 700; padding: 16px 36px;
+  border-radius: 14px; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 8px 30px rgba(184,134,11,0.35); transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-subscribe:hover { transform: translateY(-3px); box-shadow: 0 14px 45px rgba(184,134,11,0.5); }
+
+/* ─── UPI MODAL ───────────────────────────────────────── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65); backdrop-filter: blur(6px);
+  z-index: 1000; align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 20px;
+  padding: 44px 36px; max-width: 440px; width: 90%; text-align: center;
+  animation: modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+  position: relative; max-height: 90vh; overflow-y: auto;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(184,134,11,0.1); border: 1px solid var(--border);
+  color: var(--text); font-size: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-logo {
+  width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
+  overflow: hidden;
+}
+.modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.modal-box h3 {
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; margin-bottom: 6px;
+}
+.modal-box .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.upi-box {
+  background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(14,116,144,0.08));
+  border: 2px solid rgba(184,134,11,0.3); border-radius: 14px; padding: 20px;
+  margin-bottom: 18px;
+}
+.upi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; font-weight: 700; }
+.upi-id {
+  font-family: monospace; font-size: 20px; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.5px;
+}
+.upi-amount {
+  font-size: 28px; font-weight: 900; margin: 10px 0 4px;
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.upi-note { font-size: 11px; color: var(--muted); }
+.upi-qr-wrap { margin-top: 14px; text-align: center; }
+.upi-qr-wrap img {
+  width: 150px; height: 150px; border-radius: 10px;
+  border: 2px solid rgba(184,134,11,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.upi-qr-label { font-size: 11px; color: var(--muted); margin-top: 6px; letter-spacing: 0.4px; }
+.upi-steps { text-align: left; margin-bottom: 18px; }
+.upi-step { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.upi-step .step-num {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--gold);
+  color: white; font-size: 11px; font-weight: 700; display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.btn-copy {
+  background: rgba(184,134,11,0.12); border: 1px solid rgba(184,134,11,0.3);
+  color: var(--gold); font-size: 13px; font-weight: 600; padding: 10px 20px;
+  border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-copy:hover { background: rgba(184,134,11,0.2); }
+.btn-drive-access {
+  display: block; text-align: center; margin: 14px 0 10px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #b8860b, #0e7490);
+  color: white; font-weight: 700; font-size: 14px; border-radius: 10px;
+  text-decoration: none; box-shadow: 0 6px 20px rgba(184,134,11,0.25);
+  transition: all 0.25s;
+}
+.btn-drive-access:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(184,134,11,0.4); }
+
+/* ─── QUOTE ─────────────────────────────────────────── */
+.quote-section { padding: 80px 60px; text-align: center; border-top: 1px solid var(--border); position: relative; }
+.quote-mark { font-family: 'Playfair Display', serif; font-size: 80px; line-height: 0.5; color: var(--gold); opacity: 0.4; display: block; margin-bottom: 20px; }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic; color: var(--text); max-width: 700px; margin: 0 auto 16px; line-height: 1.6; }
+.quote-author { font-size: 13px; color: var(--muted); }
+
+/* ─── REVIEWS ────────────────────────────────────────── */
+.reviews-top { display: grid; grid-template-columns: 280px 1fr; gap: 40px; margin-bottom: 50px; align-items: start; }
+.rating-summary.glass { padding: 36px 28px; text-align: center; }
+.rating-big {
+  font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 900;
+  background: linear-gradient(135deg, var(--gold), #fde68a);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin-bottom: 6px;
+}
+.stars-display { font-size: 22px; margin-bottom: 8px; letter-spacing: 2px; }
+.rating-count { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.bar-row-label { font-size: 12px; color: var(--muted); width: 28px; text-align: right; }
+.bar-row-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+.bar-row-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #fde68a); border-radius: 4px; }
+.bar-row-count { font-size: 11px; color: var(--muted); width: 20px; }
+.review-cards { display: flex; flex-direction: column; gap: 16px; }
+.review-card.glass { padding: 24px 28px; }
+.review-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.reviewer { display: flex; align-items: center; gap: 14px; }
+.reviewer-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+.reviewer-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.reviewer-info p { font-size: 12px; color: var(--muted); }
+.review-stars { font-size: 14px; letter-spacing: 1px; }
+.review-text { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+.review-subject { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: rgba(6,182,212,0.1); color: var(--teal); border: 1px solid rgba(6,182,212,0.2); }
+
+/* ─── REVIEW FORM ─────────────────────────────────────── */
+.review-form-section { margin-top: 60px; }
+.review-form-section h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+.review-form-section .sub { font-size: 13px; color: var(--muted); margin-bottom: 30px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; }
+.form-group input, .form-group textarea, .form-group select {
+  background: rgba(255,255,255,0.6); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px; color: var(--text);
+  font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--teal); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.star-btn { font-size: 40px; cursor: pointer; color: #ddd; transition: color 0.15s, transform 0.15s; line-height: 1; padding: 4px; -webkit-tap-highlight-color: transparent; user-select: none; touch-action: manipulation; }
+.star-btn.active { color: var(--gold); }
+.star-btn:hover { transform: scale(1.2); }
+.star-picker { display: flex; flex-direction: row; gap: 10px; margin-top: 6px; }
+.full-width { grid-column: 1 / -1; }
+#reviews-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+.success-msg {
+  background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+  color: #4ade80; border-radius: 12px; padding: 16px 22px; font-size: 14px; display: none; margin-top: 14px;
+}
+
+/* ─── CONTACT ────────────────────────────────────────── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-item.glass { padding: 22px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--text); }
+.contact-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.contact-icon.email { background: rgba(37,99,235,0.15); }
+.contact-icon.yt    { background: rgba(255,0,0,0.15); }
+.contact-icon.loc   { background: rgba(6,182,212,0.15); }
+.contact-icon.insta { background: linear-gradient(135deg, rgba(225,48,108,0.15), rgba(150,47,191,0.15)); }
+.contact-item h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.contact-item p  { font-size: 12px; color: var(--muted); }
+.contact-form.glass { padding: 36px; }
+.contact-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+/* ─── FOOTER ────────────────────────────────────────── */
+footer { border-top: 1px solid var(--border); padding: 28px 60px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 8px; }
+footer a { color: var(--teal); text-decoration: none; }
+
+/* ─── SIDEBAR OVERLAY ────────────────────────────────── */
+.sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 250; }
+.sidebar-overlay.active { display: block; }
+
+/* ─── INSTAGRAM ICON ──────────────────────────────────── */
+.insta-icon {
+  display: inline-block; width: 22px; height: 22px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 6px; text-align: center; line-height: 22px; font-size: 13px;
+  margin-right: 4px; vertical-align: middle; color: white;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .sidebar { left: -260px; width: 240px; transition: left 0.3s ease; }
+  .sidebar.open { left: 0; box-shadow: 6px 0 40px rgba(0,0,0,0.2); }
+  .menu-toggle { display: flex !important; }
+  .main { margin-left: 0 !important; }
+  .hero { padding: 80px 24px 60px; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero h1 { font-size: 38px; }
+  .hero-image-wrap { order: -1; }
+  .hero-btns { justify-content: center; }
+  .hero-meta { align-items: center; }
+  section { padding: 70px 24px; }
+  .subscribe-section { padding: 60px 24px; }
+  .about-grid, .reviews-top, .contact-grid { grid-template-columns: 1fr; }
+  .form-grid, .cf-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .research-card.glass { flex-direction: column; }
+  .yt-card.glass { flex-direction: column; text-align: center; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 28px 24px; }
+  .hero-float-badge.top-right { right: -10px; }
+  .hero-float-badge.bottom-left { left: -10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="aurora-bg"></div>
+<div class="aurora-mid"></div>
+<div class="stars"></div>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Mobile toggle -->
+<button class="menu-toggle" id="menuToggle">☰</button>
+
+<!-- ─── SIDEBAR ─── -->
+<aside class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose">✕</button>
+
+  <!-- Channel Logo in sidebar -->
+  <img src="logo.jpg" alt="GyanMitra" class="sidebar-logo-img">
+
+  <div class="sidebar-logo">Ritesh Ojha</div>
+  <div class="sidebar-tagline">Physics Educator</div>
+
+  <a href="#about"      class="active"><span class="nav-icon">👤</span>About</a>
+  <a href="#education"            ><span class="nav-icon">🎓</span>Education</a>
+  <a href="#skills"               ><span class="nav-icon">⚡</span>Skills</a>
+  <a href="#research"             ><span class="nav-icon">🔬</span>Research</a>
+  <a href="#awards"               ><span class="nav-icon">🏆</span>Awards</a>
+  <a href="#youtube"              ><span class="nav-icon">📺</span>YouTube</a>
+  <a href="#subscribe"            ><span class="nav-icon">⭐</span>Subscribe</a>
+  <a href="#reviews"              ><span class="nav-icon">💬</span>Reviews</a>
+  <a href="#contact"              ><span class="nav-icon">✉️</span>Contact</a>
+
+  <button class="sidebar-subscribe-btn" onclick="openSubscribeModal()">
+    🔔 Subscribe — ₹11
+  </button>
+
+  <!-- Instagram link in sidebar -->
+  <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank"
+     style="display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:10px;text-decoration:none;font-size:12.5px;font-weight:600;color:#cc2366;background:linear-gradient(135deg,rgba(240,148,51,0.10),rgba(188,24,136,0.10));border:1px solid rgba(220,39,67,0.18);margin-top:2px;transition:all 0.25s;">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="igSide" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#f09433"/>
+          <stop offset="50%" style="stop-color:#dc2743"/>
+          <stop offset="100%" style="stop-color:#bc1888"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#igSide)"/>
+      <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+    </svg>
+    @iam_riteshojha1
+  </a>
+
+  <!-- QR Barcode in sidebar -->
+  <div class="sidebar-qr-wrap">
+    <img src="barcode1.jpg" alt="Scan to Pay ₹11">
+    <div class="sidebar-qr-label">📲 Scan to Subscribe ₹11</div>
+  </div>
+
+  <div class="sidebar-bottom">
+    Gorakhpur, UP, India<br>
+    <a href="/cdn-cgi/l/email-protection#6f1d061b0a1c070005070e56572f08020e0603410c0002" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="1a68736e7f69727570727b23225a7d777b737634797577">[email&#160;protected]</span></a>
+  </div>
+</aside>
+
+<!-- ─── MAIN ─── -->
+<div class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-badge">⚡ Available for Collaboration</div>
+        <h1>Ritesh<br><em>Ojha</em></h1>
+        <p class="hero-sub">Physics Educator · YouTuber · M.Sc Student<br>Making physics simple, engaging &amp; unforgettable.</p>
+        <div class="hero-meta">
+          <span>⚛️ M.Sc Physics (Electronics) — DDU University</span>
+          <span>📍 Gorakhpur, Uttar Pradesh, India</span>
+          <span>🎓 Teaching Class 9–12 since 2022</span>
+          <span>✉️ <a href="/cdn-cgi/l/email-protection#2c5e4558495f444346444d15146c4b414d4540024f4341" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="72001b0617011a1d181a134b4a32151f131b1e5c111d1f">[email&#160;protected]</span></a></span>
+        </div>
+        <div class="hero-btns">
+          <a href="#reviews" class="btn btn-primary">⭐ Student Reviews</a>
+          <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ GyanMitra</a>
+          <button onclick="openSubscribeModal()" class="btn btn-secondary">🔔 Subscribe ₹11</button>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-img-frame">
+          <img src="profile.jpg" alt="Ritesh Ojha — Physics Educator Gorakhpur">
+          <div class="hero-float-badge top-right">⚛️ M.Sc Physics</div>
+          <div class="hero-float-badge bottom-left">📺 GyanMitra</div>
+        </div>
+        <!-- Updated resume link -->
+        <a href="https://drive.google.com/file/d/1MqcYJat3B5w8zcfLUTyqWNDicvkhSGZb/view?usp=drivesdk" target="_blank" class="hero-resume-link">
+          📄 View My Resume
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-title">About <em>Me</em></h2>
+    <p class="section-desc">A passionate Physics educator on a mission to make learning genuinely joyful and effective for every student.</p>
+
+    <div class="stats-row">
+      <div class="stat-card glass">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Teaching</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">9–12</div>
+        <div class="stat-label">Classes Taught</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Research Paper</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num">📺</div>
+        <div class="stat-label">GyanMitra Channel</div>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-main glass">
+        <p>Hi! I'm <b>Ritesh Ojha</b>, a dedicated Physics educator based in Gorakhpur, India. I believe that every student deserves to experience the wonder of Physics — not as a burden, but as a doorway to understanding the universe.</p>
+        <p>Currently pursuing <b>M.Sc in Physics (Electronics)</b> at DDU Gorakhpur University (2024–2026), I combine academic rigor with creative teaching methods. My goal is to simplify even the most complex concepts and deliver them in a way that truly sticks.</p>
+        <p>I run <b>GyanMitra</b> — my YouTube channel dedicated to educational content for school and college students. I have been teaching students of Class 9 to 12 offline since my graduation in 2024. Teaching isn't just my career — it's my calling.</p>
+        <p>My greatest strength? My mother's blessings, and the satisfaction of watching my students succeed. 🙏</p>
+      </div>
+
+      <div class="about-side">
+        <div class="info-card glass">
+          <div class="info-icon blue">🎓</div>
+          <div>
+            <h4>M.Sc Physics (Electronics)</h4>
+            <p>DDU University · 2024 – 2026</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon gold">📍</div>
+          <div>
+            <h4>Present Location</h4>
+            <p>Gorakhpur, Uttar Pradesh, India</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon teal">💡</div>
+          <div>
+            <h4>Interests</h4>
+            <p>Teaching Physics · Video Editing · Content Creation · Digital Education</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon blue">🌐</div>
+          <div>
+            <h4>Languages</h4>
+            <p>Hindi (Native) · English (Fluent)</p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon gold">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="/cdn-cgi/l/email-protection#b6c4dfc2d3c5ded9dcded78f8ef6d1dbd7dfda98d5d9db"><span class="__cf_email__" data-cfemail="bcced5c8d9cfd4d3d6d4dd8584fcdbd1ddd5d092dfd3d1">[email&#160;protected]</span></a></p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon" style="background:linear-gradient(135deg,rgba(225,48,108,0.15),rgba(150,47,191,0.15));font-size:18px;">📸</div>
+          <div>
+            <h4>Instagram</h4>
+            <p><a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank" style="color:var(--teal);">@iam_riteshojha1</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">Academic Journey</div>
+    <h2 class="section-title">My <em>Education</em></h2>
+    <p class="section-desc">A strong academic foundation building towards excellence in Physics education and research.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-tag">Current · 2024–2026</span>
+        <div class="tl-card glass">
+          <h3>M.Sc Physics — Post Graduation</h3>
+          <div class="institution">Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur (UP) — India</div>
+          <div class="year">Specialization in Electronics · Research in Molecular Interactions</div>
+          <div class="subjects">📚 Subjects: Physics with specialization in Electronics</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-tag">2021–2024</span>
+        <div class="tl-card glass">
+          <h3>B.Sc (Maths) — Graduation</h3>
+          <div class="institution">Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur (UP) — India</div>
+          <div class="year">Bachelor of Science in Mathematics, Physics and Chemistry · Completed 2024</div>
+          <div class="subjects">📚 Subjects: Mathematics, Physics, Chemistry<br>🎓 Since graduation, teaching students of Class 9 to 12 offline</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-tag">2021 · 12th CBSE</span>
+        <div class="tl-card glass">
+          <h3>12th CBSE Board — Science</h3>
+          <div class="institution">Star Hybrid School, Taramandal, Gorakhpur (Uttar Pradesh) — India</div>
+          <div class="year">Completed 2021</div>
+          <div class="subjects">📚 Subjects: Physics, Chemistry, Mathematics, Hindi, English, Physical Education</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-tag">2019 · 10th CBSE</span>
+        <div class="tl-card glass">
+          <h3>10th CBSE Board</h3>
+          <div class="institution">US Central Academy, Sirkriganj, Gorakhpur (UP) — India</div>
+          <div class="year">Completed 2019</div>
+          <div class="subjects">📚 Subjects: Science, English, Hindi, Social Science, Mathematics, Foundation of IT (Computer)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">My <em>Skills</em></h2>
+    <p class="section-desc">A combination of academic depth, communication mastery, and digital content skills.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card glass">
+        <span class="skill-icon">📖</span>
+        <h3>Physics Teaching</h3>
+        <p>Class 9–12 curriculum, NEET, JEE fundamentals with concept clarity</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>95%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card glass">
+        <span class="skill-icon">🎬</span>
+        <h3>Video Editing</h3>
+        <p>Educational video production, animation overlays, engaging formats</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card glass">
+        <span class="skill-icon">✍️</span>
+        <h3>Content Creation</h3>
+        <p>Scripting, structuring lessons, YouTube content strategy for GyanMitra</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card glass">
+        <span class="skill-icon">🗣️</span>
+        <h3>Communication</h3>
+        <p>Clear, engaging explanation. Adapts complexity to the learner's level</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>92%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card glass">
+        <span class="skill-icon">🔬</span>
+        <h3>Research &amp; Analysis</h3>
+        <p>Molecular interaction studies, scientific literature review &amp; documentation</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:78%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card glass">
+        <span class="skill-icon">💪</span>
+        <h3>Consistency</h3>
+        <p>Daily commitment to teaching excellence, growth mindset, goal-oriented focus</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Proficiency</span><span>99%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:99%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="section-label">Academic Research</div>
+    <h2 class="section-title">Research <em>Work</em></h2>
+    <p class="section-desc">Exploring the intersection of computational biology and pharmacology in the context of modern medicine.</p>
+
+    <div class="research-card glass">
+      <div class="research-icon">🧬</div>
+      <div class="research-body">
+        <h3>Molecular Interactions of ACE Inhibitors with ACE Receptors<br><em style="font-size:15px;color:var(--muted);font-style:normal;">(Captopril &amp; Enalapril in COVID-19)</em></h3>
+        <p>This research investigates the molecular docking interactions of ACE inhibitors — specifically Captopril and Enalapril — with ACE2 receptors, exploring their significance in the context of COVID-19 pathophysiology and potential therapeutic applications. The study provides insight into drug-receptor binding affinity and pharmacological implications for hypertensive patients during viral infection.</p>
+        <div class="research-tags">
+          <span class="tag blue">Molecular Docking</span>
+          <span class="tag teal">COVID-19</span>
+          <span class="tag gold">Pharmacology</span>
+          <span class="tag blue">ACE Inhibitors</span>
+          <span class="tag teal">Computational Biology</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1pSr9UfwcjKRI5utNuwQst2IPC-T1h3ca/view?usp=drivesdk" target="_blank" class="btn btn-resume" style="display:inline-flex;margin-top:4px;">
+          📄 View Research Paper (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Awards &amp; <em>Achievements</em></h2>
+    <p class="section-desc">Milestones that mark the journey of dedication and hard work.</p>
+
+    <div class="awards-grid">
+      <div class="award-card glass">
+        <img src="award1.jpg" alt="Award 1">
+        <div class="award-card-body">
+          <h4>🏆 Achievement Award</h4>
+          <p>Recognized for outstanding academic performance and contribution</p>
+        </div>
+      </div>
+      <div class="award-card glass">
+        <img src="award2.jpg" alt="Award 2">
+        <div class="award-card-body">
+          <h4>🏅 Excellence Award</h4>
+          <p>Honored for dedication to education and teaching excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube">
+    <div class="section-label">Digital Education</div>
+    <h2 class="section-title">YouTube <em>Channel</em></h2>
+    <p class="section-desc">Spreading physics knowledge beyond classrooms through engaging video content.</p>
+
+    <div class="yt-card glass">
+      <img src="logo.jpg" alt="GyanMitra Logo" class="yt-logo">
+      <div class="yt-body">
+        <h3>📺 GyanMitra</h3>
+        <p>GyanMitra is my educational YouTube channel dedicated to making Physics and Science accessible to every student. From basics to advanced concepts — explained clearly, visually, and memorably. Subscribe and join the learning family!</p>
+        <div class="yt-stats">
+          <div class="yt-stat">
+            <div class="num">📺</div>
+            <div class="lbl">Channel</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">🎓</div>
+            <div class="lbl">Education</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">🇮🇳</div>
+            <div class="lbl">Hindi &amp; English</div>
+          </div>
+        </div>
+        <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="btn btn-yt">▶ Visit GyanMitra Channel</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section id="subscribe" class="subscribe-section">
+    <div class="section-label">Exclusive Content</div>
+    <h2 class="section-title" style="text-align:center;">Premium <em>Subscription</em></h2>
+    <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;">Get exclusive study material and special digital content — at a price that fits every student!</p>
+
+    <div class="subscribe-card glass">
+      <!-- Logo in subscription section -->
+      <div class="sub-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Join the Learning Family</h3>
+      <div class="sub-price">₹11 <span style="font-size:18px;-webkit-text-fill-color:var(--muted);font-weight:400;">/ access</span></div>
+      <p class="sub-desc">Get instant access to exclusive study notes, special content, and the <strong>AI Basic Prompt PDF</strong> — a practical guide to using AI tools for your studies!</p>
+
+      <div class="sub-features">
+        <div class="sub-feature"><span class="icon">🤖</span><span><strong>AI Basic Prompt PDF</strong> — Learn how to use AI prompts effectively for studying</span></div>
+        <div class="sub-feature"><span class="icon">⭐</span><span><strong>Special Content</strong> — Curated physics notes, tips and tricks</span></div>
+        <div class="sub-feature"><span class="icon">📱</span><span><strong>Instant Access</strong> — Pay ₹11 via UPI and get your content link directly</span></div>
+        <div class="sub-feature"><span class="icon">🇮🇳</span><span><strong>Made for Indian Students</strong> — Hindi + English content</span></div>
+      </div>
+
+      <button class="btn-subscribe" onclick="openSubscribeModal()">
+        🔔 Subscribe Now — ₹11 Only
+      </button>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">My mother is my strength — her happiness gives me the power to achieve anything in this world.</p>
+    <p class="quote-author">— Ritesh Ojha</p>
+  </div>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="section-label">What Students Say</div>
+    <h2 class="section-title">Student <em>Reviews</em></h2>
+    <p class="section-desc">Honest feedback from the students I've had the joy of teaching — their success is my greatest reward.</p>
+
+    <div class="reviews-top">
+      <div class="rating-summary glass">
+        <div class="rating-big" id="avgRating">4.8</div>
+        <div class="stars-display" id="avgStars">⭐⭐⭐⭐⭐</div>
+        <div class="rating-count" id="totalCount">Based on 5 reviews</div>
+        <div id="barRows">
+          <div class="bar-row"><span class="bar-row-label">5★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar5" style="width:80%"></div></div><span class="bar-row-count" id="cnt5">4</span></div>
+          <div class="bar-row"><span class="bar-row-label">4★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar4" style="width:20%"></div></div><span class="bar-row-count" id="cnt4">1</span></div>
+          <div class="bar-row"><span class="bar-row-label">3★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar3" style="width:0%"></div></div><span class="bar-row-count" id="cnt3">0</span></div>
+          <div class="bar-row"><span class="bar-row-label">2★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar2" style="width:0%"></div></div><span class="bar-row-count" id="cnt2">0</span></div>
+          <div class="bar-row"><span class="bar-row-label">1★</span><div class="bar-row-bar"><div class="bar-row-fill" id="bar1" style="width:0%"></div></div><span class="bar-row-count" id="cnt1">0</span></div>
+        </div>
+      </div>
+
+      <div class="review-cards" id="reviewCards">
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(37,99,235,0.2);color:#60a5fa;">AK</div>
+              <div class="reviewer-info">
+                <h4>Amit Kumar</h4>
+                <p>Class 12 · Physics · March 2025</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">Sir explains even the hardest topics with such clarity and creativity. His analogies for electromagnetism and modern physics are unmatched. I cleared my boards with 96% in Physics — couldn't have done it without him!</p>
+          <span class="review-subject">Electromagnetism</span>
+        </div>
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(6,182,212,0.2);color:var(--teal);">PS</div>
+              <div class="reviewer-info">
+                <h4>Priya Singh</h4>
+                <p>Class 11 · Physics · January 2025</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">The GyanMitra YouTube channel is a lifesaver! Sir's videos are concise, visual, and super easy to follow. Physics used to scare me — now it's my favourite subject. Thank you, Ritesh Sir!</p>
+          <span class="review-subject">Mechanics</span>
+        </div>
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(245,158,11,0.2);color:var(--gold);">RV</div>
+              <div class="reviewer-info">
+                <h4>Rohit Verma</h4>
+                <p>Class 12 · Physics · November 2024</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">Very patient and dedicated. He never makes you feel bad for asking basic questions, and always follows up with extra material. The numerical problem sessions are gold for board and NEET prep!</p>
+          <span class="review-subject">Thermodynamics</span>
+        </div>
+        <div class="review-card glass">
+          <div class="review-header">
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:rgba(139,92,246,0.2);color:#a78bfa;">NJ</div>
+              <div class="reviewer-info">
+                <h4>Neha Joshi</h4>
+                <p>Class 11 · Physics · December 2024</p>
+              </div>
+            </div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="review-text">His passion for Physics is truly infectious! The story behind every discovery makes learning so enjoyable. He guided me through NEET prep alongside board exams — seamlessly and effectively.</p>
+          <span class="review-subject">Modern Physics</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="reviews-list"></div>
+
+    <!-- LEAVE A REVIEW FORM -->
+    <div class="review-form-section">
+      <h3>✨ Leave a Review</h3>
+      <p class="sub">Were you one of my students? Your feedback genuinely helps me grow as an educator.</p>
+      <div class="glass" style="padding:36px;" id="reviewFormWrap">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>YOUR NAME *</label>
+            <input type="text" id="rName" placeholder="e.g. Anjali Gupta">
+          </div>
+          <div class="form-group">
+            <label>SUBJECT / CLASS</label>
+            <input type="text" id="rSubject" placeholder="e.g. Class 12 · Physics">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:16px;">
+          <label>YOUR RATING *</label>
+          <div class="star-picker" id="starPicker">
+            <span class="star-btn" data-val="1">★</span>
+            <span class="star-btn" data-val="2">★</span>
+            <span class="star-btn" data-val="3">★</span>
+            <span class="star-btn" data-val="4">★</span>
+            <span class="star-btn" data-val="5">★</span>
+          </div>
+          <input type="hidden" id="selectedRating" value="">
+        </div>
+        <div class="form-group" style="margin-bottom:20px;">
+          <label>YOUR REVIEW *</label>
+          <textarea id="rText" placeholder="Share your experience with Ritesh Sir..."></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="submitReview()">Submit Review ⭐</button>
+        <div class="success-msg" id="successMsg">
+          🌟 Thank you so much! Your review has been posted and means the world to me.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Build <em>Together</em></h2>
+    <p class="section-desc">Feel free to reach out for tutoring enquiries, collaborations, or just to say hello!</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="/cdn-cgi/l/email-protection#99ebf0edfceaf1f6f3f1f8a0a1d9fef4f8f0f5b7faf6f4" class="contact-item glass">
+          <div class="contact-icon email">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><span class="__cf_email__" data-cfemail="106279647563787f7a7871292850777d71797c3e737f7d">[email&#160;protected]</span></p>
+          </div>
+        </a>
+        <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank" class="contact-item glass">
+          <div class="contact-icon yt">▶</div>
+          <div>
+            <h4>YouTube</h4>
+            <p>@riteshojha1 · GyanMitra</p>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank" class="contact-item glass">
+          <div class="contact-icon insta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#f09433"/>
+                  <stop offset="25%" style="stop-color:#e6683c"/>
+                  <stop offset="50%" style="stop-color:#dc2743"/>
+                  <stop offset="75%" style="stop-color:#cc2366"/>
+                  <stop offset="100%" style="stop-color:#bc1888"/>
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#instaGrad)"/>
+              <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@iam_riteshojha1</p>
+          </div>
+        </a>
+        <div class="contact-item glass">
+          <div class="contact-icon loc">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Gorakhpur, Uttar Pradesh, India</p>
+          </div>
+        </div>
+        <div class="glass" style="padding:24px;">
+          <p style="font-size:13px;color:var(--muted);line-height:1.8;">
+            🙏 I'm passionate about helping students unlock their potential in Physics. Whether you need personalized tutoring, study materials, or guidance for board/NEET/JEE preparation — I'm here to help. Email: <a href="/cdn-cgi/l/email-protection#bbc9d2cfdec8d3d4d1d3da8283fbdcd6dad2d795d8d4d6" style="color:var(--teal);"><span class="__cf_email__" data-cfemail="8bf9e2ffeef8e3e4e1e3eab2b3cbece6eae2e7a5e8e4e6">[email&#160;protected]</span></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form glass">
+        <h3>Send a Message</h3>
+        <div class="cf-grid">
+          <div class="form-group">
+            <label>NAME</label>
+            <input type="text" id="cName" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>EMAIL</label>
+            <input type="email" id="cEmail" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:14px;">
+          <label>SUBJECT</label>
+          <input type="text" id="cSubject" placeholder="What's this about?">
+        </div>
+        <div class="form-group" style="margin-bottom:20px;">
+          <label>MESSAGE</label>
+          <textarea id="cMsg" placeholder="Type your message here..."></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="sendMsg()">Send Message →</button>
+        <div class="success-msg" id="msgSuccess">✅ Message sent! I'll get back to you soon.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>Love From ❤️ <a href="#">Ritesh Ojha</a> · 2026</span>
+    <span>
+      <a href="/cdn-cgi/l/email-protection#abd9c2dfced8c3c4c1c3ca9293ebccc6cac2c785c8c4c6" style="color:var(--teal);text-decoration:none;"><span class="__cf_email__" data-cfemail="b0c2d9c4d5c3d8dfdad8d18988f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span></a>
+      &nbsp;·&nbsp;
+      <a href="https://youtube.com/@riteshojha1?si=D0JRWsdgJcCF2K_4" target="_blank">YouTube @riteshojha1</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig2)"/>
+          <defs>
+            <linearGradient id="ig2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#f09433"/>
+              <stop offset="100%" style="stop-color:#bc1888"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8" fill="none"/>
+          <circle cx="17" cy="7" r="1" fill="white"/>
+        </svg>Instagram
+      </a>
+    </span>
+  </footer>
+
+</div><!-- end .main -->
+
+<!-- ── UPI SUBSCRIBE MODAL ───────────────────────────── -->
+<div class="modal-overlay" id="subscribeModal">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeSubscribeModal()">✕</button>
+
+    <!-- STEP 1: Touch to Generate Amount -->
+    <div id="payStep1">
+      <div class="modal-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Premium Subscription</h3>
+      <p class="modal-sub">
+        Get instant access to <strong>special content</strong> and the <strong>AI Basic Prompt PDF</strong>.<br>
+        Tap below to generate your payment of <strong>₹11</strong>!
+      </p>
+
+      <div class="amount-touch-wrap">
+        <div class="amount-touch-ring" id="amountTouchBtn" onclick="generateAmount()" ontouchend="generateAmount(event)">
+          <div class="amount-touch-inner">
+            <div class="amount-touch-icon">💳</div>
+            <div class="amount-touch-label">Touch to Pay</div>
+            <div class="amount-touch-sub">Tap here</div>
+          </div>
+        </div>
+        <div class="amount-display" id="amountDisplay">
+          <span class="amount-currency">₹</span>
+          <span class="amount-value" id="amountValue">--</span>
+        </div>
+        <p class="amount-hint">Touch the button to generate your ₹11 subscription</p>
+      </div>
+
+      <button class="btn-buy-now" id="buyNowBtn" onclick="proceedToPayment()" style="display:none;">
+        🛒 Buy Now — ₹11
+      </button>
+    </div>
+
+    <!-- STEP 2: Choose Payment Method -->
+    <div id="payStep2" style="display:none;">
+      <div class="modal-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Choose Payment Method</h3>
+      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
+      <p class="modal-sub" style="margin-bottom:18px;">Select how you'd like to complete your payment</p>
+
+      <div class="payment-options">
+        <div class="pay-option" onclick="selectPayMethod('upi')" ontouchend="selectPayMethod('upi',event)">
+          <div class="pay-option-icon">📱</div>
+          <div class="pay-option-body">
+            <div class="pay-option-title">UPI</div>
+            <div class="pay-option-desc">GPay · PhonePe · Paytm · BHIM</div>
+          </div>
+          <div class="pay-option-arrow">›</div>
+        </div>
+        <div class="pay-option" onclick="selectPayMethod('debit')" ontouchend="selectPayMethod('debit',event)">
+          <div class="pay-option-icon">💳</div>
+          <div class="pay-option-body">
+            <div class="pay-option-title">Debit Card</div>
+            <div class="pay-option-desc">Visa · Mastercard · RuPay</div>
+          </div>
+          <div class="pay-option-arrow">›</div>
+        </div>
+        <div class="pay-option" onclick="selectPayMethod('netbanking')" ontouchend="selectPayMethod('netbanking',event)">
+          <div class="pay-option-icon">🏦</div>
+          <div class="pay-option-body">
+            <div class="pay-option-title">Net Banking</div>
+            <div class="pay-option-desc">All major Indian banks</div>
+          </div>
+          <div class="pay-option-arrow">›</div>
+        </div>
+      </div>
+
+      <button class="btn-back-step" onclick="goToStep(1)">← Back</button>
+    </div>
+
+    <!-- STEP 3A: UPI Apps -->
+    <div id="payStep3upi" style="display:none;">
+      <div class="modal-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Pay via UPI</h3>
+      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
+      <p class="modal-sub" style="margin-bottom:16px;">Choose your UPI app to pay directly</p>
+
+      <div class="upi-apps-grid">
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/512px-Google_Pay_Logo.svg.png" alt="GPay" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
+          <span class="upi-app-fallback" style="display:none;font-size:22px;">G</span>
+          <span>GPay</span>
+        </a>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PhonePe_Logo.png/512px-PhonePe_Logo.png" alt="PhonePe" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
+          <span class="upi-app-fallback" style="display:none;font-size:22px;">Pe</span>
+          <span>PhonePe</span>
+        </a>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/512px-Paytm_Logo_%28standalone%29.svg.png" alt="Paytm" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
+          <span class="upi-app-fallback" style="display:none;font-size:22px;">Pt</span>
+          <span>Paytm</span>
+        </a>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/BHIM_logo.png/512px-BHIM_logo.png" alt="BHIM" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
+          <span class="upi-app-fallback" style="display:none;font-size:22px;">BH</span>
+          <span>BHIM</span>
+        </a>
+      </div>
+
+      <div class="upi-divider">— or pay with UPI ID —</div>
+
+      <div class="upi-box" style="margin-top:0;">
+        <div class="upi-label">UPI ID</div>
+        <div class="upi-id" id="upiIdText">riteshojha98-1@okicici</div>
+        <div class="upi-amount">₹11</div>
+        <div class="upi-qr-wrap">
+          <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
+          <div class="upi-qr-label">📲 Scan with any UPI app</div>
+        </div>
+      </div>
+
+      <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
+
+      <div class="txn-verify-box">
+        <label class="txn-label">📋 Enter UPI Transaction ID / UTR Number</label>
+        <input type="text" id="txnIdUpi" class="txn-input" placeholder="e.g. 123456789012 (12-digit)">
+        <p class="txn-hint">Find this in your UPI app under payment history after paying ₹11</p>
+        <div class="txn-error" id="txnErrUpi" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
+      </div>
+
+      <button class="btn-paid" onclick="verifyAndUnlock('txnIdUpi','txnErrUpi')" ontouchend="verifyAndUnlock('txnIdUpi','txnErrUpi',event)">
+        ✅ Verify & Unlock Content
+      </button>
+
+      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
+    </div>
+
+    <!-- STEP 3B: Debit Card -->
+    <div id="payStep3debit" style="display:none;">
+      <div class="modal-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Pay via Debit Card</h3>
+      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
+      <p class="modal-sub">Debit card payments are processed via UPI QR. Scan the QR below with your bank app to pay ₹11.</p>
+      <div class="upi-box">
+        <div class="upi-qr-wrap">
+          <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
+          <div class="upi-qr-label">📲 Scan to Pay ₹11 (Debit Card via UPI)</div>
+        </div>
+        <div class="upi-id">riteshojha98-1@okicici</div>
+        <div class="upi-amount">₹11</div>
+      </div>
+      <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
+      <div class="txn-verify-box">
+        <label class="txn-label">📋 Enter UPI Transaction ID / UTR Number</label>
+        <input type="text" id="txnIdDebit" class="txn-input" placeholder="e.g. 123456789012 (12-digit)">
+        <p class="txn-hint">Find this in your bank app under recent transactions after paying ₹11</p>
+        <div class="txn-error" id="txnErrDebit" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
+      </div>
+      <button class="btn-paid" onclick="verifyAndUnlock('txnIdDebit','txnErrDebit')" ontouchend="verifyAndUnlock('txnIdDebit','txnErrDebit',event)">
+        ✅ Verify & Unlock Content
+      </button>
+      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
+    </div>
+
+    <!-- STEP 3C: Net Banking -->
+    <div id="payStep3netbanking" style="display:none;">
+      <div class="modal-logo">
+        <img src="logo.jpg" alt="GyanMitra">
+      </div>
+      <h3>Pay via Net Banking</h3>
+      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
+      <p class="modal-sub">Use your bank's Net Banking portal or mobile app to transfer ₹11 to the UPI ID below.</p>
+      <div class="upi-box">
+        <div class="upi-label">Send ₹11 to</div>
+        <div class="upi-id">riteshojha98-1@okicici</div>
+        <div class="upi-amount">₹11</div>
+        <div class="upi-note">Login to your bank → IMPS/NEFT/UPI Transfer → Enter UPI ID</div>
+        <div class="upi-qr-wrap">
+          <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
+          <div class="upi-qr-label">📲 Or scan QR from bank app</div>
+        </div>
+      </div>
+      <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
+      <div class="txn-verify-box">
+        <label class="txn-label">📋 Enter Transaction Reference / UTR Number</label>
+        <input type="text" id="txnIdNet" class="txn-input" placeholder="e.g. UTRNXXXXXXXX or Ref No.">
+        <p class="txn-hint">Find this in your bank's Net Banking payment confirmation after paying ₹11</p>
+        <div class="txn-error" id="txnErrNet" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
+      </div>
+      <button class="btn-paid" onclick="verifyAndUnlock('txnIdNet','txnErrNet')" ontouchend="verifyAndUnlock('txnIdNet','txnErrNet',event)">
+        ✅ Verify & Unlock Content
+      </button>
+      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
+    </div>
+
+    <!-- STEP 4: Premium Content Unlocked -->
+    <div id="payStepDone" style="display:none;">
+      <div class="premium-unlock-wrap">
+        <div class="premium-unlock-icon">🎉</div>
+        <h3 style="color:var(--gold);font-family:'Playfair Display',serif;font-size:26px;margin-bottom:8px;">Payment Verified!</h3>
+        <p class="modal-sub">Thank you for subscribing to GyanMitra Premium!<br>Your transaction ID: <strong id="displayTxnId" style="color:var(--teal);">—</strong></p>
+
+        <div class="premium-features-list">
+          <div class="pf-item">🤖 <strong>AI Basic Prompt PDF</strong></div>
+          <div class="pf-item">⭐ <strong>Special Physics Notes</strong></div>
+          <div class="pf-item">📚 <strong>Curated Study Material</strong></div>
+        </div>
+
+        <a href="https://drive.google.com/drive/folders/12oILLzzBQd-FooQmux47yzIlVYxuKgB8" target="_blank" class="btn-drive-access" style="margin-top:20px;">
+          📂 Access Your Premium Content →
+        </a>
+
+        <p style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6;">
+          If you haven't paid yet, please go back and complete payment first.<br>
+          Issues? Email: riteshojha98@gmail.com
+        </p>
+
+        <button class="btn-back-step" onclick="closeSubscribeModal()" style="margin-top:10px;">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ── Payment Modal Steps ───────────────────── */
+/* Amount Touch Button */
+.amount-touch-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 20px 0 10px;
+}
+.amount-touch-ring {
+  width: 130px; height: 130px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(184,134,11,0.15), rgba(14,116,144,0.15));
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 3px linear-gradient(135deg, var(--gold), var(--teal)), 0 8px 32px rgba(184,134,11,0.25);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.25s; position: relative;
+  animation: pulseRing 2s ease-in-out infinite;
+}
+.amount-touch-ring::before {
+  content: ''; position: absolute; inset: -4px; border-radius: 50%;
+  background: conic-gradient(var(--gold), var(--teal), var(--gold));
+  z-index: -1; animation: spin 3s linear infinite;
+}
+.amount-touch-ring::after {
+  content: ''; position: absolute; inset: 3px; border-radius: 50%;
+  background: rgba(253,250,236,0.97); z-index: 0;
+}
+.amount-touch-inner {
+  position: relative; z-index: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+}
+.amount-touch-icon { font-size: 32px; }
+.amount-touch-label { font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; }
+.amount-touch-sub { font-size: 10px; color: var(--muted); }
+.amount-touch-ring:active, .amount-touch-ring.touched {
+  transform: scale(0.94); box-shadow: 0 4px 16px rgba(184,134,11,0.4);
+}
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184,134,11,0.3), 0 8px 32px rgba(184,134,11,0.25); }
+  50% { box-shadow: 0 0 0 10px rgba(184,134,11,0.08), 0 8px 32px rgba(184,134,11,0.25); }
+}
+
+.amount-display {
+  display: flex; align-items: baseline; gap: 4px;
+  font-family: 'Playfair Display', serif;
+}
+.amount-currency { font-size: 28px; color: var(--gold); font-weight: 700; }
+.amount-value {
+  font-size: 52px; font-weight: 900; color: var(--text);
+  background: linear-gradient(135deg, var(--gold), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; transition: all 0.4s ease;
+}
+.amount-value.generated { animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both; }
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.amount-hint { font-size: 12px; color: var(--muted); text-align: center; }
+
+/* Buy Now Button */
+.btn-buy-now {
+  width: 100%; padding: 15px; border-radius: 12px; border: none;
+  background: linear-gradient(135deg, #b8860b, var(--teal2));
+  color: white; font-size: 17px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 8px 30px rgba(184,134,11,0.35); margin-top: 14px;
+  transition: all 0.25s; font-family: 'DM Sans', sans-serif; letter-spacing: 0.3px;
+  animation: fadeUp 0.4s ease both;
+}
+.btn-buy-now:hover, .btn-buy-now:active { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,134,11,0.5); }
+
+/* Amount Deducted Badge */
+.pay-amount-badge {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  background: linear-gradient(135deg, rgba(184,134,11,0.15), rgba(14,116,144,0.10));
+  border: 1.5px solid rgba(184,134,11,0.35); border-radius: 30px;
+  padding: 6px 20px; font-size: 22px; font-weight: 900;
+  font-family: 'Playfair Display', serif; color: var(--gold);
+  margin: 10px auto 6px; display: flex; justify-content: center;
+}
+.pay-amount-badge span { font-size: 13px; font-weight: 500; color: var(--muted); font-family: 'DM Sans',sans-serif; }
+
+/* Payment Options */
+.payment-options { display: flex; flex-direction: column; gap: 10px; margin: 10px 0 14px; }
+.pay-option {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  background: rgba(255,252,235,0.8); border: 1.5px solid var(--border);
+  border-radius: 12px; cursor: pointer; transition: all 0.22s;
+}
+.pay-option:hover, .pay-option:active {
+  border-color: var(--gold); background: rgba(184,134,11,0.08);
+  transform: translateX(4px);
+}
+.pay-option-icon { font-size: 26px; flex-shrink: 0; }
+.pay-option-body { flex: 1; text-align: left; }
+.pay-option-title { font-weight: 700; font-size: 15px; color: var(--text); }
+.pay-option-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.pay-option-arrow { font-size: 22px; color: var(--gold); font-weight: 300; }
+
+/* UPI Apps Grid */
+.upi-apps-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px 0 6px;
+}
+.upi-app-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 12px 6px; background: rgba(255,252,235,0.9); border: 1.5px solid var(--border);
+  border-radius: 12px; text-decoration: none; color: var(--text); font-size: 12px; font-weight: 600;
+  transition: all 0.22s; cursor: pointer;
+}
+.upi-app-btn:hover, .upi-app-btn:active {
+  border-color: var(--gold); background: rgba(184,134,11,0.1); transform: translateY(-3px);
+}
+.upi-app-btn img { width: 38px; height: 38px; object-fit: contain; border-radius: 8px; }
+
+.upi-divider { text-align: center; color: var(--muted); font-size: 12px; margin: 12px 0 8px; letter-spacing: 1px; }
+
+/* Paid / Unlock Button */
+.btn-paid {
+  width: 100%; padding: 14px; border-radius: 12px; border: none;
+  background: linear-gradient(135deg, #16a34a, #059669);
+  color: white; font-size: 15px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 6px 24px rgba(22,163,74,0.3); margin-top: 12px;
+  transition: all 0.25s; font-family: 'DM Sans', sans-serif;
+}
+.btn-paid:hover, .btn-paid:active { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(22,163,74,0.45); }
+
+/* Back button */
+.btn-back-step {
+  width: 100%; padding: 9px; border-radius: 10px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 13px; font-weight: 600;
+  cursor: pointer; margin-top: 8px; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+}
+.btn-back-step:hover { background: rgba(184,134,11,0.07); color: var(--text); }
+
+/* Premium Unlocked */
+.premium-unlock-wrap { text-align: center; padding: 10px 0; }
+.premium-unlock-icon { font-size: 56px; margin-bottom: 10px; animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both; }
+.premium-features-list {
+  display: flex; flex-direction: column; gap: 10px; margin: 18px 0;
+  text-align: left; background: rgba(255,252,235,0.8);
+  border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px;
+}
+.pf-item { font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 10px; }
+
+/* Transaction Verify Box */
+.txn-verify-box {
+  background: rgba(14,116,144,0.06); border: 1.5px solid rgba(14,116,144,0.25);
+  border-radius: 12px; padding: 14px 16px; margin: 14px 0 6px; text-align: left;
+}
+.txn-label { display: block; font-size: 12px; font-weight: 700; color: var(--teal); margin-bottom: 8px; letter-spacing: 0.3px; }
+.txn-input {
+  width: 100%; padding: 11px 14px; border-radius: 8px;
+  border: 1.5px solid rgba(14,116,144,0.3); background: rgba(255,255,255,0.9);
+  font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--text);
+  outline: none; transition: border 0.2s;
+}
+.txn-input:focus { border-color: var(--teal); }
+.txn-hint { font-size: 11px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.txn-error { font-size: 12px; color: #dc2626; margin-top: 6px; font-weight: 600; }
+</style>
+
+<script>
+/* ── Load Cloudflare email decode only if on CF (ignore locally) ── */
+(function(){
+  try {
+    var s = document.createElement('script');
+    s.setAttribute('data-cfasync','false');
+    s.src = '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js';
+    s.onerror = function(){};
+    document.head.appendChild(s);
+  } catch(e){}
+})();
+</script>
+<script>
+/* ── Mobile sidebar ─────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  var closeBtn = document.getElementById('sidebarClose');
+
+  if (!toggle || !sidebar) return;
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+    toggle.innerHTML = '✕';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+    toggle.innerHTML = '☰';
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+  toggle.addEventListener('touchend', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeSidebar);
+    closeBtn.addEventListener('touchend', function(e) { e.preventDefault(); closeSidebar(); });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeSidebar);
+    overlay.addEventListener('touchend', function(e) { e.preventDefault(); closeSidebar(); });
+  }
+
+  document.querySelectorAll('.sidebar a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 900) closeSidebar();
+    });
+  });
+});
+
+/* ── Active nav link on scroll ──── */
+const sections = document.querySelectorAll('section, .hero, .subscribe-section');
+const navLinks = document.querySelectorAll('.sidebar a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 160) current = s.id || 'hero';
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+/* ── Subscribe Modal ─────────── */
+function openSubscribeModal() {
+  document.getElementById('subscribeModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeSubscribeModal() {
+  document.getElementById('subscribeModal').classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(function() { goToStep(1, null, true); }, 300);
+}
+
+var amountGenerated = false;
+function generateAmount(e) {
+  if (e && e.cancelable) e.preventDefault();
+  if (amountGenerated) return;
+  amountGenerated = true;
+  var btn = document.getElementById('amountTouchBtn');
+  btn.classList.add('touched');
+  var valEl = document.getElementById('amountValue');
+  var count = 0;
+  var interval = setInterval(function() {
+    count++;
+    valEl.textContent = count;
+    if (count >= 11) {
+      clearInterval(interval);
+      valEl.classList.add('generated');
+      document.getElementById('buyNowBtn').style.display = 'block';
+      document.querySelector('.amount-hint').textContent = '✅ ₹11 generated! Press Buy Now to proceed.';
+    }
+  }, 60);
+}
+
+function proceedToPayment() { goToStep(2); }
+
+function verifyAndUnlock(inputId, errId, e) {
+  if (e && e.cancelable) e.preventDefault();
+  var txnId = document.getElementById(inputId).value.trim();
+  var errEl = document.getElementById(errId);
+  if (!txnId || txnId.length < 6) {
+    errEl.style.display = 'block';
+    document.getElementById(inputId).focus();
+    return;
+  }
+  errEl.style.display = 'none';
+  // Store the txn ID to show on success screen
+  var displayEl = document.getElementById('displayTxnId');
+  if (displayEl) displayEl.textContent = txnId;
+  goToStep('done');
+}
+
+function selectPayMethod(method, e) {
+  if (e && e.cancelable) e.preventDefault();
+  if (method === 'upi') goToStep('3upi');
+  else if (method === 'debit') goToStep('3debit');
+  else if (method === 'netbanking') goToStep('3netbanking');
+}
+
+function goToStep(step, e, reset) {
+  if (e && e.cancelable) e.preventDefault();
+  ['payStep1','payStep2','payStep3upi','payStep3debit','payStep3netbanking','payStepDone'].forEach(function(id) {
+    var el = document.getElementById(id); if (el) el.style.display = 'none';
+  });
+  if (step === 1 || step === '1') {
+    document.getElementById('payStep1').style.display = 'block';
+    if (reset) {
+      amountGenerated = false;
+      document.getElementById('amountValue').textContent = '--';
+      document.getElementById('amountValue').classList.remove('generated');
+      document.getElementById('buyNowBtn').style.display = 'none';
+      document.getElementById('amountTouchBtn').classList.remove('touched');
+      document.querySelector('.amount-hint').textContent = 'Touch the button to generate your ₹11 subscription';
+    }
+  } else if (step === 2 || step === '2') {
+    document.getElementById('payStep2').style.display = 'block';
+  } else if (step === '3upi') {
+    document.getElementById('payStep3upi').style.display = 'block';
+  } else if (step === '3debit') {
+    document.getElementById('payStep3debit').style.display = 'block';
+  } else if (step === '3netbanking') {
+    document.getElementById('payStep3netbanking').style.display = 'block';
+  } else if (step === 'done') {
+    document.getElementById('payStepDone').style.display = 'block';
+  }
+  var box = document.getElementById('modalBox'); if (box) box.scrollTop = 0;
+}
+function copyUPI() {
+  const upiId = 'riteshojha98-1@okicici';
+  navigator.clipboard.writeText(upiId).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => { btn.innerHTML = '📋 Copy UPI ID'; }, 2000);
+  }).catch(() => {
+    prompt('Copy this UPI ID:', upiId);
+  });
+}
+document.getElementById('subscribeModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSubscribeModal();
+});
+
+/* ── Supabase Review System ──────── */
+const SUPABASE_URL = 'https://hekrgjagvfvmpyegjfze.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_RMpKG63wnnTsIkWzf8d_6w_y5wQsdEu';
+const sbHeaders = {
+  'apikey': SUPABASE_ANON_KEY,
+  'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+  'Content-Type': 'application/json',
+  'Prefer': 'return=representation'
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-btn');
+  function selectStar(val) {
+    document.getElementById('selectedRating').value = val;
+    stars.forEach(s => {
+      const active = parseInt(s.dataset.val) <= val;
+      s.classList.toggle('active', active);
+      s.style.setProperty('color', active ? '#b8860b' : '#cccccc', 'important');
+    });
+  }
+  stars.forEach(star => {
+    star.addEventListener('touchend', (e) => { e.preventDefault(); selectStar(parseInt(star.dataset.val)); }, { passive: false });
+    star.addEventListener('click', () => { selectStar(parseInt(star.dataset.val)); });
+  });
+  const submitBtn = document.querySelector('#reviewFormWrap .btn-primary');
+  if (submitBtn) {
+    submitBtn.addEventListener('touchend', (e) => { e.preventDefault(); submitReview(); }, { passive: false });
+  }
+});
+
+const colors = ['#60a5fa','#22d3ee','#f59e0b','#a78bfa','#4ade80','#f87171','#fb923c'];
+
+function starsHtml(n) { return '⭐'.repeat(n) + (n < 5 ? '☆'.repeat(5 - n) : ''); }
+function initials(name) { return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
+function timeAgo(ts) {
+  if (!ts) return 'Recently';
+  const date = ts.toDate ? ts.toDate() : new Date(ts);
+  const diff = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (diff < 60) return 'Just now';
+  if (diff < 3600) return Math.floor(diff / 60) + ' min ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + ' hr ago';
+  return date.toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+}
+
+function renderReviews(reviewsArr) {
+  const list = document.getElementById('reviews-list');
+  if (!list) return;
+  list.innerHTML = '';
+  reviewsArr.forEach((r, i) => {
+    const c = colors[i % colors.length];
+    const div = document.createElement('div');
+    div.className = 'review-card glass';
+    div.innerHTML = `
+      <div class="review-header">
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:${c}22;color:${c};">${initials(r.name)}</div>
+          <div class="reviewer-info">
+            <h4>${r.name}</h4>
+            <p>${r.subject || 'Student'} · ${timeAgo(r.created_at)}</p>
+          </div>
+        </div>
+        <div class="review-stars">${starsHtml(r.rating)}</div>
+      </div>
+      <p class="review-text">${r.text}</p>
+    `;
+    list.appendChild(div);
+  });
+  updateStats(reviewsArr);
+}
+
+function updateStats(reviewsArr) {
+  const seed = [5,5,5,5,4];
+  const all  = [...seed, ...reviewsArr.map(r => r.rating)];
+  const total = all.length;
+  const avg   = (all.reduce((a,b) => a+b, 0) / total).toFixed(1);
+  document.getElementById('avgRating').textContent  = avg;
+  document.getElementById('totalCount').textContent = `Based on ${total} reviews`;
+  [1,2,3,4,5].forEach(s => {
+    const cnt = all.filter(r => r === s).length;
+    const pct = total ? (cnt / total * 100).toFixed(0) : 0;
+    document.getElementById('bar' + s).style.width   = pct + '%';
+    document.getElementById('cnt' + s).textContent   = cnt;
+  });
+}
+
+async function loadReviews() {
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', { headers: sbHeaders });
+    if (!res.ok) { console.error('Load error:', res.status); return; }
+    const data = await res.json();
+    renderReviews(data || []);
+  } catch(e) { console.error('loadReviews failed:', e); }
+}
+loadReviews();
+
+async function submitReview() {
+  const name      = document.getElementById('rName').value.trim();
+  const subj      = document.getElementById('rSubject').value.trim();
+  const text      = document.getElementById('rText').value.trim();
+  const ratingVal = document.getElementById('selectedRating').value;
+
+  if (!name || !text || !ratingVal) {
+    alert('Please fill in your name, rating, and review before submitting.');
+    return;
+  }
+  const btn = document.querySelector('#reviewFormWrap .btn-primary');
+  btn.disabled = true; btn.textContent = 'Submitting…';
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+      method: 'POST', headers: sbHeaders,
+      body: JSON.stringify({ name, subject: subj, text, rating: parseInt(ratingVal) })
+    });
+    if (!res.ok) throw new Error(await res.text());
+    loadReviews();
+    document.getElementById('rName').value      = '';
+    document.getElementById('rSubject').value   = '';
+    document.getElementById('rText').value      = '';
+    document.getElementById('selectedRating').value = '';
+    document.querySelectorAll('.star-btn').forEach(s => {
+      s.classList.remove('active');
+      s.style.setProperty('color', '#cccccc', 'important');
+    });
+    const successMsg = document.getElementById('successMsg');
+    if (successMsg) { successMsg.style.display = 'block'; setTimeout(() => { successMsg.style.display = 'none'; }, 4000); }
+  } catch(err) {
+    console.error('submitReview error:', err);
+    alert('Oops! Could not submit your review. Please try again.');
+  } finally {
+    btn.disabled = false; btn.textContent = 'Submit Review ⭐';
+  }
+}
+
+/* ── Contact Form — sends to riteshojha98@gmail.com via mailto fallback ── */
+function sendMsg() {
+  const name    = document.getElementById('cName').value.trim();
+  const email   = document.getElementById('cEmail').value.trim();
+  const subject = document.getElementById('cSubject').value.trim();
+  const msg     = document.getElementById('cMsg').value.trim();
+
+  if (!name || !msg) {
+    alert('Please fill in your name and message.');
+    return;
+  }
+
+  const btn = document.querySelector('.contact-form .btn-primary');
+  btn.disabled = true; btn.textContent = 'Sending…';
+
+  /* Build mailto as reliable fallback */
+  const mailSubject = encodeURIComponent((subject || 'Message from ' + name) + ' — via Portfolio');
+  const mailBody    = encodeURIComponent(
+    'Name: ' + name + '\nEmail: ' + (email || 'Not provided') + '\n\nMessage:\n' + msg
+  );
+
+  window.location.href = 'mailto:riteshojha98@gmail.com?subject=' + mailSubject + '&body=' + mailBody;
+
+  setTimeout(() => {
+    btn.disabled = false; btn.textContent = 'Send Message →';
+    const successEl = document.getElementById('msgSuccess');
+    if (successEl) { successEl.style.display = 'block'; setTimeout(() => { successEl.style.display = 'none'; }, 4000); }
+  }, 1000);
+}
+</script>
+</body>
+</html>
