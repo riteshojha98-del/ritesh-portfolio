@@ -1390,83 +1390,40 @@ footer a { color: var(--teal); text-decoration: none; }
         <p class="amount-hint">Touch the button to generate your ₹11 subscription</p>
       </div>
 
-      <button class="btn-buy-now" id="buyNowBtn" onclick="proceedToPayment()" style="display:none;">
+      <button class="btn-buy-now" id="buyNowBtn" onclick="goToStep('3upi')" style="display:none;">
         🛒 Buy Now — ₹11
       </button>
     </div>
 
-    <!-- STEP 2: Choose Payment Method -->
-    <div id="payStep2" style="display:none;">
-      <div class="modal-logo">
-        <img src="logo.jpg" alt="GyanMitra">
-      </div>
-      <h3>Choose Payment Method</h3>
-      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
-      <p class="modal-sub" style="margin-bottom:18px;">Select how you'd like to complete your payment</p>
-
-      <div class="payment-options">
-        <div class="pay-option" onclick="selectPayMethod('upi')" ontouchend="selectPayMethod('upi',event)">
-          <div class="pay-option-icon">📱</div>
-          <div class="pay-option-body">
-            <div class="pay-option-title">UPI</div>
-            <div class="pay-option-desc">GPay · PhonePe · Paytm · BHIM</div>
-          </div>
-          <div class="pay-option-arrow">›</div>
-        </div>
-        <div class="pay-option" onclick="selectPayMethod('debit')" ontouchend="selectPayMethod('debit',event)">
-          <div class="pay-option-icon">💳</div>
-          <div class="pay-option-body">
-            <div class="pay-option-title">Debit Card</div>
-            <div class="pay-option-desc">Visa · Mastercard · RuPay</div>
-          </div>
-          <div class="pay-option-arrow">›</div>
-        </div>
-        <div class="pay-option" onclick="selectPayMethod('netbanking')" ontouchend="selectPayMethod('netbanking',event)">
-          <div class="pay-option-icon">🏦</div>
-          <div class="pay-option-body">
-            <div class="pay-option-title">Net Banking</div>
-            <div class="pay-option-desc">All major Indian banks</div>
-          </div>
-          <div class="pay-option-arrow">›</div>
-        </div>
-      </div>
-
-      <button class="btn-back-step" onclick="goToStep(1)">← Back</button>
-    </div>
-
-    <!-- STEP 3A: UPI Apps -->
+    <!-- STEP 2: UPI Payment (only option) -->
     <div id="payStep3upi" style="display:none;">
       <div class="modal-logo">
         <img src="logo.jpg" alt="GyanMitra">
       </div>
       <h3>Pay via UPI</h3>
       <div class="pay-amount-badge">₹11 <span>to pay</span></div>
-      <p class="modal-sub" style="margin-bottom:16px;">Choose your UPI app to pay directly</p>
+      <p class="modal-sub" style="margin-bottom:14px;">Open your UPI app and pay ₹11 to complete subscription</p>
 
       <div class="upi-apps-grid">
-        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/512px-Google_Pay_Logo.svg.png" alt="GPay" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
-          <span class="upi-app-fallback" style="display:none;font-size:22px;">G</span>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium">
+          <span style="font-size:28px;font-weight:900;color:#1a73e8;">G</span>
           <span>GPay</span>
         </a>
-        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PhonePe_Logo.png/512px-PhonePe_Logo.png" alt="PhonePe" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
-          <span class="upi-app-fallback" style="display:none;font-size:22px;">Pe</span>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium">
+          <span style="font-size:28px;font-weight:900;color:#5f259f;">Pe</span>
           <span>PhonePe</span>
         </a>
-        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/512px-Paytm_Logo_%28standalone%29.svg.png" alt="Paytm" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
-          <span class="upi-app-fallback" style="display:none;font-size:22px;">Pt</span>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium">
+          <span style="font-size:28px;font-weight:900;color:#00baf2;">Pt</span>
           <span>Paytm</span>
         </a>
-        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium" ontouchend="this.click()">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/BHIM_logo.png/512px-BHIM_logo.png" alt="BHIM" onerror="this.src='';this.parentNode.querySelector('.upi-app-fallback').style.display='block';this.style.display='none'">
-          <span class="upi-app-fallback" style="display:none;font-size:22px;">BH</span>
+        <a class="upi-app-btn" href="upi://pay?pa=riteshojha98-1@okicici&pn=RiteshOjha&am=11&cu=INR&tn=GyanMitraPremium">
+          <span style="font-size:28px;font-weight:900;color:#f47920;">BH</span>
           <span>BHIM</span>
         </a>
       </div>
 
-      <div class="upi-divider">— or pay with UPI ID —</div>
+      <div class="upi-divider">— or scan QR / use UPI ID —</div>
 
       <div class="upi-box" style="margin-top:0;">
         <div class="upi-label">UPI ID</div>
@@ -1481,77 +1438,17 @@ footer a { color: var(--teal); text-decoration: none; }
       <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
 
       <div class="txn-verify-box">
-        <label class="txn-label">📋 Enter UPI Transaction ID / UTR Number</label>
-        <input type="text" id="txnIdUpi" class="txn-input" placeholder="e.g. 123456789012 (12-digit)">
-        <p class="txn-hint">Find this in your UPI app under payment history after paying ₹11</p>
-        <div class="txn-error" id="txnErrUpi" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
+        <label class="txn-label">📋 Enter UPI Transaction ID after paying</label>
+        <input type="text" id="txnIdUpi" class="txn-input" placeholder="e.g. 123456789012">
+        <p class="txn-hint">Open your UPI app → Payment History → Copy the 12-digit Transaction ID</p>
+        <div class="txn-error" id="txnErrUpi" style="display:none;">⚠️ Please enter your Transaction ID first.</div>
       </div>
 
       <button class="btn-paid" onclick="verifyAndUnlock('txnIdUpi','txnErrUpi')" ontouchend="verifyAndUnlock('txnIdUpi','txnErrUpi',event)">
-        ✅ Verify & Unlock Content
+        ✅ I've Paid — Unlock Content
       </button>
 
-      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
-    </div>
-
-    <!-- STEP 3B: Debit Card -->
-    <div id="payStep3debit" style="display:none;">
-      <div class="modal-logo">
-        <img src="logo.jpg" alt="GyanMitra">
-      </div>
-      <h3>Pay via Debit Card</h3>
-      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
-      <p class="modal-sub">Debit card payments are processed via UPI QR. Scan the QR below with your bank app to pay ₹11.</p>
-      <div class="upi-box">
-        <div class="upi-qr-wrap">
-          <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
-          <div class="upi-qr-label">📲 Scan to Pay ₹11 (Debit Card via UPI)</div>
-        </div>
-        <div class="upi-id">riteshojha98-1@okicici</div>
-        <div class="upi-amount">₹11</div>
-      </div>
-      <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
-      <div class="txn-verify-box">
-        <label class="txn-label">📋 Enter UPI Transaction ID / UTR Number</label>
-        <input type="text" id="txnIdDebit" class="txn-input" placeholder="e.g. 123456789012 (12-digit)">
-        <p class="txn-hint">Find this in your bank app under recent transactions after paying ₹11</p>
-        <div class="txn-error" id="txnErrDebit" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
-      </div>
-      <button class="btn-paid" onclick="verifyAndUnlock('txnIdDebit','txnErrDebit')" ontouchend="verifyAndUnlock('txnIdDebit','txnErrDebit',event)">
-        ✅ Verify & Unlock Content
-      </button>
-      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
-    </div>
-
-    <!-- STEP 3C: Net Banking -->
-    <div id="payStep3netbanking" style="display:none;">
-      <div class="modal-logo">
-        <img src="logo.jpg" alt="GyanMitra">
-      </div>
-      <h3>Pay via Net Banking</h3>
-      <div class="pay-amount-badge">₹11 <span>to pay</span></div>
-      <p class="modal-sub">Use your bank's Net Banking portal or mobile app to transfer ₹11 to the UPI ID below.</p>
-      <div class="upi-box">
-        <div class="upi-label">Send ₹11 to</div>
-        <div class="upi-id">riteshojha98-1@okicici</div>
-        <div class="upi-amount">₹11</div>
-        <div class="upi-note">Login to your bank → IMPS/NEFT/UPI Transfer → Enter UPI ID</div>
-        <div class="upi-qr-wrap">
-          <img src="barcode1.jpg" alt="Scan QR to Pay ₹11">
-          <div class="upi-qr-label">📲 Or scan QR from bank app</div>
-        </div>
-      </div>
-      <button class="btn-copy" onclick="copyUPI()">📋 Copy UPI ID</button>
-      <div class="txn-verify-box">
-        <label class="txn-label">📋 Enter Transaction Reference / UTR Number</label>
-        <input type="text" id="txnIdNet" class="txn-input" placeholder="e.g. UTRNXXXXXXXX or Ref No.">
-        <p class="txn-hint">Find this in your bank's Net Banking payment confirmation after paying ₹11</p>
-        <div class="txn-error" id="txnErrNet" style="display:none;">⚠️ Please enter your transaction ID to verify payment.</div>
-      </div>
-      <button class="btn-paid" onclick="verifyAndUnlock('txnIdNet','txnErrNet')" ontouchend="verifyAndUnlock('txnIdNet','txnErrNet',event)">
-        ✅ Verify & Unlock Content
-      </button>
-      <button class="btn-back-step" onclick="goToStep(2)">← Back</button>
+      <button class="btn-back-step" onclick="goToStep(1)">← Back</button>
     </div>
 
     <!-- STEP 4: Premium Content Unlocked -->
@@ -1850,8 +1747,6 @@ function generateAmount(e) {
   }, 60);
 }
 
-function proceedToPayment() { goToStep(2); }
-
 function verifyAndUnlock(inputId, errId, e) {
   if (e && e.cancelable) e.preventDefault();
   var txnId = document.getElementById(inputId).value.trim();
@@ -1862,22 +1757,14 @@ function verifyAndUnlock(inputId, errId, e) {
     return;
   }
   errEl.style.display = 'none';
-  // Store the txn ID to show on success screen
   var displayEl = document.getElementById('displayTxnId');
   if (displayEl) displayEl.textContent = txnId;
   goToStep('done');
 }
 
-function selectPayMethod(method, e) {
-  if (e && e.cancelable) e.preventDefault();
-  if (method === 'upi') goToStep('3upi');
-  else if (method === 'debit') goToStep('3debit');
-  else if (method === 'netbanking') goToStep('3netbanking');
-}
-
 function goToStep(step, e, reset) {
   if (e && e.cancelable) e.preventDefault();
-  ['payStep1','payStep2','payStep3upi','payStep3debit','payStep3netbanking','payStepDone'].forEach(function(id) {
+  ['payStep1','payStep3upi','payStepDone'].forEach(function(id) {
     var el = document.getElementById(id); if (el) el.style.display = 'none';
   });
   if (step === 1 || step === '1') {
@@ -1890,14 +1777,8 @@ function goToStep(step, e, reset) {
       document.getElementById('amountTouchBtn').classList.remove('touched');
       document.querySelector('.amount-hint').textContent = 'Touch the button to generate your ₹11 subscription';
     }
-  } else if (step === 2 || step === '2') {
-    document.getElementById('payStep2').style.display = 'block';
   } else if (step === '3upi') {
     document.getElementById('payStep3upi').style.display = 'block';
-  } else if (step === '3debit') {
-    document.getElementById('payStep3debit').style.display = 'block';
-  } else if (step === '3netbanking') {
-    document.getElementById('payStep3netbanking').style.display = 'block';
   } else if (step === 'done') {
     document.getElementById('payStepDone').style.display = 'block';
   }
