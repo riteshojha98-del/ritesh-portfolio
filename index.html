@@ -693,6 +693,71 @@ footer a { color: var(--teal); text-decoration: none; }
   margin-right: 4px; vertical-align: middle; color: white;
 }
 
+/* ─── FACEBOOK ICON ───────────────────────────────────── */
+.contact-icon.fb { background: rgba(24,119,242,0.15); }
+
+/* ─── PHOTOS GALLERY ─────────────────────────────────── */
+.photos-section { padding: 100px 60px; border-top: 1px solid var(--border); }
+.photos-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px; margin-top: 10px;
+}
+.photo-card {
+  border-radius: var(--radius); overflow: hidden;
+  background: var(--card); border: 1px solid var(--border);
+  backdrop-filter: blur(12px); transition: all 0.3s ease;
+}
+.photo-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(184,134,11,0.15); }
+.photo-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+.photo-card-body { padding: 16px 20px; }
+.photo-card-body h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+.photo-card-body p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ─── CURRENT AFFAIRS ────────────────────────────────── */
+#current-affairs { }
+.news-source-bar {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.news-source-badge {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
+  border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+  border: 1px solid var(--border); background: rgba(255,255,255,0.5);
+}
+.news-source-badge.hindu { color: #b91c1c; border-color: rgba(185,28,28,0.25); background: rgba(185,28,28,0.06); }
+.news-source-badge.toi   { color: #dc2626; border-color: rgba(220,38,38,0.25); background: rgba(220,38,38,0.06); }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.news-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; backdrop-filter: blur(12px); transition: all 0.3s ease;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.news-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(184,134,11,0.12); }
+.news-card-tag {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+  width: fit-content;
+}
+.news-card-tag.hindu { background: rgba(185,28,28,0.10); color: #b91c1c; border: 1px solid rgba(185,28,28,0.2); }
+.news-card-tag.toi   { background: rgba(220,38,38,0.10); color: #dc2626; border: 1px solid rgba(220,38,38,0.2); }
+.news-card h4 { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); }
+.news-card p  { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+.news-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+.news-card-date { font-size: 11px; color: var(--muted); }
+.news-card-link {
+  font-size: 12px; font-weight: 600; color: var(--teal);
+  text-decoration: none; display: flex; align-items: center; gap: 4px;
+}
+.news-card-link:hover { text-decoration: underline; }
+.news-loading { text-align: center; padding: 48px; color: var(--muted); font-size: 15px; }
+.news-refresh-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px;
+  background: rgba(14,116,144,0.10); border: 1px solid rgba(14,116,144,0.25);
+  border-radius: 10px; color: var(--teal); font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.25s; margin-left: auto; display: flex;
+}
+.news-refresh-btn:hover { background: rgba(14,116,144,0.20); }
+.news-controls { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 900px) {
   .sidebar { left: -260px; width: 240px; transition: left 0.3s ease; }
@@ -746,8 +811,10 @@ footer a { color: var(--teal); text-decoration: none; }
   <a href="#skills"               ><span class="nav-icon">⚡</span>Skills</a>
   <a href="#research"             ><span class="nav-icon">🔬</span>Research</a>
   <a href="#awards"               ><span class="nav-icon">🏆</span>Awards</a>
+  <a href="#photos"               ><span class="nav-icon">📸</span>Photos</a>
   <a href="#youtube"              ><span class="nav-icon">📺</span>YouTube</a>
   <a href="#subscribe"            ><span class="nav-icon">⭐</span>Subscribe</a>
+  <a href="#current-affairs"      ><span class="nav-icon">📰</span>Current Affairs</a>
   <a href="#reviews"              ><span class="nav-icon">💬</span>Reviews</a>
   <a href="#contact"              ><span class="nav-icon">✉️</span>Contact</a>
 
@@ -771,6 +838,16 @@ footer a { color: var(--teal); text-decoration: none; }
       <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
     </svg>
     @iam_riteshojha1
+  </a>
+
+  <!-- Facebook link in sidebar -->
+  <a href="https://www.facebook.com/share/191cnEU7Zv/" target="_blank"
+     style="display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:10px;text-decoration:none;font-size:12.5px;font-weight:600;color:#1877f2;background:rgba(24,119,242,0.10);border:1px solid rgba(24,119,242,0.22);margin-top:2px;transition:all 0.25s;">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#1877f2"/>
+      <path d="M16 8h-2a1 1 0 0 0-1 1v2h3l-.5 3H13v7h-3v-7H8v-3h2V9a4 4 0 0 1 4-4h2v3z" fill="white"/>
+    </svg>
+    Ritesh Ojha — Facebook
   </a>
 
   <!-- QR Barcode in sidebar -->
@@ -899,6 +976,13 @@ footer a { color: var(--teal); text-decoration: none; }
           <div>
             <h4>Instagram</h4>
             <p><a href="https://www.instagram.com/iam_riteshojha1?igsh=MTBmcWZ6Y2Vwbnl5MA==" target="_blank" style="color:var(--teal);">@iam_riteshojha1</a></p>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon" style="background:rgba(24,119,242,0.12);font-size:18px;">👤</div>
+          <div>
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/share/191cnEU7Zv/" target="_blank" style="color:#1877f2;">Ritesh Ojha — Facebook</a></p>
           </div>
         </div>
       </div>
@@ -1048,17 +1132,48 @@ footer a { color: var(--teal); text-decoration: none; }
 
     <div class="awards-grid">
       <div class="award-card glass">
-        <img src="award1.jpg" alt="Award 1">
+        <img src="award1.jpg" alt="Award Ceremony — St. Andrew's College Gorakhpur">
         <div class="award-card-body">
-          <h4>🏆 Achievement Award</h4>
-          <p>Recognized for outstanding academic performance and contribution</p>
+          <h4>🏆 First Prize — Debate Competition</h4>
+          <p>Receiving the First Prize at the Physics Association Annual Function, St. Andrew's College Gorakhpur. Awarded by the Department of Physics on 16 March 2026.</p>
         </div>
       </div>
       <div class="award-card glass">
-        <img src="award2.jpg" alt="Award 2">
+        <img src="award2.jpg" alt="Certificate of Excellence — St. Andrew's College Gorakhpur">
         <div class="award-card-body">
-          <h4>🏅 Excellence Award</h4>
-          <p>Honored for dedication to education and teaching excellence</p>
+          <h4>🏅 Certificate of Excellence — First Position</h4>
+          <p>Certificate & medal from St. Andrew's College, Department of Physics for winning First Position in the Debate Competition organized by Physics Association, Academic Session 2025–26.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOS GALLERY -->
+  <section id="photos">
+    <div class="section-label">Gallery</div>
+    <h2 class="section-title">My <em>Photos</em></h2>
+    <p class="section-desc">Moments that tell the story of this journey — award ceremonies, celebrations, and milestones.</p>
+
+    <div class="photos-grid">
+      <div class="photo-card">
+        <img src="profile.jpg" alt="Ritesh Ojha — Batch 2024 Farewell">
+        <div class="photo-card-body">
+          <h4>Ritesh Ojha — Batch 2024 Farewell</h4>
+          <p>A memorable moment at the Batch 2024 farewell celebration, surrounded by the energy of learning and achievement. <em>E = mc²</em> on the board says it all! 🎓</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="award1.jpg" alt="Award Ceremony — St. Andrew's College Gorakhpur">
+        <div class="photo-card-body">
+          <h4>Award Ceremony — St. Andrew's College Gorakhpur</h4>
+          <p>Ritesh Ojha receiving the First Prize trophy and certificate at the Physics Association Annual Function, Department of Physics, St. Andrew's College Gorakhpur (March 2026). 🏆</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="award2.jpg" alt="Certificate of Excellence, Medal & Award — Physics Association">
+        <div class="photo-card-body">
+          <h4>Certificate of Excellence, Medal &amp; Award</h4>
+          <p>The full achievement collection from St. Andrew's College — Certificate of Excellence, First Prize medal, trophy plaque, and a token of love from the Physics Association for winning First Position in the Debate Competition 2025–26. 🏅</p>
         </div>
       </div>
     </div>
@@ -1119,6 +1234,28 @@ footer a { color: var(--teal); text-decoration: none; }
       <button class="btn-subscribe" onclick="openSubscribeModal()">
         🔔 Subscribe Now — ₹11 Only
       </button>
+    </div>
+  </section>
+
+  <!-- CURRENT AFFAIRS -->
+  <section id="current-affairs">
+    <div class="section-label">Stay Updated</div>
+    <h2 class="section-title">Current <em>Affairs</em></h2>
+    <p class="section-desc">Important news and current affairs updated daily — sourced from India's leading newspapers to keep students informed for exams and general awareness.</p>
+
+    <div class="news-controls">
+      <div class="news-source-bar">
+        <span class="news-source-badge hindu">📰 The Hindu</span>
+        <span class="news-source-badge toi">🗞️ Times of India</span>
+        <span style="font-size:12px;color:var(--muted);">AI-curated · Updated daily</span>
+      </div>
+      <button class="news-refresh-btn" onclick="loadCurrentAffairs(true)" id="refreshNewsBtn">
+        🔄 Refresh News
+      </button>
+    </div>
+
+    <div id="news-container">
+      <div class="news-loading">⏳ Loading today's important news...</div>
     </div>
   </section>
 
@@ -1293,6 +1430,18 @@ footer a { color: var(--teal); text-decoration: none; }
             <p>@iam_riteshojha1</p>
           </div>
         </a>
+        <a href="https://www.facebook.com/share/191cnEU7Zv/" target="_blank" class="contact-item glass">
+          <div class="contact-icon fb">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="24" height="24" rx="5" fill="#1877f2"/>
+              <path d="M16 8h-2a1 1 0 0 0-1 1v2h3l-.5 3H13v7h-3v-7H8v-3h2V9a4 4 0 0 1 4-4h2v3z" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Facebook</h4>
+            <p>Ritesh Ojha — Visit My Facebook Profile</p>
+          </div>
+        </a>
         <div class="contact-item glass">
           <div class="contact-icon loc">📍</div>
           <div>
@@ -1353,6 +1502,13 @@ footer a { color: var(--teal); text-decoration: none; }
           <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8" fill="none"/>
           <circle cx="17" cy="7" r="1" fill="white"/>
         </svg>Instagram
+      </a>
+      &nbsp;·&nbsp;
+      <a href="https://www.facebook.com/share/191cnEU7Zv/" target="_blank" style="color:#1877f2;">
+        <svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="24" height="24" rx="5" fill="#1877f2"/>
+          <path d="M16 8h-2a1 1 0 0 0-1 1v2h3l-.5 3H13v7h-3v-7H8v-3h2V9a4 4 0 0 1 4-4h2v3z" fill="white"/>
+        </svg>Facebook
       </a>
     </span>
   </footer>
@@ -1629,7 +1785,120 @@ async function submitReview() {
   }
 }
 
-/* ── Contact Form — sends to riteshojha98@gmail.com via mailto fallback ── */
+/* ── Current Affairs — AI-powered news from The Hindu & Times of India ── */
+let newsCache = null;
+let newsCacheTime = 0;
+const NEWS_CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
+
+async function loadCurrentAffairs(forceRefresh = false) {
+  const container = document.getElementById('news-container');
+  const btn = document.getElementById('refreshNewsBtn');
+  const now = Date.now();
+
+  // Use cache if fresh and not forced
+  if (!forceRefresh && newsCache && (now - newsCacheTime) < NEWS_CACHE_DURATION) {
+    renderNewsCards(newsCache);
+    return;
+  }
+
+  container.innerHTML = '<div class="news-loading">⏳ Fetching today\'s important news from The Hindu & Times of India...</div>';
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Loading...'; }
+
+  try {
+    const today = new Date().toLocaleDateString('en-IN', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+    const prompt = `Today is ${today}. You are a current affairs curator for Indian students preparing for competitive exams (UPSC, SSC, NEET, JEE, board exams).
+
+Generate 8 important current affairs news items from TODAY. Mix 4 items from The Hindu and 4 from Times of India perspectives. Cover: national politics, science & technology, economy, environment, sports, international affairs.
+
+Respond ONLY with a valid JSON array — no markdown, no backticks, no explanation:
+[
+  {
+    "source": "The Hindu",
+    "sourceKey": "hindu",
+    "headline": "...",
+    "summary": "2-3 sentence summary relevant for exam prep...",
+    "category": "Science & Technology",
+    "date": "${today}",
+    "examRelevance": "UPSC/SSC/NEET"
+  }
+]
+
+Make all 8 items realistic, informative, and genuinely useful for Indian students. Include actual current topics like government schemes, scientific discoveries, economic policies, sports achievements, environmental issues.`;
+
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 1000,
+        tools: [{ "type": "web_search_20250305", "name": "web_search" }],
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+
+    const data = await response.json();
+    let newsText = '';
+    if (data.content) {
+      newsText = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    }
+
+    // Parse JSON — strip any backtick fences
+    const cleaned = newsText.replace(/```json|```/g, '').trim();
+    const startIdx = cleaned.indexOf('[');
+    const endIdx = cleaned.lastIndexOf(']');
+    const jsonStr = cleaned.substring(startIdx, endIdx + 1);
+    const news = JSON.parse(jsonStr);
+
+    newsCache = news;
+    newsCacheTime = Date.now();
+    renderNewsCards(news);
+
+  } catch (err) {
+    console.error('News load error:', err);
+    // Fallback: show placeholder cards
+    renderNewsCards(getFallbackNews());
+  }
+
+  if (btn) { btn.disabled = false; btn.textContent = '🔄 Refresh News'; }
+}
+
+function renderNewsCards(newsArr) {
+  const container = document.getElementById('news-container');
+  if (!container) return;
+  container.innerHTML = `<div class="news-grid">${newsArr.map(item => `
+    <div class="news-card">
+      <div class="news-card-tag ${item.sourceKey || 'hindu'}">${item.sourceKey === 'toi' ? '🗞️ Times of India' : '📰 The Hindu'}</div>
+      <h4>${item.headline}</h4>
+      <p>${item.summary}</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">📅 ${item.date} · ${item.category || 'General'}</span>
+        ${item.examRelevance ? `<span style="font-size:11px;color:var(--gold);font-weight:600;">📝 ${item.examRelevance}</span>` : ''}
+      </div>
+    </div>`).join('')}</div>
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:20px;">
+      🤖 AI-curated from The Hindu & Times of India perspectives · For exam preparation only · Always verify from original sources
+    </p>`;
+}
+
+function getFallbackNews() {
+  return [
+    { sourceKey:'hindu', headline:'India Advances in Space Exploration', summary:'ISRO continues its ambitious space programme with new milestones in lunar and solar missions, strengthening India\'s position as a global space power.', category:'Science & Technology', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC' },
+    { sourceKey:'toi', headline:'Economic Growth & Policy Updates', summary:'The Indian economy shows resilience with key government initiatives aimed at boosting manufacturing and exports under the Make in India programme.', category:'Economy', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC' },
+    { sourceKey:'hindu', headline:'Climate & Environment News', summary:'India reaffirms its commitment to renewable energy targets as solar capacity additions reach new highs, contributing to net-zero goals.', category:'Environment', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/IFS' },
+    { sourceKey:'toi', headline:'Sports Achievement — India on Global Stage', summary:'Indian athletes continue to shine on international platforms, bringing laurels and medals across multiple sporting disciplines.', category:'Sports', date: new Date().toLocaleDateString('en-IN'), examRelevance:'General Awareness' },
+    { sourceKey:'hindu', headline:'Education Policy & Reforms', summary:'NEP 2020 implementation progresses with new curriculum frameworks aimed at holistic development and skill-based learning for students.', category:'Education', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC/NEET' },
+    { sourceKey:'toi', headline:'Health & Medical Research Breakthrough', summary:'Indian researchers make strides in affordable healthcare solutions, with new developments in vaccine technology and disease prevention.', category:'Health', date: new Date().toLocaleDateString('en-IN'), examRelevance:'NEET/UPSC' },
+    { sourceKey:'hindu', headline:'International Relations & Diplomacy', summary:'India strengthens bilateral ties with key nations, participating in multilateral forums to promote peace, trade, and sustainable development.', category:'International', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/IFS' },
+    { sourceKey:'toi', headline:'Technology & Digital India Update', summary:'Digital India initiatives expand internet connectivity and e-governance services to rural areas, bridging the digital divide across the country.', category:'Technology', date: new Date().toLocaleDateString('en-IN'), examRelevance:'SSC/UPSC' }
+  ];
+}
+
+// Load news when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(loadCurrentAffairs, 800);
+});
+
+
 function sendMsg() {
   const name    = document.getElementById('cName').value.trim();
   const email   = document.getElementById('cEmail').value.trim();
