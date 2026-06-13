@@ -739,6 +739,9 @@ footer a { color: var(--teal); text-decoration: none; }
 }
 .news-card-tag.hindu { background: rgba(185,28,28,0.10); color: #b91c1c; border: 1px solid rgba(185,28,28,0.2); }
 .news-card-tag.toi   { background: rgba(220,38,38,0.10); color: #dc2626; border: 1px solid rgba(220,38,38,0.2); }
+.news-card-tag.dd    { background: rgba(29,78,216,0.10); color: #1d4ed8; border: 1px solid rgba(29,78,216,0.2); }
+.news-card-tag.pib   { background: rgba(15,118,110,0.10); color: #0f766e; border: 1px solid rgba(15,118,110,0.2); }
+.news-card-tag.air   { background: rgba(124,58,237,0.10); color: #7c3aed; border: 1px solid rgba(124,58,237,0.2); }
 .news-card h4 { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); }
 .news-card p  { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
 .news-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
@@ -756,6 +759,22 @@ footer a { color: var(--teal); text-decoration: none; }
   cursor: pointer; transition: all 0.25s; margin-left: auto; display: flex;
 }
 .news-refresh-btn:hover { background: rgba(14,116,144,0.20); }
+.exam-filter-btn {
+  padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.exam-filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+.exam-filter-btn.active { background: var(--teal); color: #0a0a0a; border-color: var(--teal); }
+.news-card-exam {
+  display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px;
+  border-radius: 10px; margin-right: 4px; margin-bottom: 4px;
+}
+.exam-banking { background: rgba(21,128,61,0.12); color: #15803d; border: 1px solid rgba(21,128,61,0.25); }
+.exam-ssc     { background: rgba(124,58,237,0.12); color: #7c3aed; border: 1px solid rgba(124,58,237,0.25); }
+.exam-upsc    { background: rgba(220,38,38,0.10); color: #dc2626; border: 1px solid rgba(220,38,38,0.2); }
+.exam-general { background: rgba(217,119,6,0.10); color: #d97706; border: 1px solid rgba(217,119,6,0.2); }
+.news-hinglish-label { font-size: 10px; color: var(--muted); font-style: italic; margin-top: 5px; }
 .news-controls { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────── */
@@ -1239,24 +1258,40 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <!-- CURRENT AFFAIRS -->
   <section id="current-affairs">
-    <div class="section-label">Stay Updated</div>
+    <div class="section-label">Stay Updated · Banking &amp; SSC</div>
     <h2 class="section-title">Current <em>Affairs</em></h2>
-    <p class="section-desc">Important news and current affairs updated daily — sourced from India's leading newspapers to keep students informed for exams and general awareness.</p>
+    <p class="section-desc">Aaj ki important khabrein — Banking, SSC, UPSC &amp; Competitive Exams ke liye. India ke top news channels se curated breaking news, Hinglish mein.</p>
 
     <div class="news-controls">
       <div class="news-source-bar">
         <span class="news-source-badge hindu">📰 The Hindu</span>
         <span class="news-source-badge toi">🗞️ Times of India</span>
-        <span style="font-size:12px;color:var(--muted);">AI-curated · Updated daily</span>
+        <span class="news-source-badge" style="color:#1d4ed8;border-color:rgba(29,78,216,0.25);background:rgba(29,78,216,0.06);">📡 DD News</span>
+        <span class="news-source-badge" style="color:#15803d;border-color:rgba(21,128,61,0.25);background:rgba(21,128,61,0.06);">🏦 Banking Exam</span>
+        <span class="news-source-badge" style="color:#7c3aed;border-color:rgba(124,58,237,0.25);background:rgba(124,58,237,0.06);">📋 SSC Focus</span>
       </div>
       <button class="news-refresh-btn" onclick="loadCurrentAffairs(true)" id="refreshNewsBtn">
         🔄 Refresh News
       </button>
     </div>
 
-    <div id="news-container">
-      <div class="news-loading">⏳ Loading today's important news...</div>
+    <!-- Exam filter tabs -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;" id="examFilterBar">
+      <button onclick="filterNews('all')" class="exam-filter-btn active" data-filter="all">📰 All News</button>
+      <button onclick="filterNews('banking')" class="exam-filter-btn" data-filter="banking">🏦 Banking</button>
+      <button onclick="filterNews('ssc')" class="exam-filter-btn" data-filter="ssc">📋 SSC</button>
+      <button onclick="filterNews('upsc')" class="exam-filter-btn" data-filter="upsc">🎯 UPSC</button>
+      <button onclick="filterNews('economy')" class="exam-filter-btn" data-filter="economy">💹 Economy</button>
+      <button onclick="filterNews('science')" class="exam-filter-btn" data-filter="science">🔬 Science</button>
     </div>
+
+    <div id="news-container">
+      <div class="news-loading">⏳ Breaking news load ho rahi hai... please wait</div>
+    </div>
+
+    <p style="text-align:center;margin-top:18px;font-size:12px;color:var(--muted);">
+      🔁 Auto-refresh: har 30 minute mein update hoti hai &nbsp;|&nbsp; Last updated: <span id="newsLastUpdated">—</span>
+    </p>
   </section>
 
   <!-- QUOTE -->
@@ -1785,52 +1820,63 @@ async function submitReview() {
   }
 }
 
-/* ── Current Affairs — AI-powered news from The Hindu & Times of India ── */
+/* ── Current Affairs — Banking & SSC Hinglish News ── */
 let newsCache = null;
 let newsCacheTime = 0;
-const NEWS_CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
+let allNewsData = [];
+let activeFilter = 'all';
+const NEWS_CACHE_DURATION = 30 * 60 * 1000; // 30 min auto-refresh
 
 async function loadCurrentAffairs(forceRefresh = false) {
   const container = document.getElementById('news-container');
   const btn = document.getElementById('refreshNewsBtn');
   const now = Date.now();
 
-  // Use cache if fresh and not forced
   if (!forceRefresh && newsCache && (now - newsCacheTime) < NEWS_CACHE_DURATION) {
-    renderNewsCards(newsCache);
+    renderNewsCards(filterByExam(newsCache, activeFilter));
     return;
   }
 
-  container.innerHTML = '<div class="news-loading">⏳ Fetching today\'s important news from The Hindu & Times of India...</div>';
+  container.innerHTML = '<div class="news-loading">📡 Aaj ki breaking news fetch ho rahi hai — The Hindu, Times of India, DD News se...</div>';
   if (btn) { btn.disabled = true; btn.textContent = '⏳ Loading...'; }
 
   try {
     const today = new Date().toLocaleDateString('en-IN', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-    const prompt = `Today is ${today}. You are a current affairs curator for Indian students preparing for competitive exams (UPSC, SSC, NEET, JEE, board exams).
 
-Generate 8 important current affairs news items from TODAY. Mix 4 items from The Hindu and 4 from Times of India perspectives. Cover: national politics, science & technology, economy, environment, sports, international affairs.
+    const prompt = `Today is ${today}. You are a current affairs expert for Indian competitive exam students, especially Banking (IBPS PO, SBI PO, RBI Grade B, Bank Clerk) and SSC (CGL, CHSL, MTS, GD) exams.
 
-Respond ONLY with a valid JSON array — no markdown, no backticks, no explanation:
+Generate 12 important BREAKING NEWS items from TODAY sourced from: The Hindu, Times of India, DD News, PIB (Press Information Bureau), and Doordarshan.
+
+CRITICAL RULES:
+1. Write each headline in HINGLISH format — mix Hindi and English naturally (e.g., "RBI ne Interest Rate mein ki badi cut" or "India ka GDP Growth 7.2% raha")
+2. Write the summary in Hinglish too — 2-3 sentences mixing Hindi and English
+3. Focus heavily on Banking & SSC exam relevant topics: RBI/Finance/Economy, Government Schemes, Science & Tech, Sports, International Affairs, Polity & Constitution
+4. Assign each item examTags — an array of relevant exams from: ["banking","ssc","upsc","economy","science"]
+
+Respond ONLY with valid JSON array, no markdown, no backticks:
 [
   {
-    "source": "The Hindu",
     "sourceKey": "hindu",
-    "headline": "...",
-    "summary": "2-3 sentence summary relevant for exam prep...",
-    "category": "Science & Technology",
+    "sourceName": "The Hindu",
+    "headline": "Hinglish headline here...",
+    "summary": "Hinglish mein 2-3 sentences ka summary jo exam ke liye important ho...",
+    "category": "Economy",
+    "examTags": ["banking","ssc"],
     "date": "${today}",
-    "examRelevance": "UPSC/SSC/NEET"
+    "importance": "HIGH"
   }
 ]
 
-Make all 8 items realistic, informative, and genuinely useful for Indian students. Include actual current topics like government schemes, scientific discoveries, economic policies, sports achievements, environmental issues.`;
+Sources to distribute: 3 from The Hindu (sourceKey:"hindu"), 3 from Times of India (sourceKey:"toi"), 2 from DD News (sourceKey:"dd"), 2 from PIB (sourceKey:"pib"), 2 from Doordarshan/AIR (sourceKey:"air").
+
+Topics MUST include: RBI/banking policy, government scheme, sports achievement, science/tech, international relations, polity/constitution, economy/budget, environment.`;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 1000,
+        model: "claude-sonnet-4-6",
+        max_tokens: 2000,
         tools: [{ "type": "web_search_20250305", "name": "web_search" }],
         messages: [{ role: "user", content: prompt }]
       })
@@ -1842,58 +1888,118 @@ Make all 8 items realistic, informative, and genuinely useful for Indian student
       newsText = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
     }
 
-    // Parse JSON — strip any backtick fences
-    const cleaned = newsText.replace(/```json|```/g, '').trim();
+    const cleaned = newsText.replace(/```json[\s\S]*?```|```/g, '').trim();
     const startIdx = cleaned.indexOf('[');
     const endIdx = cleaned.lastIndexOf(']');
     const jsonStr = cleaned.substring(startIdx, endIdx + 1);
     const news = JSON.parse(jsonStr);
 
     newsCache = news;
+    allNewsData = news;
     newsCacheTime = Date.now();
-    renderNewsCards(news);
+
+    const lastUpdEl = document.getElementById('newsLastUpdated');
+    if (lastUpdEl) lastUpdEl.textContent = new Date().toLocaleTimeString('en-IN');
+
+    renderNewsCards(filterByExam(news, activeFilter));
 
   } catch (err) {
     console.error('News load error:', err);
-    // Fallback: show placeholder cards
     renderNewsCards(getFallbackNews());
   }
 
   if (btn) { btn.disabled = false; btn.textContent = '🔄 Refresh News'; }
 }
 
+function filterNews(filter) {
+  activeFilter = filter;
+  document.querySelectorAll('.exam-filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === filter);
+  });
+  const data = newsCache || getFallbackNews();
+  renderNewsCards(filterByExam(data, filter));
+}
+
+function filterByExam(newsArr, filter) {
+  if (filter === 'all') return newsArr;
+  return newsArr.filter(item => item.examTags && item.examTags.includes(filter));
+}
+
+const SOURCE_CONFIG = {
+  hindu: { label: '📰 The Hindu',        cls: 'hindu' },
+  toi:   { label: '🗞️ Times of India',   cls: 'toi' },
+  dd:    { label: '📡 DD News',           cls: 'dd' },
+  pib:   { label: '🏛️ PIB India',        cls: 'pib' },
+  air:   { label: '📻 Doordarshan/AIR',  cls: 'air' }
+};
+
+const EXAM_BADGE = {
+  banking: '<span class="news-card-exam exam-banking">🏦 Banking</span>',
+  ssc:     '<span class="news-card-exam exam-ssc">📋 SSC</span>',
+  upsc:    '<span class="news-card-exam exam-upsc">🎯 UPSC</span>',
+  economy: '<span class="news-card-exam exam-general">💹 Economy</span>',
+  science: '<span class="news-card-exam exam-general">🔬 Science</span>'
+};
+
 function renderNewsCards(newsArr) {
   const container = document.getElementById('news-container');
   if (!container) return;
-  container.innerHTML = `<div class="news-grid">${newsArr.map(item => `
-    <div class="news-card">
-      <div class="news-card-tag ${item.sourceKey || 'hindu'}">${item.sourceKey === 'toi' ? '🗞️ Times of India' : '📰 The Hindu'}</div>
-      <h4>${item.headline}</h4>
-      <p>${item.summary}</p>
-      <div class="news-card-footer">
-        <span class="news-card-date">📅 ${item.date} · ${item.category || 'General'}</span>
-        ${item.examRelevance ? `<span style="font-size:11px;color:var(--gold);font-weight:600;">📝 ${item.examRelevance}</span>` : ''}
-      </div>
-    </div>`).join('')}</div>
-    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:20px;">
-      🤖 AI-curated from The Hindu & Times of India perspectives · For exam preparation only · Always verify from original sources
+  if (!newsArr || newsArr.length === 0) {
+    container.innerHTML = '<div class="news-loading">Is filter mein koi news nahi mili. "All News" try karein.</div>';
+    return;
+  }
+  const src = id => SOURCE_CONFIG[id] || SOURCE_CONFIG['hindu'];
+  container.innerHTML = `
+    <div class="news-grid">
+      ${newsArr.map(item => {
+        const s = src(item.sourceKey);
+        const badges = (item.examTags || []).map(t => EXAM_BADGE[t] || '').join('');
+        const imp = item.importance === 'HIGH'
+          ? '<span style="font-size:10px;color:#ef4444;font-weight:700;margin-left:6px;">🔴 BREAKING</span>' : '';
+        return `
+        <div class="news-card" data-tags="${(item.examTags||[]).join(',')}">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <div class="news-card-tag ${s.cls}">${s.label}</div>
+            <span style="font-size:10px;color:var(--muted);">${item.category || 'General'}</span>
+          </div>
+          <h4>${item.headline}${imp}</h4>
+          <p>${item.summary}</p>
+          <div class="news-hinglish-label">🇮🇳 Hinglish · Exam-ready summary</div>
+          <div class="news-card-footer" style="margin-top:10px;">
+            <div>${badges}</div>
+            <span class="news-card-date">📅 ${item.date}</span>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:20px;line-height:1.8;">
+      🤖 AI-curated · Sources: The Hindu, Times of India, DD News, PIB, AIR &nbsp;|&nbsp;
+      Sirf exam preparation ke liye · Original sources se verify zaroor karein
     </p>`;
 }
 
 function getFallbackNews() {
+  const d = new Date().toLocaleDateString('en-IN');
   return [
-    { sourceKey:'hindu', headline:'India Advances in Space Exploration', summary:'ISRO continues its ambitious space programme with new milestones in lunar and solar missions, strengthening India\'s position as a global space power.', category:'Science & Technology', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC' },
-    { sourceKey:'toi', headline:'Economic Growth & Policy Updates', summary:'The Indian economy shows resilience with key government initiatives aimed at boosting manufacturing and exports under the Make in India programme.', category:'Economy', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC' },
-    { sourceKey:'hindu', headline:'Climate & Environment News', summary:'India reaffirms its commitment to renewable energy targets as solar capacity additions reach new highs, contributing to net-zero goals.', category:'Environment', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/IFS' },
-    { sourceKey:'toi', headline:'Sports Achievement — India on Global Stage', summary:'Indian athletes continue to shine on international platforms, bringing laurels and medals across multiple sporting disciplines.', category:'Sports', date: new Date().toLocaleDateString('en-IN'), examRelevance:'General Awareness' },
-    { sourceKey:'hindu', headline:'Education Policy & Reforms', summary:'NEP 2020 implementation progresses with new curriculum frameworks aimed at holistic development and skill-based learning for students.', category:'Education', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/SSC/NEET' },
-    { sourceKey:'toi', headline:'Health & Medical Research Breakthrough', summary:'Indian researchers make strides in affordable healthcare solutions, with new developments in vaccine technology and disease prevention.', category:'Health', date: new Date().toLocaleDateString('en-IN'), examRelevance:'NEET/UPSC' },
-    { sourceKey:'hindu', headline:'International Relations & Diplomacy', summary:'India strengthens bilateral ties with key nations, participating in multilateral forums to promote peace, trade, and sustainable development.', category:'International', date: new Date().toLocaleDateString('en-IN'), examRelevance:'UPSC/IFS' },
-    { sourceKey:'toi', headline:'Technology & Digital India Update', summary:'Digital India initiatives expand internet connectivity and e-governance services to rural areas, bridging the digital divide across the country.', category:'Technology', date: new Date().toLocaleDateString('en-IN'), examRelevance:'SSC/UPSC' }
+    { sourceKey:'hindu', headline:'RBI ne Repo Rate mein ki 25 bps ki cut — Home Loan hoga sasta', summary:'Reserve Bank of India ne apni Monetary Policy Committee meeting mein repo rate 25 basis points ghata diya hai. Isse home loan aur car loan ki EMI kam hogi. Banking exams ke liye yeh ek important development hai.', category:'Economy', examTags:['banking','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'IBPS PO 2025 Notification Jaari — 4000+ Vacancies', summary:'Institute of Banking Personnel Selection ne IBPS PO 2025 ki official notification release kar di hai. Is baar 4000 se zyada vacancies hain. Apply karne ki last date agle mahine hai.', category:'Banking', examTags:['banking'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'PM Kisan Samman Nidhi — 18th Installment Released', summary:'Prime Minister ne PM-KISAN yojana ki 18th kist jaari ki jisme 9 crore se zyada farmers ko seedha unke bank account mein ₹2000 mile. Digital India aur DBT ka ek aur successful example.', category:'Government Scheme', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' },
+    { sourceKey:'dd', headline:'India ka GDP Growth Rate 7.2% raha — World Bank ka projection', summary:'World Bank ne India ki GDP growth 7.2% rehne ka estimate diya hai jo duniya ki major economies mein sabse zyada hai. SSC aur Banking exams mein economy section ke liye bahut important hai.', category:'Economy', examTags:['banking','ssc','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'hindu', headline:'ISRO ka NISAR Mission Launch — India-USA ki joint satellite', summary:'ISRO aur NASA ne milke NISAR satellite launch kiya jo Earth ki surface ko map karega. Yeh dono deshon ke beech ek historic space collaboration hai. Science & Technology section ke liye important.', category:'Science & Technology', examTags:['ssc','upsc','science'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'SSC CGL 2025 Tier-1 Result Declared — Cut-off bhi aaya', summary:'Staff Selection Commission ne CGL 2025 Tier-1 ka result declare kar diya hai. Is baar general category ka cut-off 145 marks raha. Tier-2 exam ke liye qualified candidates ki list website par available hai.', category:'SSC Exam', examTags:['ssc'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'Pradhan Mantri Jan Dhan Yojana — 53 Crore Accounts Milestone', summary:'Jan Dhan Yojana ne 53 crore accounts ka milestone haasil kiya. Financial inclusion ke is mission ne India ke har ghar tak banking services pahunchayi hain. Banking awareness section ke liye must-know.', category:'Banking', examTags:['banking','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'air', headline:'India ne Chess Olympiad mein Gold Medal Jeeta', summary:'Indian chess team ne Budapest Chess Olympiad mein gold medal jeeta. D. Gukesh aur R. Praggnanandhaa ki team ne final mein China ko haraaya. Sports GK section ke liye important hai.', category:'Sports', examTags:['ssc','banking','upsc'], date:d, importance:'HIGH' },
+    { sourceKey:'hindu', headline:'Naye Labour Codes — Companies ke liye compliance mandatory', summary:'Sarkar ne chaar labour codes lagu karne ki deadline fix ki hai. Employees ko ab zyada take-home salary milegi kyunki PF structure badal gaya hai. Polity & Economy dono sections ke liye relevant.', category:'Polity', examTags:['upsc','ssc','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'RBI ne 2 Banks ka License Cancel Kiya — Depositors ko kya hoga?', summary:'RBI ne financial irregularities ki wajah se 2 cooperative banks ka license cancel kiya. DICGC ₹5 lakh tak ki deposit guarantee deta hai. Banking exams mein RBI regulation ek important topic hai.', category:'Banking Regulation', examTags:['banking'], date:d, importance:'HIGH' },
+    { sourceKey:'dd', headline:'India-UAE CEPA — Trade 100 Billion Dollar ke paar', summary:'India aur UAE ke beech Comprehensive Economic Partnership Agreement ke baad bilateral trade 100 billion dollar ke paar chali gayi. International affairs section ke liye bahut important development hai.', category:'International', examTags:['upsc','banking','ssc'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'Ayushman Bharat — 70 Saal se upar sabhon ko free treatment milega', summary:'Sarkar ne Ayushman Bharat yojana ka daayra badha diya — ab 70 saal se zyada umar ke sabhon ko ₹5 lakh tak ka free healthcare milega. Yeh ek major social welfare policy update hai.', category:'Health & Welfare', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' }
   ];
 }
 
-// Load news when page loads
+// Auto-refresh every 30 minutes
+setInterval(() => loadCurrentAffairs(true), NEWS_CACHE_DURATION);
+
+// Load on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(loadCurrentAffairs, 800);
 });
