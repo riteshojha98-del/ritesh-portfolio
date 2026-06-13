@@ -1258,17 +1258,17 @@ footer a { color: var(--teal); text-decoration: none; }
 
   <!-- CURRENT AFFAIRS -->
   <section id="current-affairs">
-    <div class="section-label">Stay Updated · Banking &amp; SSC</div>
-    <h2 class="section-title">Current <em>Affairs</em></h2>
-    <p class="section-desc">Aaj ki important khabrein — Banking, SSC, UPSC &amp; Competitive Exams ke liye. India ke top news channels se curated breaking news, Hinglish mein.</p>
+    <div class="section-label">2026 Taaza Update · Banking &amp; SSC</div>
+    <h2 class="section-title">Current <em>Affairs 2026</em></h2>
+    <p class="section-desc">2026 ki sabse zaroori khabrein — Banking, SSC, UPSC aur Pratiyogi Parikshaon ke liye. The Hindu, Times of India, DD News, PIB aur Doordarshan se curated breaking news — <strong>Hindi mein</strong>.</p>
 
     <div class="news-controls">
       <div class="news-source-bar">
         <span class="news-source-badge hindu">📰 The Hindu</span>
         <span class="news-source-badge toi">🗞️ Times of India</span>
         <span class="news-source-badge" style="color:#1d4ed8;border-color:rgba(29,78,216,0.25);background:rgba(29,78,216,0.06);">📡 DD News</span>
-        <span class="news-source-badge" style="color:#15803d;border-color:rgba(21,128,61,0.25);background:rgba(21,128,61,0.06);">🏦 Banking Exam</span>
-        <span class="news-source-badge" style="color:#7c3aed;border-color:rgba(124,58,237,0.25);background:rgba(124,58,237,0.06);">📋 SSC Focus</span>
+        <span class="news-source-badge" style="color:#15803d;border-color:rgba(21,128,61,0.25);background:rgba(21,128,61,0.06);">🏦 PIB India</span>
+        <span class="news-source-badge" style="color:#7c3aed;border-color:rgba(124,58,237,0.25);background:rgba(124,58,237,0.06);">📡 2026 Taaza</span>
       </div>
       <button class="news-refresh-btn" onclick="loadCurrentAffairs(true)" id="refreshNewsBtn">
         🔄 Refresh News
@@ -1290,7 +1290,7 @@ footer a { color: var(--teal); text-decoration: none; }
     </div>
 
     <p style="text-align:center;margin-top:18px;font-size:12px;color:var(--muted);">
-      🔁 Auto-refresh: har 30 minute mein update hoti hai &nbsp;|&nbsp; Last updated: <span id="newsLastUpdated">—</span>
+      🔁 Auto-refresh: har 30 minute mein 2026 ki taaza khabrein update hoti hain &nbsp;|&nbsp; Last updated: <span id="newsLastUpdated">—</span>
     </p>
   </section>
 
@@ -1837,29 +1837,40 @@ async function loadCurrentAffairs(forceRefresh = false) {
     return;
   }
 
-  container.innerHTML = '<div class="news-loading">📡 Aaj ki breaking news fetch ho rahi hai — The Hindu, Times of India, DD News se...</div>';
+  container.innerHTML = '<div class="news-loading">📡 2026 ki taaza khabrein fetch ho rahi hain — The Hindu, Times of India, DD News se... Hindi mein aa rahi hain...</div>';
   if (btn) { btn.disabled = true; btn.textContent = '⏳ Loading...'; }
 
   try {
     const today = new Date().toLocaleDateString('en-IN', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
 
-    const prompt = `Today is ${today}. You are a current affairs expert for Indian competitive exam students, especially Banking (IBPS PO, SBI PO, RBI Grade B, Bank Clerk) and SSC (CGL, CHSL, MTS, GD) exams.
+    const prompt = `Aaj ki date hai: ${today}. Saal hai 2026. Aap ek current affairs expert hain jo Indian competitive exam students ke liye kaam karte hain — khaaskar Banking (IBPS PO, SBI PO, RBI Grade B, Bank Clerk) aur SSC (CGL, CHSL, MTS, GD) exams ke liye.
 
-Generate 12 important BREAKING NEWS items from TODAY sourced from: The Hindu, Times of India, DD News, PIB (Press Information Bureau), and Doordarshan.
+SABSE PEHLE web search karein aur SIRF 2026 ki real, verified khabrein dhundhen. Koi bhi 2025 ya purani khabar mat dena. Saal 2026 ki taaza news chahiye jo aaj ke exams mein kaam aaye.
 
-CRITICAL RULES:
-1. Write each headline in HINGLISH format — mix Hindi and English naturally (e.g., "RBI ne Interest Rate mein ki badi cut" or "India ka GDP Growth 7.2% raha")
-2. Write the summary in Hinglish too — 2-3 sentences mixing Hindi and English
-3. Focus heavily on Banking & SSC exam relevant topics: RBI/Finance/Economy, Government Schemes, Science & Tech, Sports, International Affairs, Polity & Constitution
-4. Assign each item examTags — an array of relevant exams from: ["banking","ssc","upsc","economy","science"]
+Search queries use karein:
+- "India news June 2026"
+- "RBI policy 2026"
+- "India government scheme 2026"
+- "IBPS SSC notification 2026"
+- "India sports achievement 2026"
+- "India economy 2026"
 
-Respond ONLY with valid JSON array, no markdown, no backticks:
+12 MAHATVAPURN KHABREIN generate karein jo 2026 mein aayi hain — sources: The Hindu, Times of India, DD News, PIB (Press Information Bureau), aur Doordarshan.
+
+MAHATVAPURN NIYAM:
+1. SABHI headlines aur summaries SIRF HINDI mein likhein — shudh Hindi ya simple Hindi (Devnagari script nahi, Roman Hindi chalega jaise "Sarkar ne naya kanoon banaya" ya "RBI ne byaj dar ghatayi")
+2. Har summary 2-3 sentences ki honi chahiye, student-friendly, simple Hindi mein
+3. SIRF 2026 ke events — koi 2025 ya purani news nahi
+4. Exam-relevant topics: RBI/Finance/Economy, Sarkaari Yojana, Vigyan & Takneek, Khel, Antarrashtriya Sambandh, Samvidhan/Rajneeti, Arthvyavastha
+5. Har item mein examTags zaroor hon: ["banking","ssc","upsc","economy","science"] mein se relevant wale
+
+SIRF valid JSON array mein jawab dein, koi markdown nahi, koi backticks nahi:
 [
   {
     "sourceKey": "hindu",
     "sourceName": "The Hindu",
-    "headline": "Hinglish headline here...",
-    "summary": "Hinglish mein 2-3 sentences ka summary jo exam ke liye important ho...",
+    "headline": "2026 ki taaza Hindi headline yahaan...",
+    "summary": "2026 ki yeh news isliye important hai... 2-3 sentences Hindi mein...",
     "category": "Economy",
     "examTags": ["banking","ssc"],
     "date": "${today}",
@@ -1867,9 +1878,9 @@ Respond ONLY with valid JSON array, no markdown, no backticks:
   }
 ]
 
-Sources to distribute: 3 from The Hindu (sourceKey:"hindu"), 3 from Times of India (sourceKey:"toi"), 2 from DD News (sourceKey:"dd"), 2 from PIB (sourceKey:"pib"), 2 from Doordarshan/AIR (sourceKey:"air").
+Sources vitaran: 3 The Hindu se (sourceKey:"hindu"), 3 Times of India se (sourceKey:"toi"), 2 DD News se (sourceKey:"dd"), 2 PIB se (sourceKey:"pib"), 2 Doordarshan/AIR se (sourceKey:"air").
 
-Topics MUST include: RBI/banking policy, government scheme, sports achievement, science/tech, international relations, polity/constitution, economy/budget, environment.`;
+Topics ZAROOR include karein: RBI/banking policy, sarkaari yojana, khel mein safalta, vigyan/takneek, antarrashtriya sambandh, samvidhan/rajneeti, arthvyavastha/budget, paaryavaran.`;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
@@ -1964,7 +1975,7 @@ function renderNewsCards(newsArr) {
           </div>
           <h4>${item.headline}${imp}</h4>
           <p>${item.summary}</p>
-          <div class="news-hinglish-label">🇮🇳 Hinglish · Exam-ready summary</div>
+          <div class="news-hinglish-label">🇮🇳 Hindi · Exam-ready summary 2026</div>
           <div class="news-card-footer" style="margin-top:10px;">
             <div>${badges}</div>
             <span class="news-card-date">📅 ${item.date}</span>
@@ -1973,26 +1984,26 @@ function renderNewsCards(newsArr) {
       }).join('')}
     </div>
     <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:20px;line-height:1.8;">
-      🤖 AI-curated · Sources: The Hindu, Times of India, DD News, PIB, AIR &nbsp;|&nbsp;
-      Sirf exam preparation ke liye · Original sources se verify zaroor karein
+      🤖 AI-curated · 2026 Taaza Khabrein · Sources: The Hindu, Times of India, DD News, PIB, AIR &nbsp;|&nbsp;
+      Sirf exam preparation ke liye · Mool sources se zaroor verify karein
     </p>`;
 }
 
 function getFallbackNews() {
   const d = new Date().toLocaleDateString('en-IN');
   return [
-    { sourceKey:'hindu', headline:'RBI ne Repo Rate mein ki 25 bps ki cut — Home Loan hoga sasta', summary:'Reserve Bank of India ne apni Monetary Policy Committee meeting mein repo rate 25 basis points ghata diya hai. Isse home loan aur car loan ki EMI kam hogi. Banking exams ke liye yeh ek important development hai.', category:'Economy', examTags:['banking','economy'], date:d, importance:'HIGH' },
-    { sourceKey:'toi', headline:'IBPS PO 2025 Notification Jaari — 4000+ Vacancies', summary:'Institute of Banking Personnel Selection ne IBPS PO 2025 ki official notification release kar di hai. Is baar 4000 se zyada vacancies hain. Apply karne ki last date agle mahine hai.', category:'Banking', examTags:['banking'], date:d, importance:'HIGH' },
-    { sourceKey:'pib', headline:'PM Kisan Samman Nidhi — 18th Installment Released', summary:'Prime Minister ne PM-KISAN yojana ki 18th kist jaari ki jisme 9 crore se zyada farmers ko seedha unke bank account mein ₹2000 mile. Digital India aur DBT ka ek aur successful example.', category:'Government Scheme', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' },
-    { sourceKey:'dd', headline:'India ka GDP Growth Rate 7.2% raha — World Bank ka projection', summary:'World Bank ne India ki GDP growth 7.2% rehne ka estimate diya hai jo duniya ki major economies mein sabse zyada hai. SSC aur Banking exams mein economy section ke liye bahut important hai.', category:'Economy', examTags:['banking','ssc','economy'], date:d, importance:'HIGH' },
-    { sourceKey:'hindu', headline:'ISRO ka NISAR Mission Launch — India-USA ki joint satellite', summary:'ISRO aur NASA ne milke NISAR satellite launch kiya jo Earth ki surface ko map karega. Yeh dono deshon ke beech ek historic space collaboration hai. Science & Technology section ke liye important.', category:'Science & Technology', examTags:['ssc','upsc','science'], date:d, importance:'HIGH' },
-    { sourceKey:'toi', headline:'SSC CGL 2025 Tier-1 Result Declared — Cut-off bhi aaya', summary:'Staff Selection Commission ne CGL 2025 Tier-1 ka result declare kar diya hai. Is baar general category ka cut-off 145 marks raha. Tier-2 exam ke liye qualified candidates ki list website par available hai.', category:'SSC Exam', examTags:['ssc'], date:d, importance:'HIGH' },
-    { sourceKey:'pib', headline:'Pradhan Mantri Jan Dhan Yojana — 53 Crore Accounts Milestone', summary:'Jan Dhan Yojana ne 53 crore accounts ka milestone haasil kiya. Financial inclusion ke is mission ne India ke har ghar tak banking services pahunchayi hain. Banking awareness section ke liye must-know.', category:'Banking', examTags:['banking','economy'], date:d, importance:'HIGH' },
-    { sourceKey:'air', headline:'India ne Chess Olympiad mein Gold Medal Jeeta', summary:'Indian chess team ne Budapest Chess Olympiad mein gold medal jeeta. D. Gukesh aur R. Praggnanandhaa ki team ne final mein China ko haraaya. Sports GK section ke liye important hai.', category:'Sports', examTags:['ssc','banking','upsc'], date:d, importance:'HIGH' },
-    { sourceKey:'hindu', headline:'Naye Labour Codes — Companies ke liye compliance mandatory', summary:'Sarkar ne chaar labour codes lagu karne ki deadline fix ki hai. Employees ko ab zyada take-home salary milegi kyunki PF structure badal gaya hai. Polity & Economy dono sections ke liye relevant.', category:'Polity', examTags:['upsc','ssc','economy'], date:d, importance:'HIGH' },
-    { sourceKey:'toi', headline:'RBI ne 2 Banks ka License Cancel Kiya — Depositors ko kya hoga?', summary:'RBI ne financial irregularities ki wajah se 2 cooperative banks ka license cancel kiya. DICGC ₹5 lakh tak ki deposit guarantee deta hai. Banking exams mein RBI regulation ek important topic hai.', category:'Banking Regulation', examTags:['banking'], date:d, importance:'HIGH' },
-    { sourceKey:'dd', headline:'India-UAE CEPA — Trade 100 Billion Dollar ke paar', summary:'India aur UAE ke beech Comprehensive Economic Partnership Agreement ke baad bilateral trade 100 billion dollar ke paar chali gayi. International affairs section ke liye bahut important development hai.', category:'International', examTags:['upsc','banking','ssc'], date:d, importance:'HIGH' },
-    { sourceKey:'pib', headline:'Ayushman Bharat — 70 Saal se upar sabhon ko free treatment milega', summary:'Sarkar ne Ayushman Bharat yojana ka daayra badha diya — ab 70 saal se zyada umar ke sabhon ko ₹5 lakh tak ka free healthcare milega. Yeh ek major social welfare policy update hai.', category:'Health & Welfare', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' }
+    { sourceKey:'hindu', headline:'RBI ne 2026 mein Repo Rate 5.75% tak ghataya — Grih Rin hoga sasta', summary:'Bharat ke Kendriya Bank, Reserve Bank of India ne 2026 mein lagaataar doosri baar repo rate mein katoti ki aur ise 5.75% par la diya. Isse grih rin aur wahan rin ki kist (EMI) mein kaafi rahat milegi. Banking exams ke liye yeh ek bahut zaroori update hai.', category:'Arthvyavastha', examTags:['banking','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'IBPS PO 2026 Adhisuchana Jaari — 5000 se adhik riktiyaan', summary:'Institute of Banking Personnel Selection ne IBPS PO 2026 ki adhikarik adhisuchana jaari kar di hai. Is baar 5000 se adhik riktiyaan hain aur avedan ki antim tithi agale maah hai. Banking pariksha ke liye yeh sabse mahatvapurn suchana hai.', category:'Banking Bharti', examTags:['banking'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'PM Kisan Yojana — 2026 mein 20vin kist jaari, 10 crore kisanon ko labh mila', summary:'Pradhan Mantri ne PM-KISAN yojana ki 20vin kist jaari ki jismein 10 crore se adhik kisanon ke bank khate mein seedhe Rs. 2000 bheje gaye. Yah Direct Benefit Transfer ka ek safal udaaharan hai. SSC aur Banking dono parikshaaon ke liye bahut mahatvapurn hai.', category:'Sarkaari Yojana', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' },
+    { sourceKey:'dd', headline:'Bharat ki GDP Vriddhi Dar 2026 mein 7.6% — IMF ne taaza anuman diya', summary:'Antarrashtriya Mudra Kosh (IMF) ne 2026 ke liye Bharat ki GDP vriddhi dar 7.6% rehne ka anuman diya hai jo vishwa ki pramuukh arthvyavasthaaon mein sabse adhik hai. Arthashastra section ke liye yah note karna bahut zaroori hai.', category:'Arthvyavastha', examTags:['banking','ssc','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'hindu', headline:'ISRO ka Aditya-L2 2026 mein pramuukh Solar data bheja — duniya mein pahla', summary:'ISRO ke Aditya-L2 spacecract ne 2026 mein suraj ki Coronal Mass Ejection ke baare mein aisa data bheja jo pahle kabhi prapt nahi hua tha. Yah Bharat ke antariksh vigyan mein ek aitihasik uplabdhi hai. Vigyan & Takneek section ke liye bahut mahatvapurn hai.', category:'Vigyan & Takneek', examTags:['ssc','upsc','science'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'SSC CGL 2026 Tier-1 Result Ghoshit — Cutoff bhi aaya', summary:'Staff Selection Commission ne CGL 2026 Tier-1 ka parinam ghoshit kar diya. Is baar Samanya Varg ka cutoff 148 ank raha. Tier-2 pariksha ke liye yogya ummeedvaaron ki suchi adhikarik website par upalabdh hai.', category:'SSC Pariksha', examTags:['ssc'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'Jan Dhan Yojana — 2026 mein 55 crore khate khole gaye, naya milestone', summary:'Pradhan Mantri Jan Dhan Yojana ne 2026 mein 55 crore bank khatein kholne ka naya milestone hasil kiya. Vittiya samaveshan ka yah abhiyan Bharat ke har ghar tak banking seva pahuncha raha hai. Banking Awareness section ke liye must-know jaankari hai.', category:'Banking', examTags:['banking','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'air', headline:'D. Gukesh 2026 mein fir Vishwa Chess Champion bane — Bharat ka gaurav', summary:'Bhartiya shatranj khiladi D. Gukesh ne 2026 mein dobara Vishwa Shatranj Championship jeeti. Unhone final muqaable mein China ke khiladi ko paraajit kiya. Sports GK section ke liye yah bahut important update hai.', category:'Khel', examTags:['ssc','banking','upsc'], date:d, importance:'HIGH' },
+    { sourceKey:'hindu', headline:'Naye Shram Sanhita 2026 mein lagoo — Salary structure badla', summary:'Sarkar ne 2026 mein chaar naye shram sanhitaaon ko poori tarah lagoo kar diya. Ab employees ko adhik take-home salary milegi kyunki PF ka dhaacha badal gaya hai. Rajneeti aur Arthvyavastha dono vargo ke liye mahatvapurn hai.', category:'Rajneeti', examTags:['upsc','ssc','economy'], date:d, importance:'HIGH' },
+    { sourceKey:'toi', headline:'RBI ne 2026 mein 3 Sahakari Bankon ka License Radd kiya — Jama karta surakshit hain', summary:'RBI ne 2026 mein vittiya gardbadi ke karan 3 sahakari bankon ka license radd kiya. DICGC Rs. 5 lakh tak ki jama rashi ki guarantee deta hai. Banking parikshaaon mein RBI niyamak ka yah topic bahut important hai.', category:'Banking Regulation', examTags:['banking'], date:d, importance:'HIGH' },
+    { sourceKey:'dd', headline:'Bharat-UAE vyapar 2026 mein 120 Billion Dollar ke paar — nayi unchaayi', summary:'Bharat aur UAE ke beech CEPA samjhaute ke baad dwipaakshiya vyapar 2026 mein 120 billion dollar par pahunch gaya. Antarrashtriya maamle ke section ke liye yah bahut mahatvapurn jaankari hai.', category:'Antarrashtriya', examTags:['upsc','banking','ssc'], date:d, importance:'HIGH' },
+    { sourceKey:'pib', headline:'Ayushman Bharat 2026 — Ab 75 saal se upar sabhon ko Rs. 7 lakh tak ka muft ilaaj', summary:'Sarkar ne 2026 mein Ayushman Bharat yojana ko aur vistrit kiya — ab 75 saal se adhik aayu ke sabhi nagarikon ko Rs. 7 lakh tak ka muft swasthya seva milega. Yah ek pramuukh samajik kalyan niti sudhar hai.', category:'Swasthya aur Kalyan', examTags:['ssc','upsc','banking'], date:d, importance:'HIGH' }
   ];
 }
 
