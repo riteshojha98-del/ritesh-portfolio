@@ -2033,19 +2033,21 @@ function renderNewsCards(newsArr) {
     container.innerHTML = '<div class="news-loading">Is filter mein koi news nahi mili. "All News" try karein.</div>';
     return;
   }
-  const src = id => SOURCE_CONFIG[id] || SOURCE_CONFIG['hindu'];
+  const src = id => SOURCE_CONFIG[id] || null;
   container.innerHTML = `
     <div class="news-grid">
       ${newsArr.map(item => {
         const s = src(item.sourceKey);
+        const badgeLabel = s ? s.label : (item.customSourceLabel || `📰 ${item.source || 'News Source'}`);
+        const badgeCls = s ? s.cls : '';
         const badges = (item.examTags || []).map(t => EXAM_BADGE[t] || '').join('');
         const imp = item.importance === 'HIGH'
           ? '<span style="font-size:10px;color:#ef4444;font-weight:700;margin-left:6px;">🔴 BREAKING</span>' : '';
-        const sourceUrl = item.sourceUrl || s.url || '#';
+        const sourceUrl = item.sourceUrl || (s && s.url) || '#';
         return `
         <div class="news-card" data-tags="${(item.examTags||[]).join(',')}">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-            <div class="news-card-tag ${s.cls}">${s.label}</div>
+            <div class="news-card-tag ${badgeCls}">${badgeLabel}</div>
             <span style="font-size:10px;color:var(--muted);">${item.category || 'General'}</span>
           </div>
           <h4>${item.headline}${imp}</h4>
@@ -2090,9 +2092,23 @@ async function fetchRealNews() {
     }
 
     // Process articles and tag them for exams
+    const SOURCE_NAME_MAP = [
+      { match: /hindu/i, key: 'hindu' },
+      { match: /times of india|toi/i, key: 'toi' },
+      { match: /ndtv/i, key: 'ndtv' },
+      { match: /aaj ?tak/i, key: 'aajtak' },
+      { match: /dd news|doordarshan/i, key: 'dd' },
+      { match: /pib/i, key: 'pib' },
+      { match: /air|akashvani/i, key: 'air' },
+      { match: /india today/i, key: 'indiatoday' },
+      { match: /zee/i, key: 'zeenews' },
+      { match: /bbc/i, key: 'bbchindi' },
+    ];
     const processedNews = data.articles.slice(0, 12).map((article, idx) => {
       const title = article.title || 'Khabri Update';
       const source = article.source?.name || 'News Source';
+      const matched = SOURCE_NAME_MAP.find(m => m.match.test(source));
+      const sourceKey = matched ? matched.key : null;
       
       // Auto-detect exam relevance from content
       const content = (title + ' ' + (article.description || '')).toLowerCase();
@@ -2111,7 +2127,8 @@ async function fetchRealNews() {
       else if (content.includes('science') || content.includes('tech')) category = 'Vigyan';
 
       return {
-        sourceKey: 'news',
+        sourceKey: sourceKey,
+        customSourceLabel: sourceKey ? null : `📰 ${source}`,
         headline: title.substring(0, 120),
         summary: (article.description || article.content || 'Hindi mein latest khabri update').substring(0, 200),
         category: category,
