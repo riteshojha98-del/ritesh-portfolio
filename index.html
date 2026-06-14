@@ -2071,22 +2071,22 @@ function renderNewsCards(newsArr) {
 }
 
 async function fetchRealNews() {
-  const NEWSAPI_KEY = 'e506c9aec05f8e7d7dc2a64066b806d8'; // NewsAPI Key configured
+  const GNEWS_KEY = 'e506c9aec05f8e7d7dc2a64066b806d8'; // GNews.io API Key configured
   
   try {
     // If no API key, show setup instructions
-    if (!NEWSAPI_KEY || NEWSAPI_KEY === 'YOUR_NEWSAPI_KEY') {
+    if (!GNEWS_KEY || GNEWS_KEY === 'YOUR_GNEWS_KEY') {
       return getFallbackOfflineNews();
     }
 
-    // Fetch from NewsAPI - Indian news sources
+    // Fetch from GNews.io - Indian news sources
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=India%20economy%20OR%20RBI%20OR%20banking%20OR%20SSC%20OR%20UPSC%20OR%20government%20policy&sortBy=publishedAt&language=hi,en&pageSize=15&apiKey=${NEWSAPI_KEY}`,
+      `https://gnews.io/api/v4/search?q=India%20economy%20OR%20RBI%20OR%20banking%20OR%20SSC%20OR%20UPSC%20OR%20government%20policy&lang=en&country=in&max=15&sortby=publishedAt&apikey=${GNEWS_KEY}`,
       { headers: { 'Accept': 'application/json' } }
     );
 
     if (!response.ok) {
-      console.warn('NewsAPI fetch failed, using offline news');
+      console.warn('GNews fetch failed, using offline news');
       return getFallbackOfflineNews();
     }
 
