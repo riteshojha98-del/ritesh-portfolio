@@ -2140,9 +2140,7 @@ async function fetchRealNews() {
 function getFallbackOfflineNews() {
   const d = new Date().toLocaleDateString('en-IN');
   return [
-    { sourceKey:'setup', headline:'🔧 Real News API Setup Required', summary:'Real news feature ko enable karne ke liye NewsAPI.org par jayen, free account banayein, aur API key lein. Phir uske code mein paste karein. Iska setup sirf ek baar hota hai!', category:'Setup', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'https://newsapi.org/', source:'NewsAPI.org' },
-    { sourceKey:'instruction', headline:'📰 Kaise Real News Enable Karein?', summary:'1) newsapi.org par jayen 2) Free tier sign up karein 3) API key copy karein 4) Code line 2078 mein "YOUR_NEWSAPI_KEY" ko replace karein 5) Page refresh karein. Bas! Ab har din taaza khabri dekhni!', category:'Guide', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'https://newsapi.org/register', source:'GyanMitra Setup Guide' },
-    { sourceKey:'note', headline:'💡 Abhi ke liye? Static Demo Mode Chalti Hai', summary:'Abhi real API setup nahi kiye to bhi site chalti hai. Jab API setup kar doge to automatically live news dikhni shuru ho jayegi — exam-relevant filtering ke sath!', category:'Info', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'#', source:'GyanMitra Team' },
+    { sourceKey:'note', headline:'📡 Live News Load Ho Rahi Hai...', summary:'Agar real news nahi dikh rahi hai, to internet connection check karein ya thodi der baad "Refresh News" par tap karein. Live khabrein GNews se fetch hoti hain — exam-relevant filtering ke sath!', category:'Info', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'#', source:'GyanMitra Team' },
   ];
 }
 
