@@ -2086,13 +2086,15 @@ async function fetchRealNews() {
     );
 
     if (!response.ok) {
-      console.warn('GNews fetch failed, using offline news');
-      return getFallbackOfflineNews();
+      let bodyText = '';
+      try { bodyText = await response.text(); } catch(e) {}
+      console.warn('GNews fetch failed, using offline news. Status:', response.status, bodyText);
+      return getFallbackOfflineNews(`HTTP ${response.status}: ${bodyText}`.substring(0, 300));
     }
 
     const data = await response.json();
     if (!data.articles || data.articles.length === 0) {
-      return getFallbackOfflineNews();
+      return getFallbackOfflineNews('GNews returned 0 articles');
     }
 
     // Process articles and tag them for exams
@@ -2129,17 +2131,19 @@ async function fetchRealNews() {
       };
     });
 
-    return processedNews.length > 0 ? processedNews : getFallbackOfflineNews();
+    return processedNews.length > 0 ? processedNews : getFallbackOfflineNews('Processed news was empty');
 
   } catch (error) {
     console.warn('Real news fetch failed, using offline news:', error.message);
-    return getFallbackOfflineNews();
+    return getFallbackOfflineNews(`Fetch error: ${error.message}`);
   }
 }
 
-function getFallbackOfflineNews() {
+function getFallbackOfflineNews(debugMsg) {
   const d = new Date().toLocaleDateString('en-IN');
+  const debugCard = debugMsg ? [{ sourceKey:'debug', headline:'🐞 Debug Info (GNews)', summary: debugMsg, category:'Debug', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'#', source:'Debug' }] : [];
   return [
+    ...debugCard,
     { sourceKey:'note', headline:'📡 Live News Load Ho Rahi Hai...', summary:'Agar real news nahi dikh rahi hai, to internet connection check karein ya thodi der baad "Refresh News" par tap karein. Live khabrein GNews se fetch hoti hain — exam-relevant filtering ke sath!', category:'Info', examTags:['general'], date:d, importance:'NORMAL', sourceUrl:'#', source:'GyanMitra Team' },
   ];
 }
