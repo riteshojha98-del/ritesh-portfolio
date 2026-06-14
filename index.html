@@ -2079,9 +2079,10 @@ async function fetchRealNews() {
       return getFallbackOfflineNews();
     }
 
-    // Fetch from GNews.io - Indian news sources
+    // Fetch from GNews.io - Indian news sources (via CORS proxy since GNews free tier blocks direct browser requests)
+    const gnewsUrl = `https://gnews.io/api/v4/search?q=India%20economy%20OR%20RBI%20OR%20banking%20OR%20SSC%20OR%20UPSC%20OR%20government%20policy&lang=en&country=in&max=15&sortby=publishedAt&apikey=${GNEWS_KEY}`;
     const response = await fetch(
-      `https://gnews.io/api/v4/search?q=India%20economy%20OR%20RBI%20OR%20banking%20OR%20SSC%20OR%20UPSC%20OR%20government%20policy&lang=en&country=in&max=15&sortby=publishedAt&apikey=${GNEWS_KEY}`,
+      `https://corsproxy.io/?url=${encodeURIComponent(gnewsUrl)}`,
       { headers: { 'Accept': 'application/json' } }
     );
 
